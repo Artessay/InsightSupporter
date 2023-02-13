@@ -1,0 +1,65 @@
+{
+    "dataset_reader": {
+        "type": "text_classification",
+        "tokenizer": {
+            "type": "spacy"
+         },
+        "token_indexers": {
+            "tokens": {
+                "type": "single_id"
+            }
+        }
+    },
+    "train_data_path": "./data/train.csv",
+    "validation_data_path": "./data/validation.csv",
+   
+    "trainer": {
+        "num_epochs": 40,
+        "patience": 10,
+        "cuda_device": 0,
+        "grad_clipping": 5.0,
+        "validation_metric": "+accuracy",
+        "optimizer": {
+            "type": "adagrad"
+        }
+    },
+    "data_loader": {
+        "batch_size": 8
+    },
+ 
+ 
+    "model": {
+        "type": "paper_classifier",
+        "text_field_embedder": {
+            "token_embedders": {
+                "tokens": {
+                    "type": "embedding",
+                    "embedding_dim": 100
+                }
+            }
+        },
+        "title_encoder": {
+            "type": "lstm",
+            "bidirectional": true,
+            "input_size": 100,
+            "hidden_size": 100,
+            "num_layers": 1,
+            "dropout": 0.2
+        },
+        "abstract_encoder": {
+            "type": "lstm",
+            "bidirectional": true,
+            "input_size": 100,
+            "hidden_size": 100,
+            "num_layers": 1,
+            "dropout": 0.2
+        },
+        "classifier_feedforward": {
+            "input_dim": 400,
+            "num_layers": 2,
+            "hidden_dims": [200, 3],
+            "activations": ["relu", "linear"],
+            "dropout": [0.2, 0.0]
+        }
+   }
+}
