@@ -1,14 +1,12 @@
 import logging
+# from typing_extensions import override
 from allennlp.common.file_utils import cached_path
 from allennlp.data.dataset_readers.dataset_reader import DatasetReader
 from allennlp.data.fields import Field, TextField, LabelField
 from allennlp.data.instance import Instance
 from allennlp.data.token_indexers import SingleIdTokenIndexer, TokenIndexer
-from allennlp.data.tokenizers import Tokenizer, WordTokenizer
-import jieba.posseg as poss
-import jieba
+from allennlp.data.tokenizers import Tokenizer, WhitespaceTokenizer
 from typing import *
-from allennlp.data.tokenizers.word_splitter import WordSplitter
 import os
 
 from allennlp.data.tokenizers import Token
@@ -16,10 +14,10 @@ import csv
 
 from typing import Dict
 
-from overrides import overrides
+# from overrides import overrides
 
 @DatasetReader.register("text_classification")
-class TextClassificationTxtReader(DatasetReader):
+class TextClassificationReader(DatasetReader):
 
     def __init__(self,
                  tokenizer: Tokenizer = None,
@@ -40,13 +38,13 @@ class TextClassificationTxtReader(DatasetReader):
         :param lazy:
         """
         super().__init__(lazy)
-        self._tokenizer = tokenizer or WordTokenizer()
+        self._tokenizer = tokenizer or WhitespaceTokenizer() # WordTokenizer()
         self._token_indexers = token_indexers or {'tokens': SingleIdTokenIndexer()}
         self._delimiter = delimiter
         self.testing = testing
         self._max_sequence_length = max_sequence_length
 
-    @overrides
+    # @override
     def _read(self, file_path: str):
         # if `file_path` is a URL, redirect to the cache
         file_path = cached_path(file_path)
@@ -58,7 +56,7 @@ class TextClassificationTxtReader(DatasetReader):
                 label = str(row.get('Insight Type', ''))
                 yield self.text_to_instance(text, label)
 
-    @overrides
+    # @overrides
     def text_to_instance(self, text: str, label: Union[str, int] = None) -> Instance:
         """
         Parameters

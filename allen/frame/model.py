@@ -1,3 +1,4 @@
+from typing import Optional
 import torch
 
 from allennlp.data import Vocabulary
