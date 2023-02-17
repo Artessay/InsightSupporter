@@ -1,0 +1,166 @@
+The Utah Jazz have helped Lauri Markkanen unlock his offensive potential, becoming the kind of star they build a new foundation around.
+['No labels']
+Division and conference makes it easy for Maverick to win
+['Categorization']
+Kevin Durant had to leave the game after Jimmy Butler landed on his knee on this play.
+['Outlier']
+The Lakers hustled more, but the Mavericks shooting prevailed and this helps Mavericks won the game.
+['Difference']
+Without Kevin Durant, Kyrie Irving is aggressive and shot in the form of an ill-advised 30-footer
+['Difference']
+Nikola Jokic made a game-winning three-point jumper with .2 seconds on the clock to secure the victory for Denver Nuggets.
+['Extreme']
+Brooklyn Nets’ challenge of holding the fort without Kevin Durant became even more challenging.
+['Outlier']
+After Houston Rockets tore through their defense early, Los Angeles Clippers settled down and and outscored Houston Rockets in the fourth.
+['Difference']
+Wood is playing at All-Star level.
+['Value']
+Gabe Vincent lead Miami Heat to be aggressive.
+['Value']
+LeBron James became the second player score 38,000 career points, but still loss game.
+['Difference', 'Extreme']
+Kyrie Irving began his career with the Mavericks with a win and showed off some of his dazzling offensive ability with fantastic finishes.
+['Value']
+Miami Heat is valiant, but it is still not enough for victory.
+['No labels']
+Dallas Mavericks didn't make it a fight against Portland Trailblazers in the whole game.
+['Difference']
+Like the rest of the team, Hardy dropped off a little in the fourth quarter, still scoring but going 4-of-11 from the field.
+['Difference']
+Keeping it only a seven point deficit at halftime allowed the Mavericks to have a puncher’s chance in the third quarter.
+['Difference']
+Joel Embiid did not foul Rusell Westbrook on LAL's final possession.
+['Difference']
+Stephen Curry have a wonderful performance in this game and Draymond Green was a key force of the Dubs' fourth quarter brilliance.
+['No labels']
+Domantas Sabonis and Jalen Brunson are the best players in this week.
+['Categorization']
+RJ Barrett went coast-to-coast for the game-tying dunk with 0.6 seconds left.
+['Difference']
+Tom Thibodeau think the foul was unfair in the overtime.
+['Outlier']
+Serge Ibaka Remains Away From Team, Return Questionable
+['Outlier']
+Defensively the Wizards really struggled with their pick and roll coverages against both Stephen Curry and Jordan Poole, where they went for 41 points and 32 points, respectively.
+['Difference', 'Proportion']
+Bradley Beal has the potential to turn around Wizard's situation.
+['No labels']
+The New Orleans Pelicans were really good defensively in the first half, but they could not keep pace with the Cleveland Cavaliers in the fourth quarter.
+['Difference']
+Luda Doncic has a strong game against the Houston Rockets' strong defense.
+['Value']
+Dallas Mavericks head coach Jason Kidd does not believe he can field a competitive lineup containing JaVale McGee.
+['Categorization']
+Shai Gilgeous-Alexander thinks Oklanhoma City Thunder is going to be a really good team a lot sooner.
+['Value']
+Jusuf Nurkic has helped Portland space their offense and maintain the interior on both ends, but his inability to consistently secure the ball off the catch has been concerning.
+['No labels']
+Milwaukee's Lopez ejected in 4th quarter following altercation with several players and cause the team become more aggressive.
+['Outlier']
+Jrue Holiday thrills with dominance without Giannis as Bucks beat Raptors.
+['Value']
+Luka Doncic and Trae Young are worth the trade.
+['Value']
+Joel Embiid Trying to start off strong can drive the whole team.
+['No labels']
+Stephen Curry played the best game since comeback.
+['Value']
+To win the game, It is important to be aggressive in away match.
+['No applicable data fact type']
+Paul George's form has come back.
+['Trend']
+The game got a bit heated, with both teams playing confrontationally and committing more fouls
+['than usual.\n\nDifference']
+Although Damian Lillard got the highest score in the game, his team still lost.
+['Difference']
+Nikola Jokic is too difficult to control.
+['Outlier']
+The Portland Trail Blazers cannot keep up with the high-speed Denver Nuggets.
+['Difference']
+The Blazers shot well but played poorly in the second half.
+['No applicable fact type']
+The best NBA teams have different lineups.
+['Categorization']
+Jaren Jackson Jr. is the deserving front-runner to take home the Defensive Player of the Year trophy.
+['Categorization']
+Nikola Jokic is having one of the best "invisible" all-around seasons ever but may not become the MVP of this season.
+['Trend']
+The Denver Nuggets and the Los Angeles Clippers play an exciting game.
+['No labels']
+James Harden's latest trick is to bend NBA defenses with the power of stillness.
+['Value']
+The small backcourt, Garland and Mitchell, hasn’t hurt team on defense
+['Categorization']
+Kyrie Irving's defense is not good, so their team must have an offensive explosion to offset the likely defensive drop-off that comes with the presence of Kyrie Irving.
+['Difference']
+LaMelo Ball will miss the game after suffering a left ankle sprain.
+['Outlier']
+The Oklahoma City Thunder earned a massive victory over the Indiana Pacers.
+['No labels']
+Luka Doncic is phenomenal, but he needs some help.
+['Difference']
+The Mavericks need to improve their defense.
+['No label']
+With Bradley Beal back, the Wizards got their starting lineup together again and had the victory.
+['No labels']
+LaMelo Ball injured his left ankle again, making the team play together and fight stronger.
+['No labels']
+Offense ran through Normal Powell, but Lauri Markkanen was more aggressive and got going early.
+['Categorization']
+Anfernee Simons is the best player not named Damian Lillard or Jerami Grant, so Portland's trade may not touch him.
+['Categorization']
+When we were down, Fox got us back in it and when it was close, Fox got us some separation.
+['Difference']
+The Grizzlies and the Cavaliers remained close, and Dillon Brooks preserved the victory by blocking Garland's 3-point try at the buzzer.
+['Difference']
+The Grizzlies defeated the Cleveland Cavaliers 115-114 on Wednesday night to win their 11th straight game, tying a franchise record.
+['Trend']
+Tom Thibodeau defended the heavy load of minutes for the Knicks’ top players, but his team's players have high minutes per game.
+['Trend']
+Bradley Beal's comeback helps the Washington Wizards beat the New York Knicks.
+['Difference']
+With home woes, the Knicks didn't play well.
+['No labels']
+Dejounte Murray is a suitable running mate for Trae Young.
+['Value']
+DePaul pulled off a major upset on Wednesday at Wintrust Arena.
+['Outlier']
+Allen Iverson's position on an NBA roster had become untenable due to the sharp decline in his abilities and his outright refusal to even slightly alter the way he played the game.
+['Difference']
+Due of injuries, the Lakers must play "mistake-free basketball."
+['Value']
+Even with LeBron putting up MVP-caliber numbers, the Lakers' performance is criticized.
+['Difference']
+The Dallas Mavericks are becoming more fun, energetic and exciting in the game.
+['Trend']
+The defensive lynchpin of the Dallas Mavericks, Maxi Kleber, will come back soon.
+['Outlier']
+Christian Wood and Luka Dončić play well together on the court.
+['Categorization']
+With Boston sporting a two-center starting lineup, they might be trying to go small to run the opposing bigs off the court.
+['Categorization']
+Bobby Portis is having one of the best seasons of his career and making a strong case as the best bench player in the NBA.
+['Categorization']
+Claxton hasn’t been shy about his candidacy for DPOY, so he may have been anxious to show his defensive prowess once more against Ayton.
+['Association']
+The Hawks built a big lead in the first half, and were able to take the 121-113 win, moving their winning streak to three games.
+['Difference', 'trend']
+The 3-pointer by Stephen Curry is incredible.
+['Outlier']
+The painting of Luka Doncic clutching a placard pleading for assistance was well-liked by viewers.
+['Categorization']
+The Spurs went toe-to-toe with the Blazers in the first half, with San Antonio ultimately falling.
+['Difference']
+The Grizzlies lost to the Warriors by just two points, making them disappointed.
+['Difference']
+Jordan Poole has the best and worst performance  in the Golden State Warriors' thrilling 122-120 victory over the Memphis Grizzlies.
+['Extreme', 'Outlier']
+Los Angeles was able to reclaim the lead after the third through persistent defensive clamps and timely outside shooting by unexpected sources.
+['No labels']
+When the ball is popping, Harris have got to step it up and shoot the ball with confidence.
+['No labels']
+Joel Embiid always tries to play whomever is in front of him with the same aggression and try to score the ball, and James Harden took over after the first three quarters and finally led the 76ers past the Nets.
+['Value', 'Difference', 'Trend']
+Losing star point guard Luka Dončić, who is in the midst of his best season in the NBA, for any period of time is a blow for the Mavericks.
+['Extreme']
