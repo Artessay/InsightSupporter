@@ -7,7 +7,9 @@ def subtitle_frame(video_path, top=200, bottom=100, left=50, right=50, threshold
     key_frame_index_list = []
     index = 0
 
+    # 读入视频
     cap = cv2.VideoCapture(video_path)
+
     # 视频信息
     total_frame = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))  # 视频总帧数
     fps = cap.get(cv2.CAP_PROP_FPS)  # 帧率
@@ -40,13 +42,11 @@ def subtitle_frame(video_path, top=200, bottom=100, left=50, right=50, threshold
                 #break  # 继续执行
         #else:
             #break
-    #cap.release()
-   # cv2.destroyAllWindows()
+    # cap.release()
+    # cv2.destroyAllWindows()
 
-    cap = cv2.VideoCapture(video_path)
+    # cap = cv2.VideoCapture(video_path)
     success, frame = cap.read()
-
-    return
 
     print('[PROCESS] start analyze key frames...')
 

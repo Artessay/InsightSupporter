@@ -32,6 +32,12 @@ def query(key:str, events:list, method:str = 'who')->list:
         if method == "who":
             if queryWho(key, event):
                 result.append(event)
+        elif method == "when":
+            pass
+        elif method == "where":
+            pass
+        elif method == "what":
+            pass
     return result
 
 if __name__ == '__main__':
