@@ -1,16 +1,27 @@
 import json
 
 DEBUG = True
-path = r'./summary.json'
 
 def readEvents(path : str)->list:
+    if DEBUG: print("[json] json path: ", path)
     jsonFile = open(path, "r")
     data = json.load(jsonFile)
     
     events : list = data['plays']
-    if DEBUG: print("events number: ", len(events))
+    if DEBUG: print("[json] events number: ", len(events))
 
     return events
+
+def exertTime(events:list):
+    '''
+    return time series with form (clock_time:str, period:int)
+    '''
+    timeSeries = [(event['clock']['displayValue'], event['period']['number']) for event in events ]
+
+    # verify
+    # print(timeSeries[1])
+
+    return timeSeries
 
 def queryWho(who:str, event:dict)->bool:
     '''
@@ -28,7 +39,7 @@ def queryWho(who:str, event:dict)->bool:
 def query(key:str, events:list, method:str = 'who')->list:
     result = []
     for event in events:
-        print(type(event))
+        # print(type(event))
         if method == "who":
             if queryWho(key, event):
                 result.append(event)
@@ -41,7 +52,8 @@ def query(key:str, events:list, method:str = 'who')->list:
     return result
 
 if __name__ == '__main__':
-    print("json path: ", path)
+    path = r'./summary.json'
+    # print("json path: ", path)
     events = readEvents(path=path)
     # print(query("Christian Wood", events, "who"))
     

@@ -1,3 +1,5 @@
+import os
+
 from analyze_key_frame import subtitle_frame
 from extract_index_frame import extract_index_frame
 from ocr import text_process, save_subtitle
@@ -22,8 +24,10 @@ if __name__ == '__main__':
     key_frame_num = len(key_frame_index)
 
     print('\n####### 1.提取字幕关键帧 #######')
-    subtitle_path = extract_index_frame(args.video_path, key_frame_index, args.top, args.bottom, args.left, args.right)
+    # extract_index_frame(args.video_path, key_frame_index, args.top, args.bottom, args.left, args.right)
 
+    file_name = os.path.basename(args.video_path).split('.')[0]
+    subtitle_path = 'results/' + file_name
     image_list = get_image_file_list(subtitle_path)
 
     print('\n####### 2.OCR识别字幕帧 #######')
