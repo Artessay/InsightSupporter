@@ -1,14 +1,18 @@
+import cv2
 
 import readJson
+import videoProcess
 
 
 DEBUG = True
-path = r'./summary.json'
+jsonPath = r'./summary.json'
+videoPath = 'E:/OperatingSystem/basketball.mp4'
+
 
 
 
 if __name__ == '__main__':
-    events = readJson.readEvents(path=path)
+    events = readJson.readEvents(path=jsonPath)
 
     queryList = [("Alperen Sengun", "who")]
     for q in queryList:
@@ -18,5 +22,8 @@ if __name__ == '__main__':
     if DEBUG: print("[query] events number: ", len(events))
 
     timeSeries = readJson.exertTime(events)
-
+    
+    videoCapture = cv2.VideoCapture(videoPath)
+    videoProcess.processVideo(videoCapture, timeSeries)
+    
     

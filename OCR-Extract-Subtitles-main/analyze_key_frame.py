@@ -71,7 +71,7 @@ def subtitle_frame(video_path, top=200, bottom=100, left=50, right=50, threshold
     last_roi = np.where(last_roi > 0, 1, 0)
 
     while success:
-        if index % 8 == 0:
+        if index % fps == 0:
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             flatten_gray = gray.flatten()
             roi = flatten_gray - minuend
@@ -87,7 +87,7 @@ def subtitle_frame(video_path, top=200, bottom=100, left=50, right=50, threshold
 
             last_roi = roi
             pbar.set_postfix_str(f'{index}/{total_frame}')
-            pbar.update(8)
+            pbar.update(fps)
 
         index += 1
         success, frame = cap.read()
