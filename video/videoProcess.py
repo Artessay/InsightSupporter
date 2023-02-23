@@ -1,7 +1,9 @@
 import cv2
 import tqdm
+from clipVideo import clipVideo
 
 from ocr import text_process
+from Clock import Clock
 # from PIL import Image
 
 def processVideo(videoCapture, timeSeries):
@@ -17,12 +19,13 @@ def processVideo(videoCapture, timeSeries):
     fps = videoCapture.get(cv2.CAP_PROP_FPS)   # 帧率
 
     # 进度条
-    # pbar = tqdm.tqdm(total_frame)
+    pbar = tqdm.tqdm(total_frame)
 
     # 开头空白帧
     skip_frames = (2*60 + 58) * fps
     videoCapture.set(cv2.CAP_PROP_POS_FRAMES, skip_frames)
     
+    lastClock = Clock(12, 0)
     while True:
         # 读取视频帧
         success, frame = videoCapture.read()
@@ -52,15 +55,37 @@ def processVideo(videoCapture, timeSeries):
         # img.show()
         # cv2.waitKey()
 
-        # 文字识别
-        text = text_process(frame)
-        print(text)
 
-        # 字符串处理
+        # 文字识别
+        (timeVideo, periodVideo) = text_process(frame)
+        # 非法输入
+        if periodVideo == 0:
+            continue
+        # 不处理重复时间
+        if timeVideo == lastClock:
+            continue
+        else:
+            lastClock = timeVideo
+        
         
         # 更新进度条
-        # pbar.set_postfix_str(f'{position}/{total_frame}')
-        # pbar.update(fps)
+        pbar.set_postfix_str(f'{position}/{total_frame}, clock: {timeVideo.m} {timeVideo.s}  period: {periodVideo}')
+        pbar.update(fps)
+        # print('clock: ', timeVideo.m, timeVideo.s, ' period: ', periodVideo)
+
+        # 时序匹配
+        (timeJson, periodJson) = timeSeries[index]
+        while (periodVideo > periodJson):    # 错过了
+            index = index + 1                # 那就算了
+            (timeJson, periodJson) = timeSeries[index]
+        if (timeVideo < timeJson and periodVideo == periodJson):
+            print('GET! ', position)
+            fileName = f'result/{position}.mp4'
+            clipVideo(position / fps - 4, position / fps + 1, fileName, videoCapture)
+            videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position)
+            index = index + 1
+
+        
 
         # 完成视频抽取
         if index >= series_length:

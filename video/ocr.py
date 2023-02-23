@@ -1,5 +1,6 @@
 from pdocr.predict import TextSystem
 from pdocr.infer.utility import parse_args
+from Clock import Clock
 
 def predict_subtitle(image):
     args = parse_args()
@@ -19,7 +20,7 @@ def text_process(img):
     # 获取预测OCR字符
     texts = predict_subtitle(img)
     if (len(texts) != 1):
-        return ''
+        return (Clock(0, 0), 0)
 
     # if len(text) > 0:
     #     result = text[0]
@@ -33,7 +34,7 @@ def text_process(img):
     texts = text.split(':')
 
     if (len(texts) != 3):
-        return ''
+        return (Clock(0, 0), 0)
 
     # 提取节
     if texts[2].endswith('1ST'):
@@ -49,11 +50,13 @@ def text_process(img):
         period = 4
         texts[2] = texts[2].rstrip('4TH')
     else:
-        return ''
+        return (Clock(0, 0), 0)
 
-    
+    if (texts[0] == ''):
+        texts[0] = '0'
 
-    return (text, period)
+    # print(texts[0], texts[1])
+    return (Clock(int(texts[0]), round(float(texts[1]))), period)
 
 if __name__ == '__main__':
     text = "6:10：161ST"

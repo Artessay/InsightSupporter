@@ -1,6 +1,6 @@
 import cv2
 
-def clipVideo(start:int, stop:int, videoCapture):
+def clipVideo(start:int, stop:int, fileName, videoCapture):
     '''
     start   : start time (second)
     stop    : stop time (second)
@@ -32,7 +32,7 @@ def clipVideo(start:int, stop:int, videoCapture):
     position = videoCapture.get(cv2.CAP_PROP_POS_FRAMES)
     
     # 输出视频片段
-    videoWriter = cv2.VideoWriter('slide.mp4', video_fourcc, video_fps, (frame_width, frame_height))
+    videoWriter = cv2.VideoWriter(fileName, video_fourcc, video_fps, (frame_width, frame_height))
     while (position <= stop * video_fps):
         success, frame = videoCapture.read()
         if success == False:
