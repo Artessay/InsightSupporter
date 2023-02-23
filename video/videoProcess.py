@@ -1,6 +1,6 @@
 import cv2
 import tqdm
-from PIL import Image
+# from PIL import Image
 
 def processVideo(videoCapture, timeSeries):
     top = 95
@@ -33,7 +33,6 @@ def processVideo(videoCapture, timeSeries):
         
         # 截取时间栏
         h = frame.shape[0]
-        # print(frame.shape)
         frame = frame[h - top:h - bottom, left:-right-1, :]
         # img = Image.fromarray(frame)
         # img.show()
@@ -44,7 +43,6 @@ def processVideo(videoCapture, timeSeries):
         # gray = gray.flatten()
         # binary = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 0)
         # # _, binary = cv2.threshold(src=gray, thresh=220, maxval=255, type=cv2.THRESH_BINARY)
-
         # img = Image.fromarray(binary)
         # img.show()
         # cv2.waitKey()
@@ -53,5 +51,6 @@ def processVideo(videoCapture, timeSeries):
         pbar.set_postfix_str(f'{position}/{total_frame}')
         pbar.update(fps)
 
-        if (position > 200 * fps):
+        # 调试代码，提前中断
+        if position > 30 * 60 * fps:
             break
