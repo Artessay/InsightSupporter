@@ -22,7 +22,8 @@ def processVideo(videoCapture, timeSeries):
     pbar = tqdm.tqdm(total_frame)
 
     # 开头空白帧
-    skip_frames = (2*60 + 58) * fps
+    print('fps: ', fps)
+    skip_frames = 15000 # (2*60 + 58) * fps
     videoCapture.set(cv2.CAP_PROP_POS_FRAMES, skip_frames)
     
     lastClock = Clock(12, 0)
@@ -75,11 +76,13 @@ def processVideo(videoCapture, timeSeries):
 
         # 时序匹配
         (timeJson, periodJson) = timeSeries[index]
-        while (periodVideo > periodJson):    # 错过了
+        # 错过了
+        while (periodVideo > periodJson) or (periodVideo == periodJson and timeVideo < timeJson):    
             index = index + 1                # 那就算了
             (timeJson, periodJson) = timeSeries[index]
-        if (timeVideo < timeJson and periodVideo == periodJson):
-            print('GET! ', position)
+        # 对得上
+        if ((timeVideo == timeJson) and (periodVideo == periodJson)):
+            print(f'\nGET!  frame: {position} video: {timeVideo.m} {timeVideo.s} {periodVideo} json: {timeJson.m} {timeJson.s} {periodJson}')
             fileName = f'result/{position}.mp4'
             clipVideo(position / fps - 4, position / fps + 1, fileName, videoCapture)
             videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position)
