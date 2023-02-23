@@ -16,7 +16,6 @@ import infer.predict_rec as predict_rec
 import copy
 import numpy as np
 import time
-from pyocr.utils.utility import get_image_file_list, check_and_read_gif
 from PIL import Image
 from infer.utility import draw_ocr_box_txt_test
 

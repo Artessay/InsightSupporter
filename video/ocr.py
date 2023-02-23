@@ -1,9 +1,8 @@
-import time
-import cv2
 from pdocr.predict import TextSystem
+from pdocr.infer.utility import parse_args
 
-
-def predict_subtitle(args, image):
+def predict_subtitle(image):
+    args = parse_args()
     text_sys = TextSystem(args)
     dt_boxes, rec_res = text_sys(image)
 
@@ -16,44 +15,53 @@ def predict_subtitle(args, image):
     return text_list
 
 
-def text_process(args, image_list):
-    subtitle = []
-    # 图片排序
-    image_list.sort(key=lambda x: int(x.split('.')[-2].split('_')[-1]))
+def text_process(img):
+    # 获取预测OCR字符
+    texts = predict_subtitle(img)
+    if (len(texts) != 1):
+        return ''
 
-    last_result = ''
-    start_time = time.time()
-    for image_file in image_list:
-        # print(image_file)
-        img = cv2.imread(image_file)
-        text = predict_subtitle(args, img)
-        result = ''
-        last = ''
+    # if len(text) > 0:
+    #     result = text[0]
+    # if len(text) > 1:
+    #     for t in text[1:]:
+    #         result = result + ',' + t
 
-        if len(text) > 0:
-            result = text[0]
-            last = result
-        if len(text) > 1:
-            for t in text[1:]:
-                result = result + ',' + t
+    # 时间处理
+    text = texts[0]
+    text = text.replace('：', ':')  # 防止识别为中文冒号
+    texts = text.split(':')
 
-        if last != last_result and result != '':
-            subtitle.append(result)
-            #print(result)
-        last_result = last
-    total_time = time.time() - start_time
+    if (len(texts) != 3):
+        return ''
 
-    print('\n####### 3.提取字幕结果 #######')
-    #for s in subtitle:
-        #print(s)
+    # 提取节
+    if texts[2].endswith('1ST'):
+        period = 1
+        texts[2] = texts[2].rstrip('1ST')
+    elif texts[2].endswith('2ND'):
+        period = 2
+        texts[2] = texts[2].rstrip('2ND')
+    elif texts[2].endswith('3RD'):
+        period = 3
+        texts[2] = texts[2].rstrip('3RD')
+    elif texts[2].endswith('4TH'):
+        period = 4
+        texts[2] = texts[2].rstrip('4TH')
+    else:
+        return ''
 
-    print('\n[INFO] total time of reorganization:%.3f' % total_time)
+    
 
-    return subtitle
+    return (text, period)
 
-
-def save_subtitle(subtitle_list, save_path):
-    with open(save_path + '/subtitle.txt', 'w', encoding='utf-8') as f:
-        for i in subtitle_list:
-            f.write(str(i) + '\n')
-    print('[PROCESS] subtitle saved in', save_path)
+if __name__ == '__main__':
+    text = "6:10：161ST"
+    text = text.replace('：', ':')  # 防止识别为中文冒号
+    texts = text.split(':')
+    print(texts)
+    
+    text = "：58.6：171ST"
+    text = text.replace('：', ':')  # 防止识别为中文冒号
+    texts = text.split(':')
+    print(texts) 

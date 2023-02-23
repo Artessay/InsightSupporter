@@ -1,5 +1,7 @@
 import cv2
 import tqdm
+
+from ocr import text_process
 # from PIL import Image
 
 def processVideo(videoCapture, timeSeries):
@@ -7,12 +9,15 @@ def processVideo(videoCapture, timeSeries):
     bottom = 60
     left =  1535
     right = 200
+
+    index = 0   # timeSeries pointer
+    series_length = len(timeSeries)
     
     total_frame = int(videoCapture.get(cv2.CAP_PROP_FRAME_COUNT))  # 视频总帧数
     fps = videoCapture.get(cv2.CAP_PROP_FPS)   # 帧率
 
     # 进度条
-    pbar = tqdm.tqdm(total_frame)
+    # pbar = tqdm.tqdm(total_frame)
 
     # 开头空白帧
     skip_frames = (2*60 + 58) * fps
@@ -47,10 +52,20 @@ def processVideo(videoCapture, timeSeries):
         # img.show()
         # cv2.waitKey()
 
-        # 更新进度条
-        pbar.set_postfix_str(f'{position}/{total_frame}')
-        pbar.update(fps)
+        # 文字识别
+        text = text_process(frame)
+        print(text)
 
-        # 调试代码，提前中断
-        if position > 30 * 60 * fps:
+        # 字符串处理
+        
+        # 更新进度条
+        # pbar.set_postfix_str(f'{position}/{total_frame}')
+        # pbar.update(fps)
+
+        # 完成视频抽取
+        if index >= series_length:
             break
+
+        # @DEBUG 调试代码使用，提前中断
+        # if position > (3 * 60 + 6) * fps:
+        #     break

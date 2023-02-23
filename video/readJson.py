@@ -1,4 +1,5 @@
 import json
+from Clock import Clock
 
 DEBUG = True
 
@@ -12,11 +13,21 @@ def readEvents(path : str)->list:
 
     return events
 
+def processTime(text):
+    texts = text.split(':')
+    if len(texts) == 1:
+        return Clock(0, round(float(texts[0])))
+    elif len(texts) == 2:
+        return Clock((int)(texts[0]), (int)(texts[1]))
+    else:
+        print('Json Clock Program Error, debug needed')
+        return Clock(0, 0)
+
 def exertTime(events:list):
     '''
     return time series with form (clock_time:str, period:int)
     '''
-    timeSeries = [(event['clock']['displayValue'], event['period']['number']) for event in events ]
+    timeSeries = [(processTime(event['clock']['displayValue']), event['period']['number']) for event in events ]
 
     # verify
     # print(timeSeries[1])
@@ -56,4 +67,10 @@ if __name__ == '__main__':
     # print("json path: ", path)
     events = readEvents(path=path)
     # print(query("Christian Wood", events, "who"))
+
+    c1 = processTime("1:03")
+    print(c1.m, c1.s)
+    c2 = processTime("57.2")
+    print(c2.m, c2.s)
+    print(c1 > c2)
     
