@@ -88,7 +88,7 @@ def processVideo(videoCapture, timeSeries):
             videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position)
             index = index + 1
 
-        
+        # 时序匹配 另一种做法
 
         # 完成视频抽取
         if index >= series_length:

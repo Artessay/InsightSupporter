@@ -46,6 +46,9 @@ def queryWho(who:str, event:dict)->bool:
     else:
         return False
 
+def queryPeriod(when:int, event:dict)->bool:
+    period = event['period']['number']
+    return period == when
 
 def query(key:str, events:list, method:str = 'who')->list:
     result = []
@@ -55,7 +58,8 @@ def query(key:str, events:list, method:str = 'who')->list:
             if queryWho(key, event):
                 result.append(event)
         elif method == "when":
-            pass
+            if queryPeriod(int(key), event):
+                result.append(event)
         elif method == "where":
             pass
         elif method == "what":
