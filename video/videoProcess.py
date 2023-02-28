@@ -23,7 +23,8 @@ def processVideo(videoCapture, timeSeries):
 
     # 开头空白帧
     print('fps: ', fps)
-    skip_frames = 15000 # (2*60 + 58) * fps
+    skip_frames = (2*60 + 58) * fps
+    # skip_frames = 15000
     videoCapture.set(cv2.CAP_PROP_POS_FRAMES, skip_frames)
     
     lastClock = Clock(12, 0)
@@ -75,28 +76,28 @@ def processVideo(videoCapture, timeSeries):
         # print('clock: ', timeVideo.m, timeVideo.s, ' period: ', periodVideo)
 
         # 时序匹配
-        (timeJson, periodJson) = timeSeries[index]
-        # 错过了
-        while (periodVideo > periodJson) or (periodVideo == periodJson and timeVideo < timeJson):    
-            index = index + 1                # 那就算了
-            (timeJson, periodJson) = timeSeries[index]
-        # 对得上
-        if ((timeVideo == timeJson) and (periodVideo == periodJson)):
-            print(f'\nGET!  frame: {position} video: {timeVideo.m} {timeVideo.s} {periodVideo} json: {timeJson.m} {timeJson.s} {periodJson}')
-            fileName = f'result/{position}.mp4'
-            clipVideo(position / fps - 4, position / fps + 1, fileName, videoCapture)
-            videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position)
-            index = index + 1
+        # (timeJson, periodJson) = timeSeries[index]
+        # # 错过了
+        # while (periodVideo > periodJson) or (periodVideo == periodJson and timeVideo < timeJson):    
+        #     index = index + 1                # 那就算了
+        #     (timeJson, periodJson) = timeSeries[index]
+        # # 对得上
+        # if ((timeVideo == timeJson) and (periodVideo == periodJson)):
+        #     print(f'\nGET!  frame: {position} video: {timeVideo.m} {timeVideo.s} {periodVideo} json: {timeJson.m} {timeJson.s} {periodJson}')
+        #     fileName = f'result/{position}.mp4'
+        #     clipVideo(position / fps - 4, position / fps + 1, fileName, videoCapture)
+        #     videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position)
+        #     index = index + 1
 
-        # 时序匹配 另一种做法 全匹配
-        # for i in range(series_length):
-        #     (timeJson, periodJson) = timeSeries[i]
-        #     # 对得上
-        #     if ((timeVideo == timeJson) and (periodVideo == periodJson)):
-        #         print(f'\nGET!  frame: {position} video: {timeVideo.m} {timeVideo.s} {periodVideo} json: {timeJson.m} {timeJson.s} {periodJson}')
-        #         fileName = f'result/{position}.mp4'
-        #         clipVideo(position / fps - 4, position / fps + 1, fileName, videoCapture)
-        #         videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position)
+        # 时序匹配 全匹配
+        for i in range(series_length):
+            (timeJson, periodJson) = timeSeries[i]
+            # 对得上
+            if ((timeVideo == timeJson) and (periodVideo == periodJson)):
+                print(f'\nGET!  frame: {position} video: {timeVideo.m} {timeVideo.s} {periodVideo} json: {timeJson.m} {timeJson.s} {periodJson}')
+                fileName = f'result/{position}.mp4'
+                clipVideo(position / fps - 4, position / fps + 1, fileName, videoCapture)
+                videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position)
 
         # 完成视频抽取
         if index >= series_length:

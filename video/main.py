@@ -14,7 +14,7 @@ videoPath = 'E:/OperatingSystem/basketball.mp4'
 if __name__ == '__main__':
     events = readJson.readEvents(path=jsonPath)
 
-    queryList = [("Alperen Sengun", "who")]
+    queryList = [("Alperen Sengun", "who"), (("1", "when"))]
     for q in queryList:
         info, method = q
         events = readJson.query(info, events, method)
