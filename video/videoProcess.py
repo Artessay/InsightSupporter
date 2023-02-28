@@ -88,7 +88,15 @@ def processVideo(videoCapture, timeSeries):
             videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position)
             index = index + 1
 
-        # 时序匹配 另一种做法
+        # 时序匹配 另一种做法 全匹配
+        # for i in range(series_length):
+        #     (timeJson, periodJson) = timeSeries[i]
+        #     # 对得上
+        #     if ((timeVideo == timeJson) and (periodVideo == periodJson)):
+        #         print(f'\nGET!  frame: {position} video: {timeVideo.m} {timeVideo.s} {periodVideo} json: {timeJson.m} {timeJson.s} {periodJson}')
+        #         fileName = f'result/{position}.mp4'
+        #         clipVideo(position / fps - 4, position / fps + 1, fileName, videoCapture)
+        #         videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position)
 
         # 完成视频抽取
         if index >= series_length:
