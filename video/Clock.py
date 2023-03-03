@@ -2,6 +2,7 @@ class Clock(object):
     def __init__(self, m:int, s:int) -> None:
         self.m = m
         self.s = s
+        # self.wallclock = wallclock
     
     def __lt__(self, record):
         if self.m < record.m:

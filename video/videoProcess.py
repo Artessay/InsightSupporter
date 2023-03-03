@@ -1,3 +1,4 @@
+import time
 import cv2
 import tqdm
 from clipVideo import clipVideo
@@ -6,7 +7,17 @@ from ocr import text_process
 from Clock import Clock
 # from PIL import Image
 
-def processVideo(videoCapture, timeSeries):
+def getVideoPosition(st_start, st_end, pos_start, fps):
+    # 计算时间差
+    diff = st_end - st_start
+    diff_st = time.gmtime(diff)
+
+    # 锚定视频流
+    position = pos_start + (diff_st.tm_hour * 3600 + diff_st.tm_min * 60 + diff_st.tm_sec) * fps
+
+    return position
+
+def processVideo(videoCapture, timeSeries, periodParser):
     # 设置参数
     top = 95
     bottom = 60
@@ -20,7 +31,7 @@ def processVideo(videoCapture, timeSeries):
     fps = videoCapture.get(cv2.CAP_PROP_FPS)   # 帧率
 
     # 进度条
-    pbar = tqdm.tqdm(total_frame)
+    # pbar = tqdm.tqdm(total_frame)
 
     # 开头空白帧
     print('fps: ', fps)
@@ -28,82 +39,53 @@ def processVideo(videoCapture, timeSeries):
     # skip_frames = 15000
     videoCapture.set(cv2.CAP_PROP_POS_FRAMES, skip_frames)
     
-    lastClock = Clock(12, 0)
-    while True:
-        # 读取视频帧
-        success, frame = videoCapture.read()
-        if success == False:
+    for p in range(1, 5):
+        while True:
+            # 读取视频帧
+            success, frame = videoCapture.read()
+            if success == False:
+                break
+            if frame is None:
+                break
+
+            # 每秒取一帧
+            position = videoCapture.get(cv2.CAP_PROP_POS_FRAMES)
+            if position % fps != 0:
+                continue
+
+            # 截取时间栏
+            h = frame.shape[0]
+            frame = frame[h - top:h - bottom, left:-right-1, :]
+
+            # 文字识别
+            (timeVideo, periodVideo) = text_process(frame)
+            print(f"scan: {timeVideo.m}:{timeVideo.s} {periodVideo} expect: {p}")
+            # 非法输入
+            if periodVideo < p:
+                continue
+                
+            # 获取到了该节的第一个时间点
+            diff_sec = (11 - timeVideo.m) * 60 + (60 - timeVideo.s)
+            pos_start = position - diff_sec * fps
             break
-        if frame is None:
-            break
-
-        # 每秒取一帧
-        position = videoCapture.get(cv2.CAP_PROP_POS_FRAMES)
-        if position % fps != 0:
-            continue
         
-        # 截取时间栏
-        h = frame.shape[0]
-        frame = frame[h - top:h - bottom, left:-right-1, :]
-        # img = Image.fromarray(frame)
-        # img.show()
-        # cv2.waitKey()
+        # 抽取视频
+        (start, end) = periodParser.getTimeStruct()
+        st_start, st_end = time.mktime(start[p-1]), time.mktime(end[p-1])
 
-        # 图像二值化
-        # gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        # gray = gray.flatten()
-        # binary = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 0)
-        # # _, binary = cv2.threshold(src=gray, thresh=220, maxval=255, type=cv2.THRESH_BINARY)
-        # img = Image.fromarray(binary)
-        # img.show()
-        # cv2.waitKey()
+        while index < series_length:
+            (timeJson, periodJson, wallClock) = timeSeries[index]
+            if periodJson > p:
+                break
+            index = index + 1
 
+            st = time.mktime(wallClock)
+            position = getVideoPosition(st_start, st, pos_start, fps)
+            videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position)
 
-        # 文字识别
-        (timeVideo, periodVideo) = text_process(frame)
-        # 非法输入
-        if periodVideo == 0:
-            continue
-        # 不处理重复时间
-        if timeVideo == lastClock:
-            continue
-        else:
-            lastClock = timeVideo
-        
-        
-        # 更新进度条
-        pbar.set_postfix_str(f'{position}/{total_frame}, clock: {timeVideo.m} {timeVideo.s}  period: {periodVideo}')
-        pbar.update(fps)
-        # print('clock: ', timeVideo.m, timeVideo.s, ' period: ', periodVideo)
+            print(f'\nGET!  frame: {position} json: {timeJson.m} {timeJson.s} {periodJson}')
+            fileName = f'result/{position}.mp4'
+            clipVideo(position / fps - 4, position / fps + 2, fileName, videoCapture)
 
-        # 时序匹配
-        # (timeJson, periodJson) = timeSeries[index]
-        # # 错过了
-        # while (periodVideo > periodJson) or (periodVideo == periodJson and timeVideo < timeJson):    
-        #     index = index + 1                # 那就算了
-        #     (timeJson, periodJson) = timeSeries[index]
-        # # 对得上
-        # if ((timeVideo == timeJson) and (periodVideo == periodJson)):
-        #     print(f'\nGET!  frame: {position} video: {timeVideo.m} {timeVideo.s} {periodVideo} json: {timeJson.m} {timeJson.s} {periodJson}')
-        #     fileName = f'result/{position}.mp4'
-        #     clipVideo(position / fps - 4, position / fps + 1, fileName, videoCapture)
-        #     videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position)
-        #     index = index + 1
-
-        # 时序匹配 全匹配
-        for i in range(series_length):
-            (timeJson, periodJson) = timeSeries[i]
-            # 对得上
-            if ((timeVideo == timeJson) and (periodVideo == periodJson)):
-                print(f'\nGET!  frame: {position} video: {timeVideo.m} {timeVideo.s} {periodVideo} json: {timeJson.m} {timeJson.s} {periodJson}')
-                fileName = f'result/{position}.mp4'
-                clipVideo(position / fps - 4, position / fps + 1, fileName, videoCapture)
-                videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position)
-
-        # 完成视频抽取
-        if index >= series_length:
-            break
-
-        # @DEBUG 调试代码使用，提前中断
-        # if position > (3 * 60 + 6) * fps:
-        #     break
+        position = getVideoPosition(st_start, st_end, pos_start, fps)
+        videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position + 10 * fps)

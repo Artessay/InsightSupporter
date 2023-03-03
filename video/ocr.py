@@ -31,9 +31,9 @@ def text_process(img):
     # 时间处理
     text = texts[0]
     text = text.replace('：', ':')  # 防止识别为中文冒号
-    print(text)
+    # print(text)
     texts = text.split(':')
-    print(texts)
+    # print(texts)
 
     if (len(texts) != 3):
         return (Clock(0, 0), 0)

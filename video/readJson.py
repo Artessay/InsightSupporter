@@ -1,5 +1,6 @@
 import json
 from Clock import Clock
+from timeParse import parseTime
 
 DEBUG = True
 
@@ -27,7 +28,7 @@ def exertTime(events:list):
     '''
     return time series with form (clock_time:str, period:int)
     '''
-    timeSeries = [(processTime(event['clock']['displayValue']), event['period']['number']) for event in events ]
+    timeSeries = [(processTime(event['clock']['displayValue']), event['period']['number'], parseTime(event['wallclock'])) for event in events ]
 
     # verify
     # print(timeSeries[1])

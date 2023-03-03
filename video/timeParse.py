@@ -1,7 +1,7 @@
 import time
 # import datetime
 
-class periodParser:
+class PeriodParser:
     def __init__(self, events:list) -> None:
         self.start = []
         self.end   = []
@@ -59,7 +59,7 @@ if __name__ == '__main__':
     from readJson import readEvents
     path = r'./summary.json'
     events = readEvents(path=path)
-    parser = periodParser(events)
+    parser = PeriodParser(events)
     (start, end) = parser.getTimeStruct()
     for i in range(4):
         print(start[i])
