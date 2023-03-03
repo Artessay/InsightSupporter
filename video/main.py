@@ -19,7 +19,7 @@ if __name__ == '__main__':
     periodParser = PeriodParser(events)
 
     # 再进行查询操作
-    queryList = [("Alperen Sengun", "who"), (("2", "when"))]
+    queryList = [("Alperen Sengun", "who"), ("2", "when"), ("throw", "what")]
     for q in queryList:
         info, method = q
         events = readJson.query(info, events, method)
@@ -29,7 +29,8 @@ if __name__ == '__main__':
     for e in events:
         print(e['text'], e['clock']['displayValue'])
         print(e['wallclock'])
-        print(parseTime(e['wallclock']))
+        # print(parseTime(e['wallclock']))
+        print(e['type']['text'])
         print()
 
     timeSeries = readJson.exertTime(events)

@@ -51,6 +51,15 @@ def queryPeriod(when:int, event:dict)->bool:
     period = event['period']['number']
     return period == when
 
+def queryWhat(what:str, event:dict)->bool:
+    typeText:str = event['type']['text']
+    typeText = typeText.lower()
+    what = what.lower()
+    if (typeText.find(what) >= 0):
+        return True
+    else:
+        return False
+
 def query(key:str, events:list, method:str = 'who')->list:
     result = []
     for event in events:
@@ -64,7 +73,8 @@ def query(key:str, events:list, method:str = 'who')->list:
         elif method == "where":
             pass
         elif method == "what":
-            pass
+            if queryWhat(key, event):
+                result.append(event)
     return result
 
 if __name__ == '__main__':
