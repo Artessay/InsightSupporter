@@ -5,7 +5,7 @@ from timeParse import parseTime
 DEBUG = True
 
 def readEvents(path : str)->list:
-    if DEBUG: print("[json] json path: ", path)
+    # if DEBUG: print("[json] json path: ", path)
     jsonFile = open(path, "r")
     data = json.load(jsonFile)
     
