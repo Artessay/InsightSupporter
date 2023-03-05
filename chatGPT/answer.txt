@@ -1,0 +1,9 @@
+In sports, there are clear mappings for the five Ws essential elements. In basketball, for example, there are players, coaches, referees, and teams (who), locations or spaces on the basketball court such as the 3-point line or inside the key (where), distinct times or time periods such as the 4th quarter or 3-minutes left (when), and particular game "stats" such as shots, fouls, timeouts, touches, etc. (what). Extract these four elements from the following sentence and response with a formatted answer.
+Joel Embiid's most shots were taken from midrange and happened in the first quarter.
+
+Sure! Here's the formatted answer for the four elements you requested for the sentence "Joel Embiid's most shots were taken from midrange and happened in the first quarter":
+
+Who: Joel Embiid, a professional basketball player.
+Where: Midrange, a specific area on the basketball court where Embiid took most of his shots.
+When: The first quarter, a specific time period during a basketball game when most of Embiid's shots happened.
+What: The particular game "stats" related to Embiid's performance, namely the fact that he took most of his shots from midrange.
