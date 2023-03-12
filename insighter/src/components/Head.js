@@ -23,13 +23,16 @@ export default class Head extends React.Component {
                     }}
                 >
                     InsightSupporter
-                    <Drop
-                        //  style={{
-                        //     textAlign: 'right',
-                        //     float: 'right',
-                        //     margin: 10
-                        //  }}
-                    />
+                    
+                </div>
+                <div
+                     style={{
+                        // textAlign: 'right',
+                        // float: 'right',
+                        // margin: 10
+                     }}
+                >
+                    <Drop />
                 </div>
             </Menu>
         )
