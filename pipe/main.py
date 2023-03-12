@@ -12,13 +12,20 @@ if __name__ == '__main__':
     # 获取labels
     label = ai.getLabel(insight)
     labels = label.split(", ")
+    print(labels)
     # >>> ['Single Player Performance', 'Strategy and Tactic']
 
     task = ai.getTask(insight)
     tasks = task.split(", ")
+    print(tasks)
     # >>> ['Difference']
 
-    task_type = tasks[0]
     what = ai.getWhat(insight)
+    print(what)
+        
+    task_type = tasks[0]
     logic = ai.getLogic(insight, task_type)
+    print(logic)
+
     relation = ai.getRelation("Episode 2: Joel Embiid's Shot Attempts", "Episode 3: Distribution of Shots by Quarter")
+    print(relation)
