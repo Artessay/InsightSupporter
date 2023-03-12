@@ -1,6 +1,8 @@
 import './App.css';
 import Head from './components/Head';
-import { Layout} from 'antd';
+import { Layout } from 'antd';
+import Story from './components/Story';
+import Data from './components/Data';
 const { Header, Content, Footer } = Layout;
 
 
@@ -8,25 +10,54 @@ function App() {
   return (
     <div>
       <Layout className="layout">
-            <Header  className="header">
+            {/* <Header  className="header"> */}
                 <div className="logo" />
-                    <Head></Head>
-            </Header>
-            <Content
+                <Head></Head>
+            {/* </Header> */}
+            {/* <Content
                 style={{
-                padding: '0 50px',
+                    padding: '0 50px',
                 }}
-            >
-                
+            > */}
+                {/* Story Part */}
                 <div
-                className="site-layout-content"
-                // style={{
-                //     background: colorBgContainer,
-                // }}
+                    style={{
+                        backgroundColor: 'gray',
+                        width: 85,
+                        height: 75,
+                        borderRadius: 10,
+                        textAlign: 'center',
+                        textSizeAdjust: 10
+                    }}
                 >
-                Content
+                    Single Player Performance
                 </div>
-            </Content>
+
+                <div
+                    style={{
+                        backgroundColor: 'chartreuse ',
+                        width: 85,
+                        height: 40,
+                        borderRadius: 10,
+                        textAlign: 'center',
+                        textSizeAdjust: 10
+                    }}
+                >
+                    Distribution
+                </div>
+
+                <Story
+                    style={{
+                        top: 100,
+                        left: 82,
+                        width: 53,
+                        height: 120,
+                        float: 'right'
+                    }}
+                ></Story>
+                
+                <Data></Data>
+            {/* </Content> */}
             <Footer
                 style={{
                 textAlign: 'center',
@@ -35,6 +66,11 @@ function App() {
                 InsightSupporter ©2023
             </Footer>
         </Layout>
+
+        <div> a</div>
+        <div> b</div>
+        {/* display: inline */}
+        {/* float:  */}
     </div>
   );
 }

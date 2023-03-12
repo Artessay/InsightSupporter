@@ -9,32 +9,35 @@ export default class Head extends React.Component {
     }
     render() {
         return(
-            <Menu
-                theme="dark"
-                mode="horizontal"
-                style={{
-                    height: 50
-                }}
-            >
+            // <Menu
+            //     theme="dark"
+            //     mode="horizontal"
+            //     style={{
+            //         height: 50
+            //     }}
+            // >
+            <div>
                 <div
-                    style={{
-                        font: 'bold',
-                        fontSize: 32
-                    }}
+                    className="InsightSupporter"
+                    // style={{
+                    //     font: 'bold',
+                    //     fontSize: 32,
+                    //     float: 'left',
+                    // }}
                 >
                     InsightSupporter
                     
                 </div>
-                <div
-                     style={{
-                        // textAlign: 'right',
-                        // float: 'right',
-                        // margin: 10
-                     }}
-                >
-                    <Drop />
-                </div>
-            </Menu>
+                
+                <div 
+                    className='Calender'
+                    // style={{
+                    //     float: 'right',
+                    //     marginLeft: '2cm'
+                    // }}
+                > Mar 17 </div>
+            {/* </Menu> */}
+            </div>
         )
     }
 }
