@@ -5,20 +5,33 @@ import openai
 from config import *
 
 def chat(prompt):
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages = [
-            {"role": "system", "content": "资深篮球体育新闻记者"},
-            {"role": "user", "content": prompt}
-        ],
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt = prompt,
         temperature=0,
         max_tokens=1024,
         frequency_penalty=0,
         presence_penalty=0
     )
-    message = response["choices"][0]["message"]["content"]
+    message = response["choices"][0]["text"].strip()
     
     return message
+
+# def chat(prompt):
+#     response = openai.ChatCompletion.create(
+#         model="gpt-3.5-turbo",
+#         messages = [
+#             {"role": "system", "content": "资深篮球体育新闻记者"},
+#             {"role": "user", "content": prompt}
+#         ],
+#         temperature=0,
+#         max_tokens=1024,
+#         frequency_penalty=0,
+#         presence_penalty=0
+#     )
+#     message = response["choices"][0]["message"]["content"]
+    
+#     return message
 
 def getResponse(prompt):
     while True:
@@ -27,7 +40,7 @@ def getResponse(prompt):
             break
         except Exception as exc:
             print(exc)
-            time.sleep(1)
+            time.sleep(5)
     #print(message)
     
     return message

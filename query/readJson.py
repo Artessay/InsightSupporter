@@ -70,16 +70,24 @@ def queryPeriod(when:int, event:dict)->bool:
 
 def queryWhat(what:str, event:dict)->bool:
     typeText:str = event['type']['text']
-    actionList = actionType.get(what, None)
-    if actionList is None:
-        print('Action Type Error, Debug Needed')
+    typeText = typeText.lower()
+    what = what.lower()
+    if (typeText.find(what) >= 0):
+        return True
+    else:
         return False
+# def queryWhat(what:str, event:dict)->bool:
+#     typeText:str = event['type']['text']
+#     actionList = actionType.get(what, None)
+#     if actionList is None:
+#         print('Action Type Error, Debug Needed')
+#         return False
     
-    for action in actionList:    
-        if (typeText.find(action) >= 0):
-            return True
-        else:
-            return False
+#     for action in actionList:    
+#         if (typeText.find(action) >= 0):
+#             return True
+#         else:
+#             return False
 
 def query(key:str, events:list, method:str = 'who')->list:
     result = []
