@@ -5,9 +5,13 @@ from timeParse import parseTime
 DEBUG = True
 
 def readEvents(path : str)->list:
-    # if DEBUG: print("[json] json path: ", path)
-    jsonFile = open(path, "r")
-    data = json.load(jsonFile)
+    if DEBUG: print("[json] json path: ", path)
+    try:
+        jsonFile = open(path, "r")
+        data = json.load(jsonFile)    
+    except:
+        print("[json] json read failed: ", path)
+        return []
     
     events : list = data['plays']
     if DEBUG: print("[json] events number: ", len(events))

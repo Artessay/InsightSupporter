@@ -13,3 +13,13 @@
     * name
     * stats (28, 2-6, 1-3, ...)
 
+boxscore []
+  item : dict {}
+    name
+    ..
+    statistics []
+
+label
+dict
+  shot:[1,2,3]
+  guard:[]

@@ -4,17 +4,18 @@ from timeParse import parseTime
 
 DEBUG = True
 
-actionType = {
-    'shot' : ['Shot', 'Layup', 'Hook'],
-            # ['Alley Oop', 'Cutting', 'Driving', 'Shot', 'Fade Away', 'Layup', 
-            #   'Hook', 'Reverse', 'Running', 'Set Back', 'Tip', 'Turnaround'],
-    'rebound' : ['Rebound'],
-    'turnover' : ['Turnover', 'Traveling'],
-    'ft' : ['Free Throw'],
-    'foul' : ['Foul', 'Illegal Assist Turnover', 'Inbound Turnover', 'Offensive Charge', 'Technical'],
-    'challenge' : ['Challenge'],
-
-}
+actionType = []
+# {
+    # 'shot' : ['Shot', 'Layup', 'Dunk', 'Bank'],
+    #         # ['Alley Oop', 'Cutting', 'Driving', 'Shot', 'Fade Away', 'Layup', 
+    #         #   'Hook', 'Reverse', 'Running', 'Set Back', 'Tip', 'Turnaround'],
+    # 'rebound' : ['Rebound'],
+    # 'turnover' : ['Turnover', 'Traveling'],
+    # 'ft' : ['Free Throw'],
+    # 'foul' : ['Foul', 'Illegal Assist Turnover', 'Inbound Turnover', 'Offensive Charge', 'Technical'],
+    # 'challenge' : ['Challenge'],
+    # 'block' : []
+# }
 
 def readEvents(path : str)->list:
     if DEBUG: print("[json] json path: ", path)

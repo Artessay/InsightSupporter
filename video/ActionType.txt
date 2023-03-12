@@ -1,20 +1,47 @@
+3-Second Turnover
+5-Second Turnover
+8-Second Turnover
 Alley Oop Dunk Shot
+Alley Oop Layup Shot
+Away from Play Foul
+Back Court Turnover
 Bad Pass
 Turnover
+Challenge
+Clear Path Foul
 Coach's Challenge (Overturned)
+Coach's Challenge (Stands)
+Coach's Challenge (Supported)
 Cutting Dunk Shot
 Cutting Finger Roll Layup Shot
 Cutting Layup Shot
+Defensive 3-Seconds Technical
+Defensive Goaltending
 Defensive Rebound
+Delay Technical
+Delay of Game
+Disc Dribble Turnover
+Double Dribble Turnover
+Double Lane
+Double Personal Foul
+Double Technical Foul
+Driving Dunk Shot
 Driving Finger Roll Layup
 Driving Floating Bank Jump Shot
 Driving Floating Jump Shot
+Driving Hook Shot
+Driving Jump Shot Bank
 Driving Layup Shot
+Driving Reverse Dunk Shot
+Dunk Shot
+Ejection
 End Game
 End Period
 Fade Away Bank Jump Shot
 Fade Away Jump Shot
 Finger Roll Layup
+Flagrant Foul Type 1
+Flagrant Foul Type 2
 Floating Jump Shot
 Free Throw - 1 of 1
 Free Throw - 1 of 2
@@ -22,40 +49,74 @@ Free Throw - 1 of 3
 Free Throw - 2 of 2
 Free Throw - 2 of 3
 Free Throw - 3 of 3
+Free Throw - Clear Path 1 of 2
+Free Throw - Clear Path 2 of 2
+Free Throw - Flagrant 1 of 1
+Free Throw - Flagrant 1 of 2
+Free Throw - Flagrant 1 of 3
+Free Throw - Flagrant 2 of 2
+Free Throw - Flagrant 2 of 3
+Free Throw - Flagrant 3 of 3
 Free Throw - Technical
 Full Timeout
+Hook Driving Bank
 Hook Shot
+Hook Shot Bank
+Hook Turnaround Bank
+Illegal Assist Turnover
 Inbound Turnover
 Jump Shot
+Jump Shot Bank
 Jumpball
 Kicked Ball
+Kicked Ball Turnover
+Lane
+Lane Violation Turnover
 Layup Driving Reverse
+Layup Running Reverse
 Layup Shot
 Layup Shot Putback
 Loose Ball Foul
 Lost Ball Turnover
+No Shot (Default Shot)
+Not Available
 Offensive Charge
 Offensive Foul
 Offensive Foul Turnover
+Offensive Goaltending Turnover
 Offensive Rebound
 Out of Bounds - Bad Pass Turnover
 Out of Bounds - Lost Ball Turnover
 Out of Bounds - Step Turnover
+Palming Turnover
 Personal Foul
 Personal Take Foul
+Pullup Bank Jump Shot
 Pullup Jump Shot
+Punched Ball Turnover
+Putback Dunk Shot
+Reverse Dunk Shot
 Reverse Layup Shot
+Running Alley Oop Dunk Shot
 Running Alley Oop Layup Shot
 Running Dunk Shot
 Running Finger Roll Layup
 Running Jump Shot
 Running Layup Shot
 Running Pullup Jump Shot
+Running Reverse Dunk Shot
 Shooting Foul
 Shot Clock Turnover
+Step Back Bank Jump Shot
 Step Back Jump Shot
 Substitution
 Technical Foul
+Tip Dunk Shot
 Tip Shot
+Transition Take Foul
+Traveling
+Turnaround Bank Jump Shot
 Turnaround Fade Away Jump Shot
+Turnaround Fadeaway Bank Jump Shot
 Turnaround Hook Shot
+Turnaround Jump Shot
