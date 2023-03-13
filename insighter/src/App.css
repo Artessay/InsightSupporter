@@ -10,20 +10,20 @@
     height: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 70% 20%;
+    grid-template-rows: 15% 70% 20%;
     /* grid-template-rows: 100px 350px 200px; */
 }
 
 .item {
     font-size: 4em;
     text-align: center;
-    border: 3px solid #0f0f0f;
-    margin: 1px;
+    border: 1px solid #0f0f0f;
+    /* margin: 1px; */
 }
   
-.item-1 {
+/* .item-1 {
     background-color: #ef342a;
-}
+} */
   
 .item-2 {
     background-color: #f68f26;

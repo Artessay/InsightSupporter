@@ -1,5 +1,6 @@
 import './App.css';
 import Head from './components/Head/Head';
+import Story from './components/Story/Story';
 
 
 function App() {
@@ -8,7 +9,9 @@ function App() {
         <Head className='header'></Head>
         <div className='content'>
             {/* <div>This is the end of Listening Comprehension</div> */}
-            <div class="item item-1">1</div>
+            <div class="item item-1">
+                <Story></Story>
+            </div>
             <div class="item item-2">2</div>
             <div class="item item-3">3</div>
             <div class="item item-4">4</div>
