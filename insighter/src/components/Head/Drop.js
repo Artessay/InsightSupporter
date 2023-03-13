@@ -1,37 +1,34 @@
 import React from 'react';
 import { DownOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Dropdown, message, Space, Tooltip } from 'antd';
-const handleButtonClick = (e) => {
-  message.info('Click on left button.');
-  console.log('click left button', e);
-};
+import { Button, Dropdown, message, Space } from 'antd';
+// const handleButtonClick = (e) => {
+//   message.info('Click on left button.');
+//   console.log('click left button', e);
+// };
 const handleMenuClick = (e) => {
   message.info('Click on menu item.');
   console.log('click', e);
 };
 const items = [
   {
-    label: '1st menu item',
+    label: 'Mar 17',
     key: '1',
     icon: <UserOutlined />,
   },
   {
-    label: '2nd menu item',
+    label: 'Mar 18',
     key: '2',
     icon: <UserOutlined />,
   },
   {
-    label: '3rd menu item',
+    label: 'Mar 19',
     key: '3',
     icon: <UserOutlined />,
-    danger: true,
   },
   {
-    label: '4rd menu item',
+    label: 'Mar 20',
     key: '4',
     icon: <UserOutlined />,
-    danger: true,
-    disabled: true,
   },
 ];
 const menuProps = {
@@ -46,11 +43,7 @@ export default class Drop extends React.Component {
     }
     render() {
         return(
-            <Space wrap
-                // style={{
-                //     float: "right"
-                // }}
-            >
+            <Space wrap>
                 <Dropdown menu={menuProps}>
                     <Button>
                         <Space>
