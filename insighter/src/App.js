@@ -3,7 +3,6 @@ import Head from './components/Head/Head';
 import Story from './components/Story/Story';
 import Data from './components/Data/Data'
 import Episode from './components/Episode/Episode'
-
 function App() {
   return (
     <div className='App'>
