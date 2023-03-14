@@ -42,3 +42,16 @@
 
     height: 30%;
 }
+.axis path,
+      .line {
+        fill: none;
+        stroke: #98ABC5;
+        stroke-width: 2px;
+      }
+
+.GameFlow{
+    display: flex;
+    margin-left: 30px;
+
+    height: 30%;
+}
