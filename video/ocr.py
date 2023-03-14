@@ -6,6 +6,7 @@ def predict_subtitle(image):
     args = parse_args()
     text_sys = TextSystem(args)
     dt_boxes, rec_res = text_sys(image)
+    print(rec_res)
 
     drop_score = 0.5
     text_list = []
