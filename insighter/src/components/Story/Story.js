@@ -1,6 +1,6 @@
 import './Story.css'
 import React  from "react";
-import { Input } from "antd";
+// import { Input } from "antd";
 
 export default class Story extends React.Component {
     constructor(props) {
@@ -17,7 +17,10 @@ export default class Story extends React.Component {
                 <div className='TaskType'>
                     Distribution
                 </div>
-                <Input
+                <div className='InputText'>
+                    Joel Embiid most shots were taken from mid range and happened in first quarter.
+                </div>
+                {/* <Input
                     className='InputText'
                     type="text"
                     autoSize={{
@@ -25,7 +28,7 @@ export default class Story extends React.Component {
                         maxRows: 2,
                     }}
                     placeholder="Joel Embiid most shots were taken from mid range and happened in first quarter."
-                ></Input>
+                ></Input> */}
             </div>
             
         )
