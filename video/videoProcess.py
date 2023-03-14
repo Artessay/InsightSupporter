@@ -27,7 +27,7 @@ def processVideo(videoCapture, timeSeries, periodParser):
     index = 0   # timeSeries pointer
     series_length = len(timeSeries)
     
-    total_frame = int(videoCapture.get(cv2.CAP_PROP_FRAME_COUNT))  # 视频总帧数
+    # total_frame = int(videoCapture.get(cv2.CAP_PROP_FRAME_COUNT))  # 视频总帧数
     fps = videoCapture.get(cv2.CAP_PROP_FPS)   # 帧率
 
     # 进度条

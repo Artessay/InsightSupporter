@@ -6,11 +6,12 @@ import videoProcess
 
 
 DEBUG = True
-# jsonPath = r'./data/summary_401360853.json'
-# videoPath = 'E:/OperatingSystem/basketball2.mp4'
-jsonPath = r'./summary.json'
-videoPath = 'E:/OperatingSystem/basketball1.mp4'
+jsonPath = r'./data/summary_401360853.json'
+videoPath = 'E:/OperatingSystem/basketball2.mp4'
 queryList = [("Joel Embiid", "who"), ("1", "when"), ("shot", "what")]
+# jsonPath = r'./summary.json'
+# videoPath = 'E:/OperatingSystem/basketball.mp4'
+# queryList = [("Alperen Sengun", "who"), (("2", "when"))]
 
 
 
