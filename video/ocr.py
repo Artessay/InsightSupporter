@@ -6,7 +6,7 @@ def predict_subtitle(image):
     args = parse_args()
     text_sys = TextSystem(args)
     dt_boxes, rec_res = text_sys(image)
-    print(rec_res)
+    # print(rec_res)
 
     drop_score = 0.5
     text_list = []
@@ -15,6 +15,7 @@ def predict_subtitle(image):
             text_list.append(text)
 
     return text_list
+
 
 
 def text_process(img):
@@ -32,9 +33,9 @@ def text_process(img):
     # 时间处理
     text = texts[0]
     text = text.replace('：', ':')  # 防止识别为中文冒号
-    # print(text)
+    print(text)
     texts = text.split(':')
-    # print(texts)
+    print(texts)
 
     if (len(texts) != 3):
         return (Clock(0, 0), 0)

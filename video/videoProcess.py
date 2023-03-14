@@ -19,10 +19,16 @@ def getVideoPosition(st_start, st_end, pos_start, fps):
 
 def processVideo(videoCapture, timeSeries, periodParser):
     # 设置参数
-    top = 95
-    bottom = 60
-    left =  1535
-    right = 200
+    # top = 95
+    # bottom = 60
+    # left =  1535
+    # right = 200
+    # skip_time = (2*60 + 58)
+    top = 40
+    bottom = 15
+    left =  260
+    right = 360
+    skip_time = (9 * 60 + 48)
 
     index = 0   # timeSeries pointer
     series_length = len(timeSeries)
@@ -35,7 +41,7 @@ def processVideo(videoCapture, timeSeries, periodParser):
 
     # 开头空白帧
     print('fps: ', fps)
-    skip_frames = (2*60 + 58) * fps
+    skip_frames = skip_time * fps
     # skip_frames = 15000
     videoCapture.set(cv2.CAP_PROP_POS_FRAMES, skip_frames)
     
