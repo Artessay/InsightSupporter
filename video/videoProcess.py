@@ -91,7 +91,7 @@ def processVideo(videoCapture, timeSeries, periodParser):
 
             print(f'\nGET!  frame: {position} json: {timeJson.m} {timeJson.s} {periodJson}')
             fileName = f'result/{position}.mp4'
-            clipVideo(position / fps - 4, position / fps + 2, fileName, videoCapture)
+            clipVideo(position / fps - 4, position / fps + 4, fileName, videoCapture)
 
         position = getVideoPosition(st_start, st_end, pos_start, fps)
         videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position + 10 * fps)
