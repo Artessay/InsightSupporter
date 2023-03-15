@@ -1,5 +1,38 @@
 .Episode {
-    height: 100%;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
+.episodeHeader {
+    height: 50px;
+    background: gray;
+
+    font-size: 26px;
+    text-align: left;
+}
+
+.episodeContent {
+    background: lightpink;
+    /* height: 200px; */
+    flex-grow: 1;
+}
+
+.episodeFooter {
+    height: 100px;
+    margin: 5px;
+    background: lightgray;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 24px */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.022em;
+
+    color: #000000;
+}

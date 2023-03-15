@@ -8,17 +8,17 @@ function App() {
     <div className='App'>
         <Head className='header'></Head>
         <div className='content'>
-            <div class="item item-1">
+            <div className="item item-1">
                 <Story></Story>
             </div>
-            <div class="item item-2">
+            <div className="item item-2">
                 <Data></Data>
             </div>
-            <div class="item item-3">
+            <div className="item item-3">
                 <Episode></Episode>
             </div>
-            <div class="item item-4">4</div>
-            <div class="item item-5">5</div>
+            <div className="item item-4">4</div>
+            <div className="item item-5">5</div>
         </div>
     </div>
   );
