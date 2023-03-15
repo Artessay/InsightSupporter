@@ -33,7 +33,6 @@
 .item-3 {
     /* background-color: #4ba946; */
     height: 100%;
-    margin: 0;
 }
   
 .item-4 {
@@ -46,22 +45,6 @@
 }
   
 .item-5 {
-    background-color: #c077af;
-}
-  
-.item-6 {
-    background-color: #f8d29d;
-}
-  
-.item-7 {
-    background-color: #b5a87f;
-}
-  
-.item-8 {
-    background-color: #d0e4a9;
-}
-  
-.item-9 {
-    background-color: #4dc7ec;
+    height: 100%;
 }
   
