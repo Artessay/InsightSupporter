@@ -1,0 +1,55 @@
+.News {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.newsAside {
+    width: 100%;
+
+    flex: 0 0 60px;
+}
+
+.buttons {
+    height: 90%;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.verticalLine {
+    width: 2px;
+    height: 50px;
+    background: black;
+
+}
+
+.newsMain {
+    flex: 1 1;
+    background: aquamarine;
+    
+    display: inline-block;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.ViewLabel {
+    position: relative;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font: 'bold';
+    font-size: 20px;
+    background: gray;
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+    /* text-align: center; */
+}
