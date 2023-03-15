@@ -19,15 +19,21 @@ def getVideoPosition(st_start, st_end, pos_start, fps):
 
 def processVideo(videoCapture, timeSeries, periodParser):
     # 设置参数
-    top = 95
-    bottom = 60
-    left =  1535
-    right = 200
+    # top = 95
+    # bottom = 60
+    # left =  1535
+    # right = 200
+    # skip_time = (2*60 + 58)
+    top = 40
+    bottom = 15
+    left =  260
+    right = 360
+    skip_time = (9 * 60 + 48)
 
     index = 0   # timeSeries pointer
     series_length = len(timeSeries)
     
-    total_frame = int(videoCapture.get(cv2.CAP_PROP_FRAME_COUNT))  # 视频总帧数
+    # total_frame = int(videoCapture.get(cv2.CAP_PROP_FRAME_COUNT))  # 视频总帧数
     fps = videoCapture.get(cv2.CAP_PROP_FPS)   # 帧率
 
     # 进度条
@@ -35,7 +41,7 @@ def processVideo(videoCapture, timeSeries, periodParser):
 
     # 开头空白帧
     print('fps: ', fps)
-    skip_frames = (2*60 + 58) * fps
+    skip_frames = skip_time * fps
     # skip_frames = 15000
     videoCapture.set(cv2.CAP_PROP_POS_FRAMES, skip_frames)
     
@@ -85,7 +91,7 @@ def processVideo(videoCapture, timeSeries, periodParser):
 
             print(f'\nGET!  frame: {position} json: {timeJson.m} {timeJson.s} {periodJson}')
             fileName = f'result/{position}.mp4'
-            clipVideo(position / fps - 4, position / fps + 2, fileName, videoCapture)
+            clipVideo(position / fps - 4, position / fps + 4, fileName, videoCapture)
 
         position = getVideoPosition(st_start, st_end, pos_start, fps)
         videoCapture.set(cv2.CAP_PROP_POS_FRAMES, position + 10 * fps)
