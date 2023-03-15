@@ -12,12 +12,16 @@ export default class News extends React.Component {
         this.state = {
             group: 1
         }
+
+        this.handleClick = this.handleClick.bind(this)
     }
 
     handleClick = (e) => {
         this.setState({
             group: e.target.value
         })
+
+        console.log(this.state.group)
     }
 
     render() {
@@ -38,17 +42,17 @@ export default class News extends React.Component {
                         <Radio.Button shape='circle' value="3">3</Radio.Button> */}
                     {/* </Radio.Group> */}
                     <div className='buttons'>
-                        <Button shape='circle' value="1">1</Button>
+                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="1">1</Button>
                         <div className='verticalLine'></div>
-                        <Button shape='circle' value="2">2</Button>
+                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="2">2</Button>
                         <div className='verticalLine'></div>
-                        <Button shape='circle' value="3">3</Button>
+                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="3">3</Button>
                         <div className='verticalLine'></div>
-                        <Button shape='circle' value="4">4</Button>
+                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="4">4</Button>
                         <div className='verticalLine'></div>
-                        <Button shape='circle' value="5">5</Button>
+                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="5">5</Button>
                         <div className='verticalLine'></div>
-                        <Button shape='circle' value="6">6</Button>
+                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="6">6</Button>
                     </div>
                     
                 </div>
