@@ -1,6 +1,6 @@
 import React  from "react";
 import './Data.css'
-import summary from '../../data/summary_401360853.json' //assert {type:'JSON'};
+// import summary from '../../data/summary_401360853.json' //assert {type:'JSON'};
 import GameFlow from './GameFlow'
 export default class Data extends React.Component {
     constructor(props) {

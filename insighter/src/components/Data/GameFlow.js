@@ -1,7 +1,7 @@
 import React ,{Component} from "react";
 import { createRef } from 'react';
 import './Data.css'
-import summary from '../../data/summary_401360853.json' //assert {type:'JSON'};
+// import summary from '../../data/summary_401360853.json' //assert {type:'JSON'};
 import * as d3 from "d3";
 import { render } from "@testing-library/react";
 import sum from '../../data/new_summary.json' 
@@ -29,58 +29,62 @@ import to from'../../icon/to.png';
 import to_s from'../../icon/to_s.png';
 import two from'../../icon/2.png';
 import two_s from'../../icon/2_s.png';
+
 class GameFlow extends Component {
     
     componentDidMount() {
-      console.log("hi")
+      console.log("Game Flow")
       this.drawChart();
     }
 
 
-  drawChart(){
-var focus_low = [];
-for (var m=0;m< LR.Low_Relation.length;m++){
-  var re="Low"
-  if (LR.Low_Relation[m]){
-    for (var lq=0;lq< SR.Strong_Relation.length;lq++){
-      if(LR.Low_Relation[m].id==SR.Strong_Relation[lq].id)
-        re="Strong"
-    }
-    var lt=LR.Low_Relation[m].clock.displayValue.split(":")
-    
-    if(lt[1]){
-      //console.log(data[i-1])
-      if(focus_low[m-1]!={quarter:LR.Low_Relation[m].period.number,time:LR.Low_Relation[m].clock.displayValue,x:(LR.Low_Relation[m].period.number-1)*720+(720-lt[0]*60-lt[1]),y:LR.Low_Relation[m].awayScore-LR.Low_Relation[m].homeScore,type:LR.Low_Relation[m].actionType})
-      focus_low.push({id:LR.Low_Relation[m].id,quarter:LR.Low_Relation[m].period.number,time:LR.Low_Relation[m].clock.displayValue,x:(LR.Low_Relation[m].period.number-1)*720+(720-lt[0]*60-lt[1]),y:LR.Low_Relation[m].awayScore-LR.Low_Relation[m].homeScore,type:LR.Low_Relation[m].actionType,text:LR.Low_Relation[m].text,miss:LR.Low_Relation[m].scoringPlay,re:re})
-    }
-    else{
-      if(focus_low[m-1]!={quarter:LR.Low_Relation[m].period.number,time:LR.Low_Relation[m].clock.displayValue,x:(LR.Low_Relation[m].period.number-1)*720+(720-lt[0]),y:LR.Low_Relation[m].awayScore-LR.Low_Relation[m].homeScore,type:LR.Low_Relation[m].actionType})
-      focus_low.push({id:LR.Low_Relation[m].id,quarter:LR.Low_Relation[m].period.number,time:LR.Low_Relation[m].clock.displayValue,x:(LR.Low_Relation[m].period.number-1)*720+(720-lt[0]),y:LR.Low_Relation[m].awayScore-LR.Low_Relation[m].homeScore,type:LR.Low_Relation[m].actionType,text:LR.Low_Relation[m].text,miss:LR.Low_Relation[m].scoringPlay,re:re})
-    }
-  }
-} 
-console.log(focus_low)
+    drawChart(){
+      var focus_low = [];
+      for (var m=0;m< LR.Low_Relation.length;m++){
+        var re="Low"
+        if (LR.Low_Relation[m]){
+          for (var lq=0;lq< SR.Strong_Relation.length;lq++){
+            if(LR.Low_Relation[m].id==SR.Strong_Relation[lq].id)
+              re="Strong"
+          }
+          var lt=LR.Low_Relation[m].clock.displayValue.split(":")
+          
+          if(lt[1]){
+            //console.log(data[i-1])
+            if(focus_low[m-1]!={quarter:LR.Low_Relation[m].period.number,time:LR.Low_Relation[m].clock.displayValue,x:(LR.Low_Relation[m].period.number-1)*720+(720-lt[0]*60-lt[1]),y:LR.Low_Relation[m].awayScore-LR.Low_Relation[m].homeScore,type:LR.Low_Relation[m].actionType})
+            focus_low.push({id:LR.Low_Relation[m].id,quarter:LR.Low_Relation[m].period.number,time:LR.Low_Relation[m].clock.displayValue,x:(LR.Low_Relation[m].period.number-1)*720+(720-lt[0]*60-lt[1]),y:LR.Low_Relation[m].awayScore-LR.Low_Relation[m].homeScore,type:LR.Low_Relation[m].actionType,text:LR.Low_Relation[m].text,miss:LR.Low_Relation[m].scoringPlay,re:re})
+          }
+          else{
+            if(focus_low[m-1]!={quarter:LR.Low_Relation[m].period.number,time:LR.Low_Relation[m].clock.displayValue,x:(LR.Low_Relation[m].period.number-1)*720+(720-lt[0]),y:LR.Low_Relation[m].awayScore-LR.Low_Relation[m].homeScore,type:LR.Low_Relation[m].actionType})
+            focus_low.push({id:LR.Low_Relation[m].id,quarter:LR.Low_Relation[m].period.number,time:LR.Low_Relation[m].clock.displayValue,x:(LR.Low_Relation[m].period.number-1)*720+(720-lt[0]),y:LR.Low_Relation[m].awayScore-LR.Low_Relation[m].homeScore,type:LR.Low_Relation[m].actionType,text:LR.Low_Relation[m].text,miss:LR.Low_Relation[m].scoringPlay,re:re})
+          }
+        }
+      } 
+    console.log(focus_low)
 
 
 
-var data = [];
-for (var i=0;i< sum.plays.length;i++){
-  if (sum.plays[i]){
-    var t=sum.plays[i].clock.displayValue.split(":")
-    if(t[1]){
-      //console.log(data[i-1])
-      if(data[i-1]!={quarter:sum.plays[i].period.number,time:sum.plays[i].clock.displayValue,x:(sum.plays[i].period.number-1)*720+(720-t[0]*60-t[1]),y:sum.plays[i].awayScore-sum.plays[i].homeScore})
-          data.push({quarter:sum.plays[i].period.number,time:sum.plays[i].clock.displayValue,x:(sum.plays[i].period.number-1)*720+(720-t[0]*60-t[1]),y:sum.plays[i].awayScore-sum.plays[i].homeScore})
+    var data = [];
+    for (var i=0;i< sum.plays.length;i++){
+      if (sum.plays[i]){
+        var t=sum.plays[i].clock.displayValue.split(":")
+        if(t[1]){
+          //console.log(data[i-1])
+          if(data[i-1]!={quarter:sum.plays[i].period.number,time:sum.plays[i].clock.displayValue,x:(sum.plays[i].period.number-1)*720+(720-t[0]*60-t[1]),y:sum.plays[i].awayScore-sum.plays[i].homeScore})
+              data.push({quarter:sum.plays[i].period.number,time:sum.plays[i].clock.displayValue,x:(sum.plays[i].period.number-1)*720+(720-t[0]*60-t[1]),y:sum.plays[i].awayScore-sum.plays[i].homeScore})
+        }
+        else{
+          if(data[i-1]!={quarter:sum.plays[i].period.number,time:sum.plays[i].clock.displayValue,x:(sum.plays[i].period.number-1)*720+(720-t[0]),y:sum.plays[i].awayScore-sum.plays[i].homeScore})
+              data.push({quarter:sum.plays[i].period.number,time:sum.plays[i].clock.displayValue,x:(sum.plays[i].period.number-1)*720+(720-t[0]),y:sum.plays[i].awayScore-sum.plays[i].homeScore})
+        }
+      }
     }
-    else{
-      if(data[i-1]!={quarter:sum.plays[i].period.number,time:sum.plays[i].clock.displayValue,x:(sum.plays[i].period.number-1)*720+(720-t[0]),y:sum.plays[i].awayScore-sum.plays[i].homeScore})
-          data.push({quarter:sum.plays[i].period.number,time:sum.plays[i].clock.displayValue,x:(sum.plays[i].period.number-1)*720+(720-t[0]),y:sum.plays[i].awayScore-sum.plays[i].homeScore})
-    }
-  }
-}
 //console.log(data)
 
 // 定义画布尺寸和边距
+// const margin = { top: 70, right: 50, bottom: 50, left: 1020 };
+// const width = 800;
+// const height = 110;
 const margin = { top: 70, right: 50, bottom: 50, left: 1020 };
 const width = 800;
 const height = 110;

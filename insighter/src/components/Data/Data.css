@@ -51,8 +51,7 @@
       }
 
 .GameFlow{
-    display: flex;
-    margin-left: 30px;
+    position: relative;
 
     height: 30%;
 }

@@ -16,7 +16,9 @@ const Episode = props => {
                     {/* content */}
                 </div>
                 <div className="episodeFooter">
-                    Text: {DataSL.Contents.Episode[CE-1].E_Text}
+                    <div style={{margin: 5}}>
+                        <b>Text:</b> {DataSL.Contents.Episode[CE-1].E_Text}
+                    </div>
                 </div>
             </div>
             

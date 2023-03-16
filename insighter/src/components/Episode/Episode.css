@@ -30,9 +30,18 @@
     line-height: 150%;
     /* or 24px */
 
-    display: flex;
+    /* display: flex;
     align-items: center;
-    letter-spacing: -0.022em;
+    letter-spacing: -0.022em; */
+    
+    display: inline-block;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    text-align: left;
 
     color: #000000;
 }
+
+.episodeFooter::-webkit-scrollbar {display:none}
