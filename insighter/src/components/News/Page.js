@@ -1,5 +1,8 @@
 import './Page.css'
 import React from 'react';
+// import Relationship from '../charts/Relationship';
+import PieChart from '../charts/piechart';
+import BarChart from '../charts/barchart';
 
 export default class Page extends React.Component {
     constructor(props) {
@@ -50,6 +53,7 @@ export default class Page extends React.Component {
                         <p className='subtitle'>
                             Joel Embiid's Shot Attempts:
                         </p>
+                        <PieChart></PieChart>
                         <p className='subparagraph'>
                             Joel Embiid attempted 19 shots in the game, and out of those 19 shots, he made 13 of them, resulting in a shooting percentage of 68.4%. To visually represent this, a pie chart can be used to show the percentage of shots made by Embiid.
                         </p>
@@ -57,6 +61,7 @@ export default class Page extends React.Component {
                         <p className='subtitle'>
                             Distribution of Shots by Quarter:
                         </p>
+                        <BarChart></BarChart>
                         <p className='subparagraph'>
                             Embiid was dominating in the first half, hitting nine out of eleven, probably the biggest reason for the 76ers 26-point lead. But that was because he was making most of his mid-range jumpers(6/8), which is not very sustainable. He only hit 3/9 in the second half, and none of his shots were near the rim!
                         </p>
