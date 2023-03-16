@@ -90,7 +90,7 @@ const width = 800;
 const height = 110;
 
 // 创建SVG元素并设置尺寸
-const svg = d3.select("body")
+const svg = d3.select(".gameFlow")
   .append("svg")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
@@ -676,7 +676,8 @@ icons.append("svg:image")
   }
 
   render(){
-    return <div id={"#" + this.props.id}></div>
+    // return <div id={"#" + this.props.id}></div>
+    return <div className="gameFlow"></div>
   }
 }
 

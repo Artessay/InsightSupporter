@@ -1,7 +1,7 @@
 import React from "react";
 import * as d3 from 'd3';
 
-export default class BarChart extends React.Component {
+export default class BarCharts extends React.Component {
     constructor(props){
         super(props)
         this.state = {
@@ -15,7 +15,7 @@ export default class BarChart extends React.Component {
         const rectWidth = width / dataset.length;
 
         let svg = d3.select('.barChart')
-                    .append('svg') 
+                    .append('svg')                  // 添加一个svg元素
                     .attr('width', width)
                     .attr('height', height);
     
