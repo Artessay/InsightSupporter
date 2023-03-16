@@ -1,4 +1,5 @@
 import React  from "react";
+import ScoreTable from "../charts/Table/ScoreTable";
 import './Episode.css'
 
 const Episode = props => {
@@ -13,7 +14,7 @@ const Episode = props => {
                     <b>Episode {CE}</b>: {DataSL.Contents.Episode[CE-1].E_Title}
                 </div>
                 <div className="episodeContent">
-                    {/* content */}
+                    <ScoreTable></ScoreTable>
                 </div>
                 <div className="episodeFooter">
                     <div style={{margin: 5}}>
