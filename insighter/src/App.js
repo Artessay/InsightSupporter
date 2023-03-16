@@ -12,19 +12,19 @@ import { useState } from 'react';
 //var Current_Episode =1;
 
 function App() {
-    var [DataSL,setDataSL] = useState(Test)
-    var [CE,setCE] = useState(1)
+    var [DataSL, setDataSL] = useState(Test)
+    var [CE, setCE] = useState(1)
     //var DataSL=Test;
     //var Current_Episode =1;
-    var DataAll = (key,key2) => {
-        
-        
+
+    var DataAll = (key, key2) => {
         setCE(key+1)
         var DataTmp1=DataSL
         DataTmp1.Contents.Episode=(key2)
         setDataSL(DataSL=DataTmp1)
         console.log(DataSL)
     };
+
     var Datalist = (key) => {
         var DataTmp=DataSL
         DataTmp.Contents.Episode=(key)
@@ -32,8 +32,8 @@ function App() {
         //DataSL.Contents.Episode.filter
         //console.log(DataSL)
     };
+
   return (
-    
     <div className='App'>
         <Head className='header'></Head>
         <div className='content'>
