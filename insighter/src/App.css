@@ -26,13 +26,15 @@
     background-color: #ef342a;
 } */
   
-/* .item-2 {
-    background-color: #f68f26;
-} */
+.item-2 {
+    pointer-events: none;
+}
   
 .item-3 {
     /* background-color: #4ba946; */
     height: 100%;
+    margin: 0;
+    pointer-events: all;
 }
   
 .item-4 {
@@ -42,11 +44,11 @@
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 4;
-    
     pointer-events: all;
 }
   
 .item-5 {
     height: 100%;
+    pointer-events: all;
 }
   

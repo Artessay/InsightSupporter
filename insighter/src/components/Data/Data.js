@@ -9,9 +9,11 @@ export default class Data extends React.Component {
     }
 
     render() {
-        console.log(summary.boxscore)
+        //console.log(summary.boxscore)
+        // homeLogo = summary.boxscore.teams
         return(
             <div className="Data">
+                {}
                 <div className="DataLabel">
                     Data
                 </div>
