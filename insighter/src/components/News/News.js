@@ -3,6 +3,7 @@
 import React from 'react';
 import './News.css'
 import { Button, Radio } from 'antd';
+import Page from './Page';
 
 export default class News extends React.Component {
     constructor(props) {
@@ -60,7 +61,7 @@ export default class News extends React.Component {
                     className="newsMain"
                     // onScroll={handleScroll}
                 >
-                    
+                    <Page></Page>
                 </div>
             </div>
             
