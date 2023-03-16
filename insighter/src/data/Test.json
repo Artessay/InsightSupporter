@@ -94,14 +94,14 @@
     "Title":"Joel Embiid's Shooting Distribution in the Game",
     "Writer":"Writer’s Name",
     "Date":"Mar.7,2023 ",
-    "Insight_Episodes":{
-        "Episode 1: Introduction": ["- Briefly introduce the game and Joel Embiid's performance"], 
-    	"Episode 2: Joel Embiid's Shot Attempts": ["- Provide the total number of shots Joel Embiid attempted in the game", "- Mention the percentage of shots he made"], 
-        "Episode 3: Distribution of Shots by Quarter": ["- Break down the number of shots Joel Embiid took in each quarter", "- Highlight the quarter where he took the most shots"], 
-        "Episode 4: Distribution of Shots by Shot Type": ["- Categorize Joel Embiid's shots by type (midrange, three-point, layup, etc.)", "- Mention the percentage of shots he took from each type"], 
-        "Episode 5: Analysis of Midrange Shots": ["- Focus on Joel Embiid's midrange shots", "- Provide the number of midrange shots he attempted and made", "- Compare his midrange shooting percentage to his overall shooting percentage"],
-    	"Episode 6: Conclusion": ["- Summarize Joel Embiid's shooting performance in the game", "- Provide insights on his shooting distribution and effectiveness"]
-    },
+    "Insight_Episodes":
+        [{"Episode":"Episode 1: Introduction","Sentence":["- Briefly introduce the game and Joel Embiid's performance"]},
+        {"Episode":"Episode 2: Joel Embiid's Shot Attempts","Sentence":["- Provide the total number of shots Joel Embiid attempted in the game", "- Mention the percentage of shots he made"]},
+        {"Episode":"Episode 3: Distribution of Shots by Quarter","Sentence":["- Break down the number of shots Joel Embiid took in each quarter", "- Highlight the quarter where he took the most shots"]},
+        {"Episode":"Episode 4: Distribution of Shots by Shot Type","Sentence":["- Categorize Joel Embiid's shots by type (midrange, three-point, layup, etc.)", "- Mention the percentage of shots he took from each type"]},
+        {"Episode":"Episode 5: Analysis of Midrange Shots","Sentence":["- Focus on Joel Embiid's midrange shots", "- Provide the number of midrange shots he attempted and made", "- Compare his midrange shooting percentage to his overall shooting percentage"]},
+        {"Episode":"Episode 6: Conclusion","Sentence":["- Summarize Joel Embiid's shooting performance in the game", "- Provide insights on his shooting distribution and effectiveness"]}
+    ],
     "Episode_Relation":["Temporal","Elaboration","Similarity","Elaboration","Elaboration"],
    "Contents":{
     "Episode":[
