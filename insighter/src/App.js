@@ -44,7 +44,7 @@ function App() {
                 <Data></Data>
             </div>
             <div className="item item-3">
-                <Episode DataSL={DataSL} CE={CE}></Episode>
+                <Episode DataSL={DataSL} CE={CE} Datalist={Datalist}></Episode>
             </div>
             <div className="item item-4">
                 <News DataSL={DataSL}></News>
