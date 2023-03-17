@@ -32,10 +32,28 @@ const Episode = props => {
         props.Datalist(newData)
     }
     
-    let [sentences, setSentences] = useState(listData[CE-1].E_Sentences);
+    // let [sentences, setSentences] = useState(listData[CE-1].E_Sentences);
+    let sentences = listData[CE-1].E_Sentences;
+
+    const handleInsert = () => {
+        const newData = [...listData];
+        const newItem = {
+            "S_Insight": "Insight Text",
+            "S_Task": "Task Type",
+            "S_Ischart":"No"
+        }
+        const newSentences = [...newData[CE-1].E_Sentences, newItem];
+        newData[CE-1].E_Sentences = newSentences;
+
+        setListData(newData);
+        props.Datalist(newData)
+    }
 
     const handleDelete = (index) => {
-        ;
+        const newData = [...listData];
+        newData[CE-1].E_Sentences.splice(index, 1);
+        setListData(newData);
+        props.Datalist(newData)
     }
 
         return(
@@ -65,6 +83,21 @@ const Episode = props => {
                                 </div>
                             ))
                         }
+
+                        <div className="selectSection">
+                            <span className="selectNumber">
+                                {sentences.length + 1}
+                            </span>
+                            <span className="selectDelete">
+                                <Button
+                                    // disabled={true}
+                                    onClick={(e) => handleInsert()}
+                                >+</Button>
+                            </span>
+                            <span className="selectText">
+                                {/* {item.S_Insight} */}
+                            </span>
+                        </div>
                     </div>
                     
                     <ChartSelect className='selectDrop'></ChartSelect>
