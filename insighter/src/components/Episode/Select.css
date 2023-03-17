@@ -1,0 +1,39 @@
+.selectPart {
+    margin: 5px;
+    font-size: 15px;
+
+    display: block;
+    text-align: left;
+}
+
+.selectNumber {
+    background: gray;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.selectTaskEdit {
+    background: lightgreen;
+
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.selectTask {
+    background: lightpink;
+
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.selectText {
+    margin-left: 10px;
+}

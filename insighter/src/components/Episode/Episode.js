@@ -2,6 +2,7 @@ import React  from "react";
 import { useState } from 'react';
 import ScoreTable from "../charts/Table/ScoreTable";
 import './Episode.css'
+import './Select.css'
 import { Input } from "antd";
 
 const { TextArea } = Input;
@@ -18,7 +19,7 @@ const Episode = props => {
         Data_Episode_Name.push(DataSL.Contents.Episode[i])
     }
 
-    const [listData,setListData] = useState(Data_Episode_Name);
+    const [listData, setListData] = useState(Data_Episode_Name);
 
     const handleTextareaChange = (e) => {
         // console.log(e.target.value)
@@ -29,6 +30,8 @@ const Episode = props => {
         let newData = listData;
         props.Datalist(newData)
     }
+    
+    let sentences = listData[CE-1].E_Sentences;
 
         return(
             <div className="Episode">
@@ -36,7 +39,26 @@ const Episode = props => {
                     <b>Episode {CE}</b>: {DataSL.Contents.Episode[CE-1].E_Title}
                 </div>
                 <div className="episodeContent">
-                    <ScoreTable></ScoreTable>
+                    <div className="selectPart">
+                        {
+                            sentences.map((item, index) => (
+                                <div className="selectSection">
+                                    <span className="selectNumber">
+                                        {index+1}
+                                    </span>
+                                    <span className={item.S_Ischart == "Yes" ? "selectTaskEdit" : "selectTask"}>
+                                        {item.S_Task}
+                                    </span>
+                                    <span className="selectText">
+                                        {item.S_Insight}
+                                    </span>
+                                </div>
+                            ))
+                        }
+                    </div>
+                    <div className="chartArea">
+                        <ScoreTable></ScoreTable>
+                    </div>
                 </div>
                 <div className="episodeFooter">
                     <div style={{margin: 5}}>
