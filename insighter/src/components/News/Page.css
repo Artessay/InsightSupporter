@@ -25,6 +25,7 @@
 .video {
     position: relative;
     top: 10px;
+    /* margin-top: 50px; */
 
     height: 200px;
     width: 500px;
