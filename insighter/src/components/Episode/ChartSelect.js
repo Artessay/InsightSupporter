@@ -19,19 +19,36 @@ const items = [
     },
 ];
 const ChartSelect = () => (
-  <Dropdown
-    menu={{
-      items,
-      selectable: true,
-      defaultSelectedKeys: ['1'],
-    }}
+  <Space
+    
   >
-    <Typography.Link>
-      <Space>
-        Chart Type
-        <DownOutlined />
-      </Space>
-    </Typography.Link>
-  </Dropdown>
+    <div
+      style={{
+        backgroundColor: 'black',
+        color: 'white',
+        width: 100,
+      }}
+    >
+      Chart Type
+    </div>
+    <Dropdown
+      menu={{
+        items,
+        selectable: true,
+        defaultSelectedKeys: ['1'],
+      }}
+      style={{
+        color: 'black'
+      }}
+    >
+      <Typography.Link>
+        <Space>
+          Bar Chart
+          <DownOutlined />
+        </Space>
+      </Typography.Link>
+    </Dropdown>
+  </Space>
+  
 );
 export default ChartSelect;

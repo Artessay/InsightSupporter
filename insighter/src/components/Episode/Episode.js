@@ -5,6 +5,7 @@ import './Episode.css'
 import './Select.css'
 import { Input, Button } from "antd";
 import ChartSelect from "./ChartSelect";
+import StackedBarChart from "../charts/stackedBarChart";
 
 const { TextArea } = Input;
 
@@ -104,6 +105,7 @@ const Episode = props => {
                     <div className="chartArea">
                         <ScoreTable></ScoreTable>
                     </div>
+                    <StackedBarChart className='chooseChart'></StackedBarChart>
                 </div>
                 <div className="episodeFooter">
                     <div style={{margin: 5}}>
