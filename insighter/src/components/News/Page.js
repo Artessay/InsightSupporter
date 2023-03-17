@@ -1,5 +1,6 @@
 import './Page.css'
 import React from 'react';
+import { useState } from 'react';
 // import Relationship from '../charts/Relationship';
 import PieChart from '../charts/piechart';
 import BarChart from '../charts/barchart';
@@ -13,6 +14,11 @@ export default class Page extends React.Component {
 
     
     render() {
+        const {DataSL} = this.props;
+        var listData = [];
+        for (var i=0;i< DataSL.Contents.Episode.length;i++){
+            listData.push(DataSL.Contents.Episode[i])
+        }
         
         return(
             <div className="Page">
@@ -44,6 +50,19 @@ export default class Page extends React.Component {
                     </p>
 
                     <div className='paragraph'>
+                        {
+                            listData.map((item, index) => (
+                                <div>
+                                    <p className='subtitle'>
+                                        {item.E_Title}:
+                                    </p>
+                                    <p className='subparagraph'>
+                                        {item.E_Text}
+                                    </p>
+                                </div>
+                            ))
+                        }
+
                         <p className='subtitle'>
                             Introduction:
                         </p>

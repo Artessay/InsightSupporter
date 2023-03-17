@@ -35,6 +35,7 @@ const StoryLine = props => {
     //console.log(newData)
   };
   const isLastItem = (index) => index === listData.length - 1;
+
   return (
    /*  <div style={{ display: 'flex',overflowX: 'scroll' }}>
     <List
@@ -70,16 +71,25 @@ const StoryLine = props => {
       
     </List>
     </div> */
-    <div style={{ display: 'flex', flexWrap: 'nowrap',overflowX: 'scroll' }}>
-    {listData.map((item, index) => (
-      <div key={index} style={{ width: '500px', margin: '8px' }}>
-        <Card title={<Button onClick={() => onTab1Change(index)}>Episode {index+1}: {item.E_Title} </Button>} extra={<Button type="link" danger onClick={() => handleRemove(index)}>×</Button>} >
-      {/*  <Card title={"Episode"+ item.Id +item.E_Title} extra={<Button type="link"  danger onClick={() => handleRemove(index)}>×</Button>} > */}
-          <p>Card content</p>
-          <p>Card content</p>
-          <p>{item.E_Text}</p>
-        </Card>
-      </div>
+    <div 
+      style={{ display: 'flex', flexWrap: 'nowrap',overflowX: 'scroll' }}
+    >
+    {
+      listData.map((item, index) => (
+        <div key={index} style={{ width: '500px', margin: '8px' }}>
+          <Card 
+            title={
+              <Button onClick={() => onTab1Change(index)}>Episode {index+1}: {item.E_Title} </Button>
+            } 
+            extra={
+              <Button type="link" danger onClick={() => handleRemove(index)}>×</Button>} 
+            >
+        {/*  <Card title={"Episode"+ item.Id +item.E_Title} extra={<Button type="link"  danger onClick={() => handleRemove(index)}>×</Button>} > */}
+            <p>Card content</p>
+            <p>Card content</p>
+            <p>{item.E_Text}</p>
+          </Card>
+        </div>
     ))}
     {listData.length > 0 && (
       <div style={{ width: '200px', margin: '8px' }}>

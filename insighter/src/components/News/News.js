@@ -29,6 +29,7 @@ export default class News extends React.Component {
         // const handleScroll = event => {
             
         // }
+        const {DataSL} = this.props;
         
         return(
             <div className="News">
@@ -61,7 +62,7 @@ export default class News extends React.Component {
                     className="newsMain"
                     // onScroll={handleScroll}
                 >
-                    <Page></Page>
+                    <Page DataSL={DataSL}></Page>
                 </div>
             </div>
             
