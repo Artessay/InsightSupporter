@@ -1,10 +1,11 @@
 import './Page.css'
 import React from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
 // import Relationship from '../charts/Relationship';
 import PieChart from '../charts/piechart';
 import BarChart from '../charts/barchart';
 import StackedBarChart from '../charts/stackedBarChart';
+import VideoCarousel from './VideoCarousel';
 
 export default class Page extends React.Component {
     constructor(props) {
@@ -32,7 +33,8 @@ export default class Page extends React.Component {
                         &nbsp;Joel Embiid's Shooting Distribution in the Game
                     </span>
                 </div>
-                <div className='video'></div>
+                {/* <div className='video'></div> */}
+                <VideoCarousel className='video'></VideoCarousel>
                 <div className='text'>
                     <p>Joel Embiid most shots were taken from mid range and happened in first quarter. </p>
 

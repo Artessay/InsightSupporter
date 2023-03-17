@@ -105,7 +105,7 @@ const Episode = props => {
                     <div className="chartArea">
                         <ScoreTable></ScoreTable>
                     </div>
-                    <StackedBarChart className='chooseChart'></StackedBarChart>
+                    {/* <StackedBarChart className='chooseChart'></StackedBarChart> */}
                 </div>
                 <div className="episodeFooter">
                     <div style={{margin: 5}}>
