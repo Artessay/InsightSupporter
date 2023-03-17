@@ -3,7 +3,8 @@ import { useState } from 'react';
 import ScoreTable from "../charts/Table/ScoreTable";
 import './Episode.css'
 import './Select.css'
-import { Input } from "antd";
+import { Input, Button } from "antd";
+import ChartSelect from "./ChartSelect";
 
 const { TextArea } = Input;
 
@@ -31,7 +32,11 @@ const Episode = props => {
         props.Datalist(newData)
     }
     
-    let sentences = listData[CE-1].E_Sentences;
+    let [sentences, setSentences] = useState(listData[CE-1].E_Sentences);
+
+    const handleDelete = (index) => {
+        ;
+    }
 
         return(
             <div className="Episode">
@@ -46,8 +51,13 @@ const Episode = props => {
                                     <span className="selectNumber">
                                         {index+1}
                                     </span>
-                                    <span className={item.S_Ischart == "Yes" ? "selectTaskEdit" : "selectTask"}>
+                                    <span className={item.S_Ischart === "Yes" ? "selectTaskEdit" : "selectTask"}>
                                         {item.S_Task}
+                                    </span>
+                                    <span className="selectDelete">
+                                        <Button
+                                            onClick={(e) => handleDelete(index)}
+                                        ><b>-</b></Button>
                                     </span>
                                     <span className="selectText">
                                         {item.S_Insight}
@@ -56,6 +66,8 @@ const Episode = props => {
                             ))
                         }
                     </div>
+                    
+                    <ChartSelect className='selectDrop'></ChartSelect>
                     <div className="chartArea">
                         <ScoreTable></ScoreTable>
                     </div>
