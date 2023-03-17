@@ -50,7 +50,7 @@ function App() {
                 <News DataSL={DataSL}></News>
             </div>
             <div className="item item-5">
-                <StoryLine DataSL={DataSL} DataAll={DataAll} Datalist={Datalist}></StoryLine>
+                {/* <StoryLine DataSL={DataSL} DataAll={DataAll} Datalist={Datalist}></StoryLine> */}
             </div>
         </div>
     </div>
