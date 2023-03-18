@@ -1,29 +1,24 @@
 import React, { useContext } from 'react';
 import './Table.css'
 
-function ScoreTable() {
-    let tableList = [
-        {
-            quarter: 1,
-            shots: 7,
-            made: 6,
-        },
-        {
-            quarter: 2,
-            shots: 3,
-            made: 2,
-        },
-        {
-            quarter: 3,
-            shots: 5,
-            made: 2,
-        },
-        {
-            quarter: 4,
-            shots: 2,
-            made: 2,
-        },
-    ];
+function ScoreTable(props) {
+    var {ChartData} = props
+    console.log(ChartData)
+
+    let tableList = []
+    for ( let key in ChartData) {
+        if (ChartData.hasOwnProperty(key)) {
+            const quarterData = ChartData[key];
+            //   const quarter = quarterData.Quarter;
+            //   console.log(`Quarter: ${quarter}`);
+            tableList.push({
+                quarter: quarterData.Quarter,
+                shots: quarterData["Number of Shots"],
+                make: quarterData.Made
+            })
+        }
+    }
+    
 
     return (
         <table className='styled-table'>

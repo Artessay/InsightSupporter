@@ -103,7 +103,9 @@ const Episode = props => {
                     
                     <ChartSelect className='selectDrop'></ChartSelect>
                     <div className="chartArea">
-                        <ScoreTable></ScoreTable>
+                        <ScoreTable 
+                            ChartData={listData[3-1].E_Sentences[0].S_Chartneed[0].Chart_Data[0]}
+                        ></ScoreTable>
                     </div>
                     <StackedBarChart className='chooseChart'></StackedBarChart>
                 </div>
