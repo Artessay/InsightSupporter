@@ -29,7 +29,7 @@ export default class News extends React.Component {
     render() {
         
         const {DataSL} = this.props;
-        const {SetCE} = this.props;
+        // const {SetCE} = this.props;
 
         const listLength = DataSL.Contents.Episode.length;
         const numbers = Array.from({ length: listLength }, (_, index) => index);

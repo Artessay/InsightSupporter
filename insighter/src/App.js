@@ -48,7 +48,7 @@ function App() {
                 <Episode DataSL={DataSL} CE={CE} Datalist={Datalist}></Episode>
             </div>
             <div className="item item-4">
-                <News DataSL={DataSL} SetCE={setCE}></News>
+                <News DataSL={DataSL}></News>
             </div>
             <div className="item item-5">
                 <StoryLine DataSL={DataSL} DataAll={DataAll} Datalist={Datalist}></StoryLine>
