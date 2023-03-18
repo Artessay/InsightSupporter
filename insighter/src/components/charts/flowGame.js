@@ -1,6 +1,6 @@
 import React ,{Component} from "react";
 import { createRef } from 'react';
-import './Data.css'
+// import './Data.css'
 // import summary from '../../data/summary_401360853.json' //assert {type:'JSON'};
 import * as d3 from "d3";
 // import { render } from "@testing-library/react";

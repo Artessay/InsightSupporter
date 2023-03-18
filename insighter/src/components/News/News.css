@@ -28,7 +28,7 @@
 
 .newsMain {
     flex: 1 1;
-    background: lightgray;
+    background: rgba(117, 117, 117, 0.3);
 
     margin-left: 10px;
     margin-right: 10px;
@@ -50,7 +50,7 @@
 
     font: 'bold';
     font-size: 20px;
-    background: gray;
+    background: rgba(117, 117, 117, 0.3);
     width: 80px;
     height: 50px;
     border-radius: 10px;

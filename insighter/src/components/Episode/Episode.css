@@ -7,7 +7,7 @@
 
 .episodeHeader {
     height: 50px;
-    background: gray;
+    background: rgba(117, 117, 117, 0.3);
 
     font-size: 26px;
     text-align: left;
@@ -31,7 +31,7 @@
 .episodeFooter {
     height: 105px;
     margin: 5px;
-    background: lightgray;
+    background: rgba(117, 117, 117, 0.3);
 
     font-family: 'Inter';
     font-style: normal;
