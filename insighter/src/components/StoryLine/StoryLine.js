@@ -1,5 +1,6 @@
 import { Grid, List, Button, Card } from 'antd';
 import { useState } from 'react';
+import './Card.css'
 
 const { Item } = List;
 const { useBreakpoint } = Grid;
@@ -37,7 +38,52 @@ const StoryLine = props => {
   const isLastItem = (index) => index === listData.length - 1;
 
   return (
-   /*  <div style={{ display: 'flex',overflowX: 'scroll' }}>
+    <div 
+      // className='cardList'
+      style={{ display: 'flex', flexWrap: 'nowrap',overflowX: 'scroll' }}
+    >
+    {
+      listData.map((item, index) => (
+        <div key={index} className='card'>
+          <Card 
+            title={
+              <Button onClick={() => onTab1Change(index)}>Episode {index+1}: {item.E_Title} </Button>
+            } 
+            extra={
+              <Button type="link" danger onClick={() => handleRemove(index)}>×</Button>} 
+            style={{
+              maxHeight: 150
+            }}
+            >
+        {/*  <Card title={"Episode"+ item.Id +item.E_Title} extra={<Button type="link"  danger onClick={() => handleRemove(index)}>×</Button>} > */}
+            <p>Card content</p>
+            <p>Card content</p>
+            <p 
+            // style={{
+            //   maxHeight: 200
+            // }}
+            // className='cardText'
+            >
+              {item.E_Text}
+            </p>
+          </Card>
+        </div>
+    ))}
+    {listData.length > 0 && (
+      <div style={{ width: '200px', margin: '8px' }}>
+        <Card >
+        <Button type="dashed" onClick={handleAdd}>Add Item</Button>
+        </Card>
+      </div>
+    )}
+  </div>
+  );
+};
+
+export default StoryLine;
+
+
+/*  <div style={{ display: 'flex',overflowX: 'scroll' }}>
     <List
       grid={null}
       style={{ flexWrap: 'nowrap' }}
@@ -71,35 +117,3 @@ const StoryLine = props => {
       
     </List>
     </div> */
-    <div 
-      style={{ display: 'flex', flexWrap: 'nowrap',overflowX: 'scroll' }}
-    >
-    {
-      listData.map((item, index) => (
-        <div key={index} style={{ width: '500px', margin: '8px' }}>
-          <Card 
-            title={
-              <Button onClick={() => onTab1Change(index)}>Episode {index+1}: {item.E_Title} </Button>
-            } 
-            extra={
-              <Button type="link" danger onClick={() => handleRemove(index)}>×</Button>} 
-            >
-        {/*  <Card title={"Episode"+ item.Id +item.E_Title} extra={<Button type="link"  danger onClick={() => handleRemove(index)}>×</Button>} > */}
-            <p>Card content</p>
-            <p>Card content</p>
-            <p>{item.E_Text}</p>
-          </Card>
-        </div>
-    ))}
-    {listData.length > 0 && (
-      <div style={{ width: '200px', margin: '8px' }}>
-        <Card >
-        <Button type="dashed" onClick={handleAdd}>Add Item</Button>
-        </Card>
-      </div>
-    )}
-  </div>
-  );
-};
-
-export default StoryLine;
