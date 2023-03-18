@@ -20,7 +20,11 @@ const items = [
 ];
 const ChartSelect = () => (
   <Space
-    
+    align='right'
+    style={{
+      position: 'absolute',
+      marginLeft: 100
+    }}
   >
     <div
       style={{

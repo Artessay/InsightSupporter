@@ -41,11 +41,13 @@
 .selectDelete {
     margin-left: 10px;
 }
+
 /* .selectDrop {
     border: 3px;
     border-color: black;
 } */
 
-.chooseChart {
+/* .chooseChart {
     position: absolute;
-}
+    left: 300px;
+} */
