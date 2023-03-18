@@ -2,9 +2,9 @@ import { Grid, List, Button, Card } from 'antd';
 import { useState } from 'react';
 // import './Card.css'
 
-const { Item } = List;
+// const { Item } = List;
 const { useBreakpoint } = Grid;
-const data = ['Item 1', 'Item 2', 'Item 3'];
+// const data = ['Item 1', 'Item 2', 'Item 3'];
 const StoryLine = props => {
 
   const screens = useBreakpoint();

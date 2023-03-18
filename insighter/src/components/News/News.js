@@ -30,6 +30,8 @@ export default class News extends React.Component {
             
         // }
         const {DataSL} = this.props;
+
+        const listLength = DataSL.Contents.Episode.length;
         
         return(
             <div className="News">
