@@ -1,5 +1,6 @@
 import { Grid, List, Button, Card } from 'antd';
 import { useState } from 'react';
+import StackedBarChart from '../charts/stackedBarChart';
 // import './Card.css'
 
 // const { Item } = List;
@@ -40,32 +41,64 @@ const StoryLine = props => {
   return (
     <div 
       // className='cardList'
-      style={{ display: 'flex', flexWrap: 'nowrap', overflowX: 'scroll' }}
+      style={{ display: 'flex', flexWrap: 'nowrap', overflowX: 'scroll',position: "relative" }}
     >
     {
       listData.map((item, index) => (
         <div key={index} className='card'>
           <Card 
             title={
-              <Button onClick={() => onTab1Change(index)}>Episode {index+1}: {item.E_Title} </Button>
+              <div>
+              <Button onClick={() => onTab1Change(index)} style={{
+                fontSize: 10,
+                width: 200,
+                overflow:"hidden",
+                
+              }}>Episode {index+1}: {item.E_Title}{/* <Button  style={{
+
+              }} type="link" danger onClick={() => handleRemove(index)}>×</Button> */} </Button>
+              <Button  style={{
+                fontSize: 40,
+                width: 20,
+                marginLeft:0
+              }} type="link" danger onClick={() => handleRemove(index)}>×</Button>
+              </div>
             } 
-            extra={
-              <Button type="link" danger onClick={() => handleRemove(index)}>×</Button>} 
+           /*  extra={
+              <Button  style={{
+                fontSize: 40,
+                width: 20,
+                marginLeft:30
+              }} type="link" danger onClick={() => handleRemove(index)}>×</Button>}  */
             style={{
-              maxHeight: 100
+              height: 283,
+              width: 300,
+              marginLeft:20,
+              marginTop:10,
+              position: "relative"
             }}
             >
         {/*  <Card title={"Episode"+ item.Id +item.E_Title} extra={<Button type="link"  danger onClick={() => handleRemove(index)}>×</Button>} > */}
-            <p>Card content</p>
-            <p>Card content</p>
-            <p 
-            // style={{
-            //   maxHeight: 200
-            // }}
+            {/* <p>Card content</p>
+            <p>Card content</p> */}
+            
+            {item.E_Sentences.map((k, i) => (
+        <p align="left" style={{
+          height: 40,
+          overflow:"hidden",
+          marginTop:-10
+        }}key={i}>{"-- "+ k.S_Insight}</p>
+      ))}
+     {/*  <StackedBarChart style={{height:10,width:10,transform: "scale(2)",transformorigin: "left top"}}></StackedBarChart> */}
+    {/*   <p 
+             style={{
+               height: 40,
+               overflow:"hidden"
+             }}
             // className='cardText'
             >
-              {item.E_Text}
-            </p>
+              {item.E_Sentences[0].S_Insight}
+            </p> */}
           </Card>
         </div>
     ))}

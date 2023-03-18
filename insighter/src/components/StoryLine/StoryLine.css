@@ -25,4 +25,10 @@
     width: calc(100% / 4);
     flex: 0 0 auto;
   }
+
+
+.SLchart {
+   transform: scale(0.3); 
+    transform-origin: left top;
+}
   

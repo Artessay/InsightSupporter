@@ -15,7 +15,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 15% 60% 18%;
+    grid-template-rows: 15% 50% 30%;
     /* grid-template-rows: 100px 350px 200px; */
 }
 
@@ -61,6 +61,8 @@
     position: absolute;
     /* top: 50px; */
     /* left: 70%; */
-    right: 0%;
-    height: 50px;
+   transform: scale(1.07); 
+    transform-origin: left top;
+    right: 3.5%;
+    margin-top:20px;
 }
