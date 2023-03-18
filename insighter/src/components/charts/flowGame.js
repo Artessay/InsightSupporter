@@ -85,10 +85,10 @@ class FlowGame extends Component {
 // const margin = { top: 70, right: 50, bottom: 50, left: 1020 };
 // const width = 800;
 // const height = 110;
-const margin = { top: 0, right: 50, bottom: 50, left: 600 };
-const width = 600;
+const margin = { top: 0, right: 0, bottom: 50, left: 600 };
+const width = 800;
 const height = 110;
-const transformLeft = 600;
+// const transformLeft = 600;
 
 // 创建SVG元素并设置尺寸
 const svg = d3.select(".flowGame")
