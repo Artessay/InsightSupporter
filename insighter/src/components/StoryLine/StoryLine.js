@@ -1,6 +1,6 @@
 import { Grid, List, Button, Card } from 'antd';
 import { useState } from 'react';
-import './Card.css'
+// import './Card.css'
 
 const { Item } = List;
 const { useBreakpoint } = Grid;
@@ -35,12 +35,12 @@ const StoryLine = props => {
     props.Datalist(newData)
     //console.log(newData)
   };
-  const isLastItem = (index) => index === listData.length - 1;
+  // const isLastItem = (index) => index === listData.length - 1;
 
   return (
     <div 
       // className='cardList'
-      style={{ display: 'flex', flexWrap: 'nowrap',overflowX: 'scroll' }}
+      style={{ display: 'flex', flexWrap: 'nowrap', overflowX: 'scroll' }}
     >
     {
       listData.map((item, index) => (
@@ -52,7 +52,7 @@ const StoryLine = props => {
             extra={
               <Button type="link" danger onClick={() => handleRemove(index)}>×</Button>} 
             style={{
-              maxHeight: 150
+              maxHeight: 100
             }}
             >
         {/*  <Card title={"Episode"+ item.Id +item.E_Title} extra={<Button type="link"  danger onClick={() => handleRemove(index)}>×</Button>} > */}

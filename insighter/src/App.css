@@ -4,6 +4,10 @@
     /* pointer-events: none; */
 }
 
+/* .header {
+    height: 50px;
+} */
+
 .content {
     position: absolute;
     margin-top: 50px;
@@ -11,7 +15,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 15% 60% 25%;
+    grid-template-rows: 15% 60% 18%;
     /* grid-template-rows: 100px 350px 200px; */
 }
 
@@ -50,6 +54,7 @@
 .item-5 {
     /* height: 100%; */
     pointer-events: all;
+    overflow: hidden;
 }
 
 .flowGame {

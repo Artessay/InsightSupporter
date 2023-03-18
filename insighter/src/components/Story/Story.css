@@ -23,15 +23,16 @@
 .TaskType {
     width: 20%;
     height: 40%;
-    left: 0px;
+    /* left: 0px; */
     /* top: 80px; */
     font-size: 15px;
     
     /* vertical center */
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    background: lightgreen;
+    background: #B3DE69;
     border-radius: 10px;
     text-align: center;
 }
