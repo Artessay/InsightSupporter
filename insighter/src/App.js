@@ -8,6 +8,7 @@ import StoryLine from './components/StoryLine/StoryLine'
 import News from './components/News/News';
 import Test from '../src/data/Test.json' 
 import { useState } from 'react';
+import FlowGame from './components/charts/flowGame';
 
 //var Current_Episode =1;
 
@@ -51,6 +52,9 @@ function App() {
             </div>
             <div className="item item-5">
                 <StoryLine DataSL={DataSL} DataAll={DataAll} Datalist={Datalist}></StoryLine>
+            </div>
+            <div className='flowGame'>
+                <FlowGame></FlowGame>
             </div>
         </div>
     </div>

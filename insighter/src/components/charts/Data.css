@@ -1,0 +1,57 @@
+.Data {
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.DataLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font: 'bold';
+    font-size: 20px;
+    background: gray;
+    width: 80px;
+    height: 30%;
+    border-radius: 10px;
+    /* text-align: center; */
+}
+
+.homeLogo {
+    /* position: relative; */
+    display: flex;
+    margin-left: 30px;
+
+    height: 30%;
+}
+
+.dataTime {
+    display: flex;
+    margin-top: 0%;
+    font-size: 12px;
+
+    width: 80px;
+    height: 10%;
+    justify-content: center;
+}
+
+.awayLogo {
+    /* position: relative; */
+    display: flex;
+    margin-left: 30px;
+
+    height: 30%;
+}
+.axis path,
+      .line {
+        fill: none;
+        stroke: #98ABC5;
+        stroke-width: 2px;
+      }
+
+.GameFlow{
+    position: relative;
+
+    height: 30%;
+}

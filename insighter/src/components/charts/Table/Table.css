@@ -1,7 +1,7 @@
 .styled-table {
     border-collapse: collapse;
-    margin: 3px 0;
-    font-size: 16px;
+    margin: 0px 0;
+    font-size: 15px;
     font-family: sans-serif;
     min-width: 40%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -15,7 +15,7 @@
   
   .styled-table th,
   .styled-table td {
-      padding: 6px 12px;
+      padding: 5px 10px;
   }
   
   .styled-table tbody tr {

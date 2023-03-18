@@ -51,4 +51,11 @@
     /* height: 100%; */
     pointer-events: all;
 }
-  
+
+.flowGame {
+    position: absolute;
+    /* top: 50px; */
+    /* left: 70%; */
+    right: 1%;
+    height: 50px;
+}

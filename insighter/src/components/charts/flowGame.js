@@ -30,7 +30,7 @@ import to_s from'../../icon/to_s.png';
 import two from'../../icon/2.png';
 import two_s from'../../icon/2_s.png';
 
-class GameFlow extends Component {
+class FlowGame extends Component {
     
     componentDidMount() {
       console.log("Game Flow")
@@ -85,17 +85,22 @@ class GameFlow extends Component {
 // const margin = { top: 70, right: 50, bottom: 50, left: 1020 };
 // const width = 800;
 // const height = 110;
-const margin = { top: 70, right: 50, bottom: 50, left: 1020 };
-const width = 800;
+const margin = { top: 0, right: 50, bottom: 50, left: 600 };
+const width = 600;
 const height = 110;
+const transformLeft = 600;
 
 // 创建SVG元素并设置尺寸
-const svg = d3.select(".gameFlows")
-  .append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-  .attr("transform", `translate(${margin.left}, ${margin.top})`);
+const svg = d3.select(".flowGame")
+            .append('svg')
+            .attr('width',width)
+            .attr('height',height)
+            .attr("transform","translate("+0+","+0+")");
+//   .append("svg")
+//   .attr("width", width + margin.left + margin.right)
+//   .attr("height", height + margin.top + margin.bottom)
+//   .append("g")
+//   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // 定义比例尺和坐标轴
 const xScale = d3.scaleLinear()
@@ -677,8 +682,8 @@ icons.append("svg:image")
 
   render(){
     // return <div id={"#" + this.props.id}></div>
-    return <div className="gameFlows"></div>
+    return <div ></div>
   }
 }
 
-export default GameFlow;
+export default FlowGame;
