@@ -22,16 +22,17 @@ export default class News extends React.Component {
             group: e.target.value
         })
 
-        console.log(this.state.group)
+        console.log(e.target.value)
+        
     }
 
     render() {
-        // const handleScroll = event => {
-            
-        // }
+        
         const {DataSL} = this.props;
+        const {SetCE} = this.props;
 
         const listLength = DataSL.Contents.Episode.length;
+        const numbers = Array.from({ length: listLength }, (_, index) => index);
         
         return(
             <div className="News">
@@ -40,23 +41,16 @@ export default class News extends React.Component {
                         View
                     </div>
                     
-                    {/* <Radio.Group> */}
-                        {/* <Radio.Button shape='circle' value="1">1</Radio.Button>
-                        <Radio.Button shape='circle' value="2">2</Radio.Button>
-                        <Radio.Button shape='circle' value="3">3</Radio.Button> */}
-                    {/* </Radio.Group> */}
                     <div className='buttons'>
-                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="1">1</Button>
-                        <div className='verticalLine'></div>
-                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="2">2</Button>
-                        <div className='verticalLine'></div>
-                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="3">3</Button>
-                        <div className='verticalLine'></div>
-                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="4">4</Button>
-                        <div className='verticalLine'></div>
-                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="5">5</Button>
-                        <div className='verticalLine'></div>
-                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="6">6</Button>
+                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="0">0</Button>
+                        {
+                            numbers.map((number) => (
+                                < >
+                                    <div className='verticalLine'></div>
+                                    <Button shape='circle' onClick={(e) => this.handleClick(e)} value={number+1}>{number+1}</Button>
+                                </>
+                            ))
+                        }
                     </div>
                     
                 </div>
