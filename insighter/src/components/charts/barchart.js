@@ -21,7 +21,7 @@ export default class BarChart extends React.Component {
         const width = 400, height = 300;
         const left = 100, top = -30;
 
-        let svg = d3.select('.barChart')
+        let svg = d3.selectAll('.barChart')
                     .append('svg')
                     .attr('width',width)
                     .attr('height',height)
@@ -56,7 +56,7 @@ export default class BarChart extends React.Component {
         .attr("width", x.bandwidth())
         .attr("y", function(d) { return y(d.value); })
         .attr("height", function(d) { return height - y(d.value); })
-        .attr("fill", "#98abc5");
+        .attr("fill", colors[0]);
 
         // Add title
         svg.append("text")

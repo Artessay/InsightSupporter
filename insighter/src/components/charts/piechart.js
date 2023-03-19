@@ -24,7 +24,7 @@ class PieChart extends React.Component{
 
     drawModel = () => {
         let { data, colors } = this.state;
-        console.log(data, data[0], sum(data), data[0]/sum(data));
+        // console.log(data, data[0], sum(data), data[0]/sum(data));
         // let oWrapper = this.refs.wrapper;
         let width = 400;
         let height = 400;
@@ -43,7 +43,7 @@ class PieChart extends React.Component{
         // Create the SVG canvas
         d3.selectAll('svg').remove()
 
-        let svg = d3.select('.pieChart')
+        let svg = d3.selectAll('.pieChart')
                     .append('svg')
                     .attr('width',width)
                     .attr('height',height)

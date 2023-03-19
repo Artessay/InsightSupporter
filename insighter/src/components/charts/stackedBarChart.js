@@ -4,7 +4,29 @@ import * as d3 from 'd3';
 export default class StackedBarChart extends React.Component {
     constructor(props){
         super(props)
+
+        const {Data} = this.props;
+
+        let tableList = []
+        for ( let key in Data) {
+            if (Data.hasOwnProperty(key)) {
+                const quarterData = Data[key];
+                //   const quarter = quarterData.Quarter;
+                //   console.log(`Quarter: ${quarter}`);
+                tableList.push({
+                    quarter: "Q" + quarterData.Quarter,
+                    miss: (Number(quarterData["Number of Shots"]) - Number(quarterData["Made"])),
+                    made: Number(quarterData.Made)
+                })
+            }
+        }
         
+        console.log(tableList)
+
+        this.state = {
+            data: tableList,
+            colors: ["#98abc5", "#8a89a6"]
+        }
     }
 
     drawModel = () => {
@@ -21,19 +43,20 @@ export default class StackedBarChart extends React.Component {
         //             .append("g")
         //             .attr("transform",
         //                   "translate(" + margin.left + "," + margin.top + ")");
-        let svg = d3.select('.stackedBarChart')
+        let svg = d3.selectAll('.stackedBarChart')
                     .append('svg') 
                     .attr('width', width)
                     .attr('height', height)
                     .attr("transform","translate("+margin.left+","+0+")");
 
         // Parse the data
-        var data = [
-            {quarter: "Q1", miss: 1, made: 6},
-            {quarter: "Q2", miss: 0, made: 3},
-            {quarter: "Q3", miss: 3, made: 2},
-            {quarter: "Q4", miss: 0, made: 2}
-        ];
+        // var data = [
+        //     {quarter: "Q1", miss: 1, made: 6},
+        //     {quarter: "Q2", miss: 0, made: 3},
+        //     {quarter: "Q3", miss: 3, made: 2},
+        //     {quarter: "Q4", miss: 0, made: 2}
+        // ];
+        let { data, colors } = this.state;
 
         // Transpose the data into layers
         var dataset = d3.stack()
@@ -50,9 +73,6 @@ export default class StackedBarChart extends React.Component {
         var y = d3.scaleLinear()
                   .domain([0, d3.max(dataset, function(d) { return d3.max(d, function(d) { return d[1]; }); })])
                   .range([height, 0]);
-
-        // Set the colors
-        var colors = ["#98abc5", "#8a89a6"];
 
         // Draw the bars
         svg.selectAll(".layer")
