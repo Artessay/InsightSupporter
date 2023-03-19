@@ -7,6 +7,7 @@ import { Input, Button } from "antd";
 import ChartSelect from "./ChartSelect";
 import StackedBarChart from "../charts/stackedBarChart";
 import ChartGenerator from "../charts/ChartGenerate";
+import MyDropdown from "./MyDropdown/MyDropdown";
 
 const { TextArea } = Input;
 
@@ -102,7 +103,11 @@ const Episode = props => {
                         </div>
                     </div>
                     
-                    <ChartSelect className='selectDrop'></ChartSelect>
+                    <div className='selectDrop'>
+                        {/* <ChartSelect ></ChartSelect> */}
+                        <MyDropdown></MyDropdown>
+                    </div>
+                    
                     <div className="chartArea">
                         <ScoreTable 
                             ChartData={listData[3-1].E_Sentences[0].S_Chartneed[0].Chart_Data[0]}

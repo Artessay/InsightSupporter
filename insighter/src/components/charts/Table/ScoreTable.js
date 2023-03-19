@@ -3,7 +3,7 @@ import './Table.css'
 
 function ScoreTable(props) {
     var {ChartData} = props
-    console.log(ChartData)
+    // console.log(ChartData)
 
     let tableList = []
     for ( let key in ChartData) {
@@ -14,11 +14,12 @@ function ScoreTable(props) {
             tableList.push({
                 quarter: quarterData.Quarter,
                 shots: quarterData["Number of Shots"],
-                make: quarterData.Made
+                made: quarterData.Made
             })
         }
     }
     
+    // console.log(tableList)
 
     return (
         <table className='styled-table'>

@@ -28,11 +28,9 @@ class PieChart extends React.Component{
         let { data, colors } = this.state;
         // console.log(data, data[0], sum(data), data[0]/sum(data));
         // let oWrapper = this.refs.wrapper;
-        let width = 400;
-        let height = 400;
+        let width = 300;
+        let height = 300;
         let radius = Math.min(width, height) / 2;
-
-        let left = 120;
 
         // Define the pie layout
         let pie = d3.pie();
@@ -50,7 +48,7 @@ class PieChart extends React.Component{
                     .append('svg')
                     .attr('width',width)
                     .attr('height',height)
-                    .attr("transform","translate("+left+","+0+")");
+                    // .attr("transform","translate("+left+","+0+")");
 
         // Create the groups for the pie slices
         var arcs = svg.selectAll("arc")

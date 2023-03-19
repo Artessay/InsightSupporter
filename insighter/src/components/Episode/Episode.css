@@ -20,9 +20,12 @@
 }
 
 .chartArea {
-    position: absolute;
-    top: 250px;
+    /* position: absolute; */
+    position: relative;
+    top: 120px;
     left: 100px;
+    /* top: 250px; */
+    /* left: 100px; */
     /* bottom: 5px; */
     /* width: 100%; */
     /* height: 100%; */
