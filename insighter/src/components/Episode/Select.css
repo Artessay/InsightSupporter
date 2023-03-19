@@ -32,6 +32,7 @@
     height: 30px;
     text-align: center;
     margin-left: 10px;
+    font-size: auto;
 }
 
 .selectText {
@@ -44,8 +45,10 @@
 
 .selectDrop {
     position: absolute;
-    top: 280px;
-    left: 550px;
+    /* top: 280px; */
+    /* left: 550px; */
+    left: 280px;
+    top: 340px;
     border: 3px;
     border-color: black;
 }

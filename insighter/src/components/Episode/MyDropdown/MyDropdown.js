@@ -31,6 +31,7 @@ export default class MyDropdown extends React.Component {
                     <select
                         value={this.state.value}
                         onChange={(e) => this.handleChange(e)}
+                        className='dropdownText'
                     >
                         {
                             this.state.options.map((item) => (
