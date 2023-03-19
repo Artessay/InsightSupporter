@@ -20,7 +20,8 @@ label {
 }
 
 
-/* select {
+select {
+  // A reset of styles, including removing the default dropdown arrow
   appearance: none;
   background-color: transparent;
   border: none;
@@ -32,8 +33,16 @@ label {
   cursor: inherit;
   line-height: inherit;
 
+  // Stack above custom arrow
   z-index: 1;
 
+  // Remove dropdown arrow in IE10 & IE11
+  // @link https://www.filamentgroup.com/lab/select-css.html
+  // &::-ms-expand {
+  //   display: none;
+  // }
+
+  // Remove focus outline, will add on alternate element
   outline: none;
 }
 
@@ -43,7 +52,10 @@ label {
   align-items: center;
   position: relative;
 
-  
+  select,
+  &::after {
+    grid-area: select;
+  }
 
   min-width: 15ch;
   max-width: 30ch;
@@ -56,12 +68,23 @@ label {
   cursor: pointer;
   line-height: 1.1;
 
+  // Optional styles
+  // remove for transparency
   background-color: #fff;
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 
-  
+  // Custom arrow
+  &:not(.select--multiple)::after {
+    content: "";
+    justify-self: end;
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
 }
 
+// Interim solution until :focus-within has better support
 select:focus + .focus {
   position: absolute;
   top: -1px;
@@ -70,6 +93,6 @@ select:focus + .focus {
   bottom: -1px;
   border: 2px solid var(--select-focus);
   border-radius: inherit;
-} */
+}
 
 
