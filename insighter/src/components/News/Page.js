@@ -22,7 +22,7 @@ function ChartGenerator( { sentenceList } ) {
                 console.log(need.Chart_Type)
                 if (need.Chart_Type === "Pie Chart") {
                     charts.push(
-                        <PieChart></PieChart>
+                        <PieChart Data = {need.Chart_Data[0]["1"]}></PieChart>
                     );
                 } else if (need.Chart_Type === "Bar Chart") {
                     charts.push(

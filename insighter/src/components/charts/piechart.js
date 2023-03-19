@@ -4,9 +4,18 @@ import * as d3 from "d3";
 class PieChart extends React.Component{
     constructor(props){
         super(props)
+
+        const { Data } = this.props;
+        let dataList = [
+            Number(Data.Made),
+            Number(Data.Miss)
+        ]
+
+        // console.log(dataList)
+
         this.state = {
             // Define the data
-            data : [13, 6],
+            data : dataList,
             
             // Define the colors
             colors : ["#98abc5", "#8a89a6"],
@@ -15,6 +24,7 @@ class PieChart extends React.Component{
 
     drawModel = () => {
         let { data, colors } = this.state;
+        console.log(data, data[0], sum(data), data[0]/sum(data));
         // let oWrapper = this.refs.wrapper;
         let width = 400;
         let height = 400;
