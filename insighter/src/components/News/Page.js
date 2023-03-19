@@ -7,12 +7,40 @@ import BarChart from '../charts/barchart';
 import StackedBarChart from '../charts/stackedBarChart';
 import VideoCarousel from './VideoCarousel';
 
+function ChartGenerator( { n, sentenceList } ) {
+    let charts;
+    console.log(sentenceList)
+
+    for (let sentence in sentenceList) {
+        console.log(sentence)
+        if (sentence.S_Ischart === "Yes") {
+            console.log("chart")
+            console.log(sentence.S_Chartneed)
+        }
+    }
+
+    if (n === 1) {
+        charts = (
+            <PieChart></PieChart>
+        );
+    } else if (n === 2) {
+        charts = (
+            <BarChart></BarChart>
+        );
+    } else {
+        charts = (
+            <StackedBarChart></StackedBarChart>
+        );
+    }
+
+    return charts;
+}
+
 export default class Page extends React.Component {
     constructor(props) {
         super(props);
         console.log(this.props.current);        
     }
-
     
     render() {
         const {DataSL} = this.props;
@@ -33,7 +61,7 @@ export default class Page extends React.Component {
                         &nbsp;Joel Embiid's Shooting Distribution in the Game
                     </span>
                 </div>
-                {/* <div className='video'></div> */}
+                
                 <VideoCarousel className='video'></VideoCarousel>
                 <div className='text'>
                     <p>Joel Embiid most shots were taken from mid range and happened in first quarter. </p>
@@ -58,6 +86,12 @@ export default class Page extends React.Component {
                                     <p className='subtitle'>
                                         {item.E_Title}:
                                     </p>
+                                    {/* {
+                                        for (let sentence in item.E_Sentences) {
+                                            return <div>haha</div>
+                                        }
+                                    } */}
+                                    <ChartGenerator n={1} sentenceList={item.E_Sentences}></ChartGenerator>
                                     <p className='subparagraph'>
                                         {item.E_Text}
                                     </p>
