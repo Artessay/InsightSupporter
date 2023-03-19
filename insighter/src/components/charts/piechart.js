@@ -5,6 +5,8 @@ class PieChart extends React.Component{
     constructor(props){
         super(props)
 
+        this.myRef = React.createRef();
+
         const { Data } = this.props;
         let dataList = [
             Number(Data.Made),
@@ -43,7 +45,8 @@ class PieChart extends React.Component{
         // Create the SVG canvas
         // d3.selectAll('svg').remove()
 
-        let svg = d3.selectAll('.pieChart')
+        // let svg = d3.selectAll('.pieChart')
+        let svg = d3.select(this.myRef.current)
                     .append('svg')
                     .attr('width',width)
                     .attr('height',height)
@@ -108,39 +111,22 @@ class PieChart extends React.Component{
             .attr("text-anchor", "middle")
             .style("font-size", "16px")
             .text("Percentage of Shots");
-
-        // function draw(){
-        //     let updataCircle = svg.selectAll('circle')
-        //                         .data(dataset)
-        //     let enterCircle = updataCircle.enter();
-        //     let exitCircle = updataCircle.exit();
-        //     updataCircle.attr('fill','red')
-        //                 .attr('r','30')
-        //                 .attr('cx',function(d){ return d.cx;})
-        //                 .attr('cy',function(d){ return d.cy;})
-        //                 .attr('fill','red')
-
-        //     enterCircle.append('circle')
-        //                 .attr('cx',function(d){ return d.cx;})
-        //                 .attr('cy',function(d){ return d.cy;})
-        //                 .attr('r','30')
-        //                 .attr('fill','red')
-
-        //     exitCircle.remove()
-
-        // }
-
-        // draw();
-
     }
 
     componentDidMount(){
         this.drawModel();
     }
 
+    componentDidUpdate(){
+        // this.drawModel();
+    }
+
     render(){
         return (
-            <div className="pieChart">
+            <div
+                ref={this.myRef} 
+                className="pieChart"
+            >
             </div>
         )
     }

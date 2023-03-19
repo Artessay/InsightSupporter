@@ -4,6 +4,7 @@ import * as d3 from 'd3';
 export default class BarChart extends React.Component {
     constructor(props){
         super(props)
+        this.myRef = React.createRef();
 
         const {Data} = this.props;
 
@@ -39,7 +40,9 @@ export default class BarChart extends React.Component {
 
         
         // d3.selectAll('.barChart').remove();
-        let svg = d3.selectAll('.barChart')
+        // let svg = d3.selectAll('.barChart')
+        
+        let svg = d3.select(this.myRef.current)
                     .append('svg')
                     .attr('width',width)
                     .attr('height',height)
@@ -89,9 +92,13 @@ export default class BarChart extends React.Component {
         this.drawModel();
     }
 
+    componentDidUpdate(){
+        // this.drawModel();
+    }
+
     render() {
         return (
-            <div className="barChart"></div>
+            <div ref={this.myRef} className="barChart"></div>
         )
     }
 }

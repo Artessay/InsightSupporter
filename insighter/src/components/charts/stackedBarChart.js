@@ -4,6 +4,7 @@ import * as d3 from 'd3';
 export default class StackedBarChart extends React.Component {
     constructor(props){
         super(props)
+        this.myRef = React.createRef();
 
         const {Data} = this.props;
 
@@ -45,7 +46,9 @@ export default class StackedBarChart extends React.Component {
         //                   "translate(" + margin.left + "," + margin.top + ")");
         
         // d3.selectAll('.stackedBarChart').remove();
-        let svg = d3.selectAll('.stackedBarChart')
+        // let svg = d3.selectAll('.stackedBarChart')
+        
+        let svg = d3.select(this.myRef.current)
                     .append('svg') 
                     .attr('width', width)
                     .attr('height', height)
@@ -159,9 +162,13 @@ export default class StackedBarChart extends React.Component {
         this.drawModel();
     }
 
+    componentDidUpdate(){
+        // this.drawModel();
+    }
+
     render() {
         return (
-            <div className="stackedBarChart"></div>
+            <div ref={this.myRef} className="stackedBarChart"></div>
         )
     }
 }
