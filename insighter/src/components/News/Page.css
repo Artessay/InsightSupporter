@@ -51,3 +51,8 @@
     font-weight: 700;
     font-size: 24px;
 }
+
+.pageChart {
+    position: relative;
+    text-align: center;
+}

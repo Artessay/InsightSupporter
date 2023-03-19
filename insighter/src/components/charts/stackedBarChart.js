@@ -31,10 +31,8 @@ export default class StackedBarChart extends React.Component {
     }
 
     drawModel = () => {
-        const margin = {top: 10, right: 10, bottom: -10, left: 80};
-        //     width = 600 - margin.left - margin.right,
-        //     height = 400 - margin.top - margin.bottom;
-        const width = 500, height = 300;
+        const margin = {top: 30, right: 0, bottom: 30, left: 30};
+        const width = 300, height = 300;
 
         // Append the SVG object to the body of the page
         // var svg = d3.select("stackedBarChart")
@@ -52,7 +50,7 @@ export default class StackedBarChart extends React.Component {
                     .append('svg') 
                     .attr('width', width)
                     .attr('height', height)
-                    .attr("transform","translate("+margin.left+","+0+")");
+                    // .attr("transform","translate("+margin.left+","+margin.top+")");
 
         // Parse the data
         // var data = [
@@ -71,13 +69,13 @@ export default class StackedBarChart extends React.Component {
         // Set the x scale
         var x = d3.scaleBand()
                   .domain(data.map(function(d) { return d.quarter; }))
-                  .range([0, width])
+                  .range([margin.left, width-margin.right])
                   .padding(0.1);
 
         // Set the y scale
         var y = d3.scaleLinear()
                   .domain([0, d3.max(dataset, function(d) { return d3.max(d, function(d) { return d[1]; }); })])
-                  .range([height, 0]);
+                  .range([height-margin.bottom, margin.top]);
 
         // Draw the bars
         svg.selectAll(".layer")
@@ -97,7 +95,7 @@ export default class StackedBarChart extends React.Component {
 
         // Add the x axis
         svg.append("g")
-           .attr("transform", "translate(0," + height + ")")
+           .attr("transform", "translate(0," + (height-margin.bottom) + ")")
            .call(d3.axisBottom(x))
            .selectAll("text")
            .attr("transform", "rotate(-45)")
@@ -105,14 +103,15 @@ export default class StackedBarChart extends React.Component {
 
         // Add the y axis
         svg.append("g")
-           .call(d3.axisLeft(y));
+           .call(d3.axisLeft(y))
+           .attr("transform", "translate(" + margin.left + ", 0)");
 
         // Add legend
         var legend = svg.selectAll(".legend")
                         .data(colors)
                         .enter().append("g")
                         .attr("class", "legend")
-                        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+                        .attr("transform", function(d, i) { return "translate(0," + (i * 20 + margin.top)+ ")"; });
 
         // Add legend rectangles
         legend.append("rect")
@@ -138,7 +137,7 @@ export default class StackedBarChart extends React.Component {
         // Add title
         svg.append("text")
            .attr("x", (width / 2))
-           .attr("y", 0 - (margin.top / 2))
+           .attr("y", 0 + (margin.top / 2)) // @TODO
            .attr("text-anchor", "middle")
            .style("font-size", "16px")
            .text("Distribution of Shots by Quarter");
@@ -152,8 +151,8 @@ export default class StackedBarChart extends React.Component {
         // Add y axis label
         svg.append("text")
            .attr("transform", "rotate(-90)")
-           .attr("y", 0 - margin.left)
-           .attr("x", 0 - (height / 2))
+           .attr("y", 0 + margin.left)  // @TODO
+           .attr("x", 0 + (height / 2)) // @TODO
            .attr("dy", "1em")
            .style("text-anchor", "middle");
     }

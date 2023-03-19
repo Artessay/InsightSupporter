@@ -60,7 +60,10 @@ export default class Page extends React.Component {
                                             return <div>haha</div>
                                         }
                                     } */}
-                                    <ChartGenerator sentenceList={item.E_Sentences}></ChartGenerator>
+                                    <p className='pageChart'>
+                                        <ChartGenerator sentenceList={item.E_Sentences}></ChartGenerator>
+                                    </p>
+                                    
                                     <p className='subparagraph'>
                                         {item.E_Text}
                                     </p>
