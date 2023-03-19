@@ -26,7 +26,7 @@ function ChartGenerator( { sentenceList } ) {
                     );
                 } else if (need.Chart_Type === "Bar Chart") {
                     charts.push(
-                        <BarChart></BarChart>
+                        <BarChart Data = {need.Chart_Data[0]}></BarChart>
                     );
                 } else if (need.Chart_Type === "Stacked Bar Chart") {
                     console.log("Yes, it is Stacked Bar Chart");

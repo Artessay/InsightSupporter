@@ -21,7 +21,7 @@ export default class StackedBarChart extends React.Component {
             }
         }
         
-        console.log(tableList)
+        // console.log(tableList)
 
         this.state = {
             data: tableList,

@@ -4,13 +4,29 @@ import * as d3 from 'd3';
 export default class BarChart extends React.Component {
     constructor(props){
         super(props)
+
+        const {Data} = this.props;
+
+        let dataList = []
+        for ( let key in Data) {
+            if (Data.hasOwnProperty(key)) {
+                const quarterData = Data[key];
+                
+                dataList.push({
+                    type: quarterData["Type"],
+                    value: Number(quarterData["Number of Shots"])
+                })
+            }
+        }
+
         this.state = {
-            data : [
-                { type: "Midrange", value: 11 },
-                { type: "3pt", value: 3 },
-                { type: "Layup", value: 2 },
-                { type: "Dunk", value: 3 }
-            ],
+            data : dataList,
+            // [
+            //     { type: "Midrange", value: 11 },
+            //     { type: "3pt", value: 3 },
+            //     { type: "Layup", value: 2 },
+            //     { type: "Dunk", value: 3 }
+            // ],
             colors : ["#98abc5"]
         }
     }
