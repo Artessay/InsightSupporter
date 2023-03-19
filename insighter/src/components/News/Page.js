@@ -7,33 +7,39 @@ import BarChart from '../charts/barchart';
 import StackedBarChart from '../charts/stackedBarChart';
 import VideoCarousel from './VideoCarousel';
 
-function ChartGenerator( { n, sentenceList } ) {
-    let charts;
-    console.log(sentenceList)
+function ChartGenerator( { sentenceList } ) {
+    let charts = [];
+    // console.log(sentenceList)
 
-    for (let sentence in sentenceList) {
-        console.log(sentence)
-        if (sentence.S_Ischart === "Yes") {
-            console.log("chart")
-            console.log(sentence.S_Chartneed)
+    for (let i = 0; i < sentenceList.length; ++i) {
+        // console.log(sentenceList[i])
+        if (sentenceList[i].S_Ischart === "Yes") {
+            // console.log("chart")
+            // console.log(sentenceList[i].S_Chartneed)
+            let needs = sentenceList[i].S_Chartneed;
+            for (let j = 0; j < needs.length; ++j) {
+                let need = needs[j];
+                console.log(need.Chart_Type)
+                if (need.Chart_Type === "Pie Chart") {
+                    charts.push(
+                        <PieChart></PieChart>
+                    );
+                } else if (need.Chart_Type === "Bar Chart") {
+                    charts.push(
+                        <BarChart></BarChart>
+                    );
+                } else if (need.Chart_Type === "Stacked Bar Chart") {
+                    charts.push(
+                        <StackedBarChart></StackedBarChart>
+                    )
+                } else {
+                    // do nothing
+                }
+            }
         }
     }
 
-    if (n === 1) {
-        charts = (
-            <PieChart></PieChart>
-        );
-    } else if (n === 2) {
-        charts = (
-            <BarChart></BarChart>
-        );
-    } else {
-        charts = (
-            <StackedBarChart></StackedBarChart>
-        );
-    }
-
-    return charts;
+    return <>{charts}</>;
 }
 
 export default class Page extends React.Component {
@@ -91,7 +97,7 @@ export default class Page extends React.Component {
                                             return <div>haha</div>
                                         }
                                     } */}
-                                    <ChartGenerator n={1} sentenceList={item.E_Sentences}></ChartGenerator>
+                                    <ChartGenerator sentenceList={item.E_Sentences}></ChartGenerator>
                                     <p className='subparagraph'>
                                         {item.E_Text}
                                     </p>
@@ -99,7 +105,7 @@ export default class Page extends React.Component {
                             ))
                         }
 
-                        <p className='subtitle'>
+                        {/* <p className='subtitle'>
                             Introduction:
                         </p>
                         <p className='subparagraph'>
@@ -142,7 +148,7 @@ export default class Page extends React.Component {
                         </p>
                         <p className='subparagraph'>
                             <b>Alternative texts</b>
-                        </p>
+                        </p> */}
                     </div>
                 </div>
                 
