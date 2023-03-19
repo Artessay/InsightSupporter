@@ -24,7 +24,10 @@
     top: 280px;
     left: 900px;
 
-    
+    display: flex;
+    flex-direction: column;
+    /* padding-bottom: 10px; */
+    justify-content: space-between;
 }
 
 .chartButtonText {

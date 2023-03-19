@@ -10,6 +10,25 @@ import MyDropdown from "./MyDropdown/MyDropdown";
 
 const { TextArea } = Input;
 
+function ChartCount(  sentenceList  ) {
+    let chartNumber = 0;
+    // console.log(sentenceList)
+
+    for (let i = 0; i < sentenceList.length; ++i) {
+        // console.log(sentenceList[i])
+        if (sentenceList[i].S_Ischart === "Yes") {
+            // console.log("chart")
+            // console.log(sentenceList[i].S_Chartneed)
+            let needs = sentenceList[i].S_Chartneed;
+            for (let j = 0; j < needs.length; ++j) {
+                ++chartNumber;
+            }
+        }
+    }
+
+    return chartNumber;
+}
+
 const Episode = props => {
 
     var {DataSL}=props
@@ -57,6 +76,11 @@ const Episode = props => {
         setListData(newData);
         props.Datalist(newData)
     }
+
+    // console.log(sentences)
+    let counter = ChartCount(sentences);
+    console.log(counter)
+    const chartNumbers = Array.from({ length:  counter }, (_, index) => index);
 
         return(
             <div className="Episode">
@@ -108,15 +132,23 @@ const Episode = props => {
                     </div>
 
                     <div className="chartButton">
-                        <Button
-                            // type="primary"
-                            size="large"
-                            style={{
-                                backgroundColor: 'rgba(117, 117, 117, 0.3)'
-                            }}
-                        >
-                            <div className="chartButtonText">1</div>
-                        </Button>
+                        {
+                            chartNumbers.map((number) => (
+                                <Button
+                                    // type="primary"
+                                    size="large"
+                                    style={{
+                                        backgroundColor: 'rgba(117, 117, 117, 0.3)',
+                                        marginBottom: 10
+                                    }}
+                                >
+                                    <div className="chartButtonText">
+                                        {number+1}
+                                    </div>
+                                </Button>
+                            ))
+                        }
+                        
                     </div>
                     
                     <div className="chartArea">

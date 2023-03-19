@@ -24,11 +24,9 @@ function ChartGenerator( { sentenceList } ) {
                         <BarChart Data = {need.Chart_Data[0]}></BarChart>
                     );
                 } else if (need.Chart_Type === "Stacked Bar Chart") {
-                    console.log("Yes, it is Stacked Bar Chart");
                     charts.push(
                         <StackedBarChart Data = {need.Chart_Data[0]}></StackedBarChart>
                     );
-                    console.log(charts);
                 } else {
                     // do nothing
                 }
