@@ -4,8 +4,7 @@ import ScoreTable from "../charts/Table/ScoreTable";
 import './Episode.css'
 import './Select.css'
 import { Input, Button } from "antd";
-import ChartSelect from "./ChartSelect";
-import StackedBarChart from "../charts/stackedBarChart";
+// import ChartSelect from "./ChartSelect";
 import ChartGenerator from "../charts/ChartGenerate";
 import MyDropdown from "./MyDropdown/MyDropdown";
 
@@ -106,6 +105,18 @@ const Episode = props => {
                     <div className='selectDrop'>
                         {/* <ChartSelect ></ChartSelect> */}
                         <MyDropdown></MyDropdown>
+                    </div>
+
+                    <div className="chartButton">
+                        <Button
+                            // type="primary"
+                            size="large"
+                            style={{
+                                backgroundColor: 'rgba(117, 117, 117, 0.3)'
+                            }}
+                        >
+                            <div className="chartButtonText">1</div>
+                        </Button>
                     </div>
                     
                     <div className="chartArea">
