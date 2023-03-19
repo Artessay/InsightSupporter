@@ -6,6 +6,7 @@ import './Select.css'
 import { Input, Button } from "antd";
 import ChartSelect from "./ChartSelect";
 import StackedBarChart from "../charts/stackedBarChart";
+import ChartGenerator from "../charts/ChartGenerate";
 
 const { TextArea } = Input;
 
@@ -107,7 +108,13 @@ const Episode = props => {
                             ChartData={listData[3-1].E_Sentences[0].S_Chartneed[0].Chart_Data[0]}
                         ></ScoreTable>
                     </div>
-                    <StackedBarChart className='chooseChart'></StackedBarChart>
+                    {/* <StackedBarChart className='chooseChart'></StackedBarChart> */}
+                    <div className='chooseChart'>
+                        <ChartGenerator 
+                            sentenceList = {listData[CE-1].E_Sentences}
+                        ></ChartGenerator>
+                    </div>
+                    
                 </div>
                 <div className="episodeFooter">
                     <div style={{margin: 5}}>

@@ -60,7 +60,7 @@ class FlowGame extends Component {
           }
         }
       } 
-    console.log(focus_low)
+    // console.log(focus_low)
 
 
 
