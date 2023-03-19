@@ -37,6 +37,8 @@ export default class BarChart extends React.Component {
         const width = 400, height = 300;
         const left = 100, top = -30;
 
+        
+        // d3.selectAll('.barChart').remove();
         let svg = d3.selectAll('.barChart')
                     .append('svg')
                     .attr('width',width)

@@ -43,6 +43,8 @@ export default class StackedBarChart extends React.Component {
         //             .append("g")
         //             .attr("transform",
         //                   "translate(" + margin.left + "," + margin.top + ")");
+        
+        // d3.selectAll('.stackedBarChart').remove();
         let svg = d3.selectAll('.stackedBarChart')
                     .append('svg') 
                     .attr('width', width)

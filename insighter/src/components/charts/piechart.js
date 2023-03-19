@@ -41,7 +41,7 @@ class PieChart extends React.Component{
                     .outerRadius(radius);
 
         // Create the SVG canvas
-        d3.selectAll('svg').remove()
+        // d3.selectAll('svg').remove()
 
         let svg = d3.selectAll('.pieChart')
                     .append('svg')
