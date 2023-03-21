@@ -66,3 +66,10 @@
     right: 3.5%;
     margin-top:20px;
 }
+
+textarea {
+    background: transparent;
+    border-style: none;
+    text-indent: 30px;
+    color: black;
+}

@@ -17,9 +17,9 @@ export default class Story extends React.Component {
                 <div className='TaskType'>
                     Distribution
                 </div>
-                <div className='InputText'>
+                <textarea className='InputText'>
                     Joel Embiid most shots were taken from mid range and happened in first quarter.
-                </div>
+                </textarea>
                 {/* <Input
                     className='InputText'
                     type="text"

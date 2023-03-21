@@ -167,11 +167,19 @@ const Episode = props => {
                 <div className="episodeFooter">
                     <div style={{margin: 5}}>
                         {/* <b>Text:</b> {DataSL.Contents.Episode[CE-1].E_Text} */}
-                        <TextArea
+                        {/* <TextArea
                             rows={4}
                             defaultValue={listData[CE-1].E_Text}
                             onInput={(e) => handleTextareaChange(e)}
-                        ></TextArea>
+                        ></TextArea> */}
+                        <textArea
+                            className='episodeTextArea'
+                            rows={4}
+                            // defaultValue={listData[CE-1].E_Text}
+                            onInput={(e) => handleTextareaChange(e)}
+                        >
+                            {listData[CE-1].E_Text}
+                        </textArea>
                     </div>
                 </div>
             </div>
