@@ -9,7 +9,7 @@ function GenerateButton(props) {
                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                 </svg>
-                <span>HOVER ME</span>
+                <span>Generate Story</span>
             </button>
             </div>
         </div>
