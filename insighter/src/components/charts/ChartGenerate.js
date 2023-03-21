@@ -1,6 +1,7 @@
 import PieChart from './piechart';
 import BarChart from './barchart';
 import StackedBarChart from './stackedBarChart';
+import ShotChart from './shot/shotchart';
 
 function ChartGenerator( { sentenceList } ) {
     let charts = [];
@@ -27,8 +28,10 @@ function ChartGenerator( { sentenceList } ) {
                     charts.push(
                         <StackedBarChart Data = {need.Chart_Data[0]}></StackedBarChart>
                     );
-                } else {
-                    // do nothing
+                } else if (need.Chart_Type === "Shot Chart") {
+                    charts.push(
+                        <ShotChart></ShotChart>
+                    )
                 }
             }
         }
