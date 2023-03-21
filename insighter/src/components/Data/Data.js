@@ -31,7 +31,7 @@ export default class Data extends React.Component {
                     alt='away team logo'
                 ></img>
                 
-                <GameFlow id={1}></GameFlow>
+                {/* <GameFlow id={1}></GameFlow> */}
             </div>
             
         )

@@ -1,5 +1,5 @@
 import React  from "react";
-import { useState } from 'react';
+import { useRef,useEffect,useState } from 'react';
 import ScoreTable from "../charts/Table/ScoreTable";
 import './Episode.css'
 import './Select.css'
@@ -40,8 +40,11 @@ const Episode = props => {
     for (var i=0;i< DataSL.Contents.Episode.length;i++){
         Data_Episode_Name.push(DataSL.Contents.Episode[i])
     }
-
-    const [listData, setListData] = useState(Data_Episode_Name);
+    var [listData, setListData] = useState(DataSL.Contents.Episode);
+    if(listData!=DataSL.Contents.Episode){
+        setListData(DataSL.Contents.Episode)
+    }
+    //setListData(Data_Episode_Name)
 
     const handleTextareaChange = (e) => {
         // console.log(e.target.value)
@@ -52,10 +55,9 @@ const Episode = props => {
         let newData = listData;
         props.Datalist(newData)
     }
-    
+
     // let [sentences, setSentences] = useState(listData[CE-1].E_Sentences);
     let sentences = listData[CE-1].E_Sentences;
-
     const handleInsert = () => {
         const newData = [...listData];
         const newItem = {

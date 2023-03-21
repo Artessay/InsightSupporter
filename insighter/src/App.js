@@ -23,7 +23,7 @@ function App() {
         var DataTmp1=DataSL
         DataTmp1.Contents.Episode=(key2)
         setDataSL(DataSL=DataTmp1)
-        console.log(DataSL)
+        //console.log(DataSL)
     };
 
     var Datalist = (key) => {
