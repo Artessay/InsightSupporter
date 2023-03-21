@@ -1,7 +1,8 @@
 import PieChart from './piechart';
 import BarChart from './barchart';
 import StackedBarChart from './stackedBarChart';
-import ShotChart from './shot/shotchart';
+import ShotingChart from './shot/shot';
+// import ShotChart from './shot/shotchart';
 
 function ChartGenerator( { sentenceList } ) {
     let charts = [];
@@ -30,7 +31,8 @@ function ChartGenerator( { sentenceList } ) {
                     );
                 } else if (need.Chart_Type === "Shot Chart") {
                     charts.push(
-                        <ShotChart></ShotChart>
+                        // <ShotChart></ShotChart>
+                        // <ShotingChart></ShotingChart>
                     )
                 }
             }

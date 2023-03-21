@@ -1,4 +1,4 @@
-import { center } from '@antv/g2plot/lib/plots/sankey/sankey';
+// import { center } from '@antv/g2plot/lib/plots/sankey/sankey';
 import { Grid, List, Button, Card } from 'antd';
 import { useState } from 'react';
 import ChartGenerator from "../charts/ChartGenerate";
