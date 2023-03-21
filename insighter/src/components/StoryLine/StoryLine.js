@@ -1,8 +1,9 @@
+import { center } from '@antv/g2plot/lib/plots/sankey/sankey';
 import { Grid, List, Button, Card } from 'antd';
 import { useState } from 'react';
-import StackedBarChart from '../charts/stackedBarChart';
+import ChartGenerator from "../charts/ChartGenerate";
 // import './Card.css'
-
+import close from '../../icon/cancel.png';
 // const { Item } = List;
 const { useBreakpoint } = Grid;
 // const data = ['Item 1', 'Item 2', 'Item 3'];
@@ -20,8 +21,12 @@ const StoryLine = props => {
   const [listData,setListData] = useState(Data_Episode_Name);
 //console.log(Data_Episode_Name)
   const handleAdd = () => {
-    setListData([...listData, 'New Item']);
-    //console.log(listData)
+    const newData = [...listData];
+    newData.push({Id: String(DataSL.Contents.Episode.length+1), E_Title: 'New Episode', E_Sentences: [{S_Insight: "Insight Text", S_Task: 'Task Type', S_Ischart: 'No'}], E_Text: 'None'}
+    )
+    setListData(newData);
+    props.Datalist(newData)
+
   };
   const onTab1Change = (key) => {
     //console.log(key)
@@ -49,33 +54,31 @@ const StoryLine = props => {
           <Card 
             title={
               <div>
+                <icon style={{dalignSelf: "flex-start", position: "relative", top: "3px", left: "-10px"}}>{index+1}</icon>
               <Button onClick={() => onTab1Change(index)} style={{
                 fontSize: 10,
                 width: 200,
                 overflow:"hidden",
                 
-              }}>Episode {index+1}: {item.E_Title}{/* <Button  style={{
-
-              }} type="link" danger onClick={() => handleRemove(index)}>×</Button> */} </Button>
-              <Button  style={{
-                fontSize: 40,
-                width: 20,
-                marginLeft:0
-              }} type="link" danger onClick={() => handleRemove(index)}>×</Button>
+              }}>{item.E_Title}{} </Button>
+              {<img src={close} style={{
+                dalignSelf: "flex-start", position: "relative", top: "3px",right: "-10px"
+              }} onClick={() => handleRemove(index)}></img>}
               </div>
             } 
-           /*  extra={
+            /* extra={
               <Button  style={{
-                fontSize: 40,
+                fontSize: 10,
                 width: 20,
-                marginLeft:30
+                marginLeft:0
               }} type="link" danger onClick={() => handleRemove(index)}>×</Button>}  */
             style={{
-              height: 283,
+              height: 280,
               width: 300,
               marginLeft:20,
               marginTop:10,
-              position: "relative"
+              position: "relative",
+              
             }}
             >
         {/*  <Card title={"Episode"+ item.Id +item.E_Title} extra={<Button type="link"  danger onClick={() => handleRemove(index)}>×</Button>} > */}
@@ -89,7 +92,11 @@ const StoryLine = props => {
           marginTop:-10
         }}key={i}>{"-- "+ k.S_Insight}</p>
       ))}
-     {/*  <StackedBarChart style={{height:10,width:10,transform: "scale(2)",transformorigin: "left top"}}></StackedBarChart> */}
+     <div style={{ width: "40px", height: "30px", transform: "scale(0.2)" }}>
+     <ChartGenerator 
+                            sentenceList = {item.E_Sentences}
+                        ></ChartGenerator>
+</div>
     {/*   <p 
              style={{
                height: 40,
