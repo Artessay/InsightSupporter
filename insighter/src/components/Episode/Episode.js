@@ -7,6 +7,7 @@ import { Input, Button } from "antd";
 // import ChartSelect from "./ChartSelect";
 import ChartGenerator from "../charts/ChartGenerate";
 import MyDropdown from "./MyDropdown/MyDropdown";
+import SelectPanel from "./SelectPanel/SelectPanel";
 
 const { TextArea } = Input;
 
@@ -143,6 +144,8 @@ const Episode = props => {
                         {/* <ChartSelect ></ChartSelect> */}
                         <MyDropdown></MyDropdown>
                     </div>
+
+                    <SelectPanel></SelectPanel>
 
                     <div className="chartButton">
                         {

@@ -1,0 +1,12 @@
+#sequenceview {
+    /* + 45 */
+    height: 337px;
+    /* background-color: yellow; */
+}
+
+#storyline {
+    display: flex;
+    padding: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}

@@ -1,0 +1,51 @@
+.pane {
+  background: #fff;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 1px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  /* box-shadow: 2px 2px 2px #dddddd; */
+}
+
+.header {
+  background-color: #eee;
+  margin: 5px;
+  padding-left: 10px;
+  padding-top: 4px;
+  border-radius: 5px;
+  height: 30px;
+}
+
+#components-layout-demo-top-side .logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 28px 16px 0;
+  float: left;
+}
+
+#calliope-header{
+  height:50px;
+  padding-left:10px;
+  background-color: black;
+}
+
+#calliope-logo {
+  width:50px;
+  height:50px;
+  background-image: url(./logo.png); 
+  background-size: 100%;
+  display: inline-block;
+}
+
+#calliope-title{
+  color: white;
+  font-size: 20px;
+  display:inline-block; 
+  height: 50px;
+  line-height: 50px;
+  vertical-align: top;
+}

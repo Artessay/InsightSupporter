@@ -1,0 +1,139 @@
+#factview {
+    height: 288px;
+    /* background-color: yellow; */
+}
+
+#factconfigure {
+    height: 299px;
+    padding:6px 5px 15px 15px;
+    /* background-color: yellow; */
+    box-sizing: border-box
+}
+
+#caption{
+    background-color: #336fb9;
+    color: white;
+    padding: 0px 5px 0px 7px;  
+    margin-right:10px;  
+    display: flex;
+    height:68px;
+    line-height: 17px;
+    align-items: center;
+    overflow: auto;   
+}
+
+#select-panel{
+    height:226px;
+    padding-right:10px;
+    overflow-x: hidden;  
+    overflow-y: auto; 
+}
+
+#select-panel > *{
+    width:100%;
+    margin-bottom: 10px
+}
+
+.config-panel .ant-row{
+    margin-bottom: 10px;
+    height:26px;
+}
+
+.channelName {
+    height: 24px !important;
+    background-color: #383f5e;
+    text-align:center;
+    color:white;
+}
+
+.shelf {
+    width: 100%;
+    /* height: 24px; */
+    margin : 10px 0px;
+    /* box-shadow: 2px 2px 2px #dddddd; */
+    border: 1px solid black;
+}
+
+#select-panel .ant-select-selection, #select-field .ant-select-selection{
+    height:24px;
+    -webkit-border: none !important;
+    -moz-border: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px !important;
+}
+
+#select-panel .ant-select-selection__rendered {
+    margin-left: 14px !important;
+}
+
+#select-panel .ant-select-dropdown-menu {
+    max-height: 300px;
+}
+
+.select-box{
+    height: 24px;
+    background-color: #fff;
+    /* text-align: left; */
+    text-align:center;
+    width:100%;
+}
+
+#select-type {
+    width:100%;
+}
+
+#select-agg .ant-select-selection{
+    width:100%;   
+    background-color: aliceblue;
+}
+
+#select-panel .ant-btn{
+    border:none !important;
+}
+
+/* #add-subspace{
+    padding-left:14px !important;
+    text-align: left;
+} */
+
+#add-subspace, #add-groupby, #add-focus0{
+    width:100%;
+}
+
+#select-panel .ant-checkbox-group> *{
+    display: block !important;
+}
+
+#select-panel .ant-modal-body{
+    padding:15px !important;
+}
+
+.display-none{
+    display: none !important;
+}
+
+.add-btn{
+    width:100%
+}
+
+#scoreview{
+    height:75px;
+    background-color: #383f5e;
+    color:white;
+    text-align: center;
+}
+
+#information{
+    font-weight: 800;
+    font-size:32px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#significance{
+    font-weight: 600;
+    font-size:16px;
+    position: relative;
+    top: -5px;
+}

@@ -1,0 +1,130 @@
+#panel {
+    width: 238px;
+}
+
+#uploaddata {
+    /* height: 100px; */
+    height: 130px;
+    font-size: 16px;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #D8D8D8;
+    border-width: 1px;
+    background-color: #ffffff;
+    margin: 8px;
+    text-align: center;
+    /* 垂直居中+水平居中 */
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    /* align-items: center; */
+    /* padding-left: 64px;  */
+    /* padding-top: 20px;  */
+}
+
+#generatebutton{
+    /* margin-left: 8px;
+    margin-right: 8px; */
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 227px;
+}
+
+#generatebutton .ant-btn{
+    height: 39px;
+    margin-top: 2px;
+    /* vinci */
+    font-size: 16px;
+    background: white;
+    background-image: none;
+    color: #f5564e;
+    border: solid #f5564e 2px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#changeDataButton {
+    margin: 8px;
+}
+
+.card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+    /* border-color: transparent;
+    background: transparent; */
+    width: 74px;
+    text-align: center;
+}
+
+/* .card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+    border-color: #fff;
+    background: #fff;
+} */
+
+.card-container > .ant-tabs-card > .ant-tabs-content {
+    height: 190px;
+    width: 226px;
+    margin-top: -17px;
+    border-style: solid;
+    border-color: #D8D8D8;
+    border-width: 1px;
+}
+  
+.card-container > .ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane {
+    background: #fff;
+    /* padding: 16px; */
+}
+
+.card-container > .ant-tabs-card > .ant-tabs-bar {
+    border-color: #fff;
+}
+
+
+
+.label-point {
+    background: #336fb9;
+    color: white;
+    font-size: 8px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align:center;
+    padding-top: 6px;
+    /* float: left; */
+}
+
+.center-point {
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+}
+
+.drag-area-background {
+    margin-left: 44px;
+    margin-top: 40px;
+    border: 1px solid #336fb9;
+    border-radius: 50%;
+}
+
+.drag-area {
+    margin-left: 44px;
+    margin-top: 40px;
+}
+
+.drag-point {
+    background: white;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 2px;
+    border-color: #336fb9;
+    width: 30px;
+    height: 30px;
+    text-align:center;
+    padding-top: 2px;
+    font-size: 14px;
+    color: #336fb9;
+    cursor: grab;
+}
+
+.card-container .ant-tabs-tab {
+    padding : 0px !important;
+}
