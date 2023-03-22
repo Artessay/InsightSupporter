@@ -63,8 +63,7 @@
     /* left: 70%; */
     transform: scale(1.07); 
     transform-origin: left top;
-    /* right: 3.5%; */
-    right: 865px;
+    right: 3.5%;
     margin-top:20px;
 }
 

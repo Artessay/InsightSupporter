@@ -201,31 +201,17 @@
                         {
                             "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True"}],
                             "Breakdown":"ShotType",
-                            "Measure":"",
-                            "Is_Tracking":"Yes",
-                            "Chart_Type":"Shot Chart",
+                            "Measure":"Count",
+                            "Is_Tracking":"No",
+                            "Chart_Type":"Bar Chart",
                             "Chart_Title":"Shots Categorized by Type",
                             "Chart_Data":[
                                 {
-                                    "1":{"Text":"Joel Embiid makes 18-foot jumper","x":"8","y":"6","Iscore":"True","Action_Type":"Jump Shot"},
-                                    "2":{"Text":"Joel Embiid makes 12-foot two point shot","x":"27","y":"12","Iscore":"True","Action_Type":"Turnaround Fade Away Jump Shot"},
-                                    "3":{"Text":"Joel Embiid makes 11-foot two point shot","x":"15","y":"4","Iscore":"True","Action_Type":"Turnaround Fade Away Jump Shot"},
-                                    "4":{"Text":"Joel Embiid makes 12-foot two point shot","x":"22","y":"12","Iscore":"True","Action_Type":"Turnaround Fade Away Jump Shot"},
-                                    "5":{"Text":"Joel Embiid makes pullup jump shot (Tyrese Maxey assists)","x":"25","y":"10","Iscore":"True","Action_Type":"Pullup Jump Shot"},
-                                    "6":{"Text":"Joel Embiid misses 10-foot two point shot","x":"29","y":"9","Iscore":"False","Action_Type":"Turnaround Fade Away Jump Shot"},
-                                    "7":{"Text":"Joel Embiid misses 18-foot step back jumpshot","x":"22","y":"17","Iscore":"False","Action_Type":"Step Back Jump Shot"},
-                                    "8":{"Text":"Joel Embiid makes 18-foot step back jumpshot","x":"17","y":"16","Iscore":"True","Action_Type":"Step Back Jump Shot"},
-                                    "9":{"Text":"Joel Embiid makes 26-foot three point shot","x":"9","y":"20","Iscore":"True","Action_Type":"Turnaround Fade Away Jump Shot"},
-                                    "10":{"Text":"Joel Embiid misses 26-foot three point jumper","x":"40","y":"21","Iscore":"False","Action_Type":"Jump Shot"},
-                                    "11":{"Text":"Joel Embiid misses three point jumper","x":"25","y":"27","Iscore":"False","Action_Type":"Jump Shot"},
-                                    "12":{"Text":"Joel Embiid misses tip shot","x":"25","y":"0","Iscore":"True","Action_Type":"Tip Shot"},
-                                    "13":{"Text":"Joel Embiid makes driving dunk (James Harden assists)","x":"26","y":"0","Iscore":"True","Action_Type":"Driving Dunk Shot"},
-                                    "14":{"Text":"Joel Embiid makes dunk (Georges Niang assists)","x":"25","y":"0","Iscore":"True","Action_Type":"Dunk Shot"},
-                                    "15":{"Text":"Joel Embiid makes 1-foot dunk (James Harden assists)","x":"24","y":"1","Iscore":"True","Action_Type":"Cutting Dunk Shot"},
-                                    "16":{"Text":"Moses Brown blocks Joel Embiid‘s layup","x":"24","y":"0","Iscore":"True","Action_Type":"Layup Shot"},
-                                    "17":{"Text":"Joel Embiid makes two point shot","x":"25","y":"0","Iscore":"True","Action_Type":"Layup Shot Putback"},
-                                    "18":{"Text":"Joel Embiid makes two point shot","x":"25","y":"0","Iscore":"True","Action_Type":"ayup Shot Putback"},
-                                    "19":{"Text":"Joel Embiid makes driving layup (Tobias Harris assists)","x":"25","y":"0","Iscore":"True","Action_Type":"Driving Layup Shot"}
+                                    "1":{"Type":"Jump Shot","Number of Shots":"11","Made":""},
+                                    "2":{"Type":"Bank","Number of Shots":"0","Made":""},
+                                    "3":{"Type":"Layup","Number of Shots":"4","Made":""},
+                                    "4":{"Type":"Dunk","Number of Shots":"3","Made":""},
+                                    "5":{"Type":"Tip","Number of Shots":"1","Made":""}
                                 }
                             ]
                         }
@@ -246,11 +232,11 @@
                             "Chart_Title":"The Percentage of Shots from Each Type",
                             "Chart_Data":[
                                 {
-                            	"1":{"Type":"Jump Shot","Number of Shots":"11","Made":"7","Percentage of Shots":"63.6%"},
-                                "2":{"Type":"Bank","Number of Shots":"0","Made":"0","Percentage of Shots":"0,0%"},
-                                "3":{"Type":"Layup","Number of Shots":"4","Made":"3","Percentage of Shots":"75.0%"},
-                                "4":{"Type":"Dunk","Number of Shots":"3","Made":"3","Percentage of Shots":"100%"},
-                                "5":{"Type":"Tip","Number of Shots":"1","Made":"0","Percentage of Shots":"0.0%"}
+                            	"1":{"Type":"Jump Shot","Percentage of Shots":"63.6%"},
+                                "2":{"Type":"Bank","Percentage of Shots":"0%"},
+                                "3":{"Type":"Layup","Percentage of Shots":"75%"},
+                                "4":{"Type":"Dunk","Percentage of Shots":"66.7%"},
+                                "5":{"Type":"Tip","Number of Shots":"100%"}
                 				}
                             ]
                         }
@@ -329,8 +315,7 @@
                             	"1":{"Type":"MidRange%","Percentage of Shots":"75%"},
                                 "2":{"Type":"LongRange%","Percentage of Shots":"33.3%"},
                                 "3":{"Type":"ShortRange%","Percentage of Shots":"75%"},
-                                "4":{"Type":"FT%","Percentage of Shots":"80%"},
-                                "5":{"Type":"Overall%","Percentage of Shots":"68.4%"}
+                                "4":{"Type":"Overall%","Percentage of Shots":"68.4%"}
                 				}
                             ]
                         }
