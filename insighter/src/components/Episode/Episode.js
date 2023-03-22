@@ -87,7 +87,18 @@ const Episode = props => {
         return(
             <div className="Episode">
                 <div className='episodeHeader'>
-                    <b>Episode {CE}</b>: {DataSL.Contents.Episode[CE-1].E_Title}
+                    <b>Episode {CE}</b>: 
+                    <div className="input-wrapper">
+                        {/* <input 
+                            type="text"
+                            defaultValue=
+                        ></input> */}
+                        <textarea rows="1">
+                            {DataSL.Contents.Episode[CE-1].E_Title}
+                        </textarea>
+                    </div>
+                    
+                    
                 </div>
                 <div className="episodeContent">
                     <div className="selectPart">

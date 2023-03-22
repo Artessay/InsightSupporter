@@ -31,7 +31,6 @@ export default class Page extends React.Component {
                     </span>
                 </div>
                 
-                <VideoCarousel className='video'></VideoCarousel>
                 <div className='text'>
                     <p>Joel Embiid most shots were taken from mid range and happened in first quarter. </p>
 
@@ -47,7 +46,10 @@ export default class Page extends React.Component {
                             on Mar. 17, 2023
                         </span>
                     </p>
-
+                </div>
+                    
+                    <VideoCarousel className='video'></VideoCarousel>
+                <div className='text'>
                     <div className='paragraph'>
                         {
                             listData.map((item, index) => (

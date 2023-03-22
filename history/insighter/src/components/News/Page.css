@@ -1,0 +1,58 @@
+.Page {
+    /* display: flex; */
+    /* align-items: center; */
+    text-align: center;
+}
+
+.title {
+    /* margin: 10px; */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    /* or 36px */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.022em;
+
+    color: #FFFFFF;
+    background: black;
+}
+
+.video {
+    position: relative;
+    top: 10px;
+    /* margin-top: 50px; */
+
+    height: 200px;
+    width: 500px;
+
+    margin: 0 auto;
+
+    background: lightcoral;
+}
+
+.text {
+    margin-left: 5px;
+    margin-right: 5px;
+
+    font-size: 16px;
+
+    font-family: 'Inter';
+    font-style: normal;
+
+    text-align: left;
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.pageChart {
+    position: relative;
+    text-align: center;
+}

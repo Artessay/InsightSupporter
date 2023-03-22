@@ -13,14 +13,25 @@ const shotData = [
     {"id": "401360853138", "sequenceNumber": "138", "type": {"id": "95", "text": "Layup Shot"}, "text": "Moses Brown blocks Joel Embiid's layup", "awayScore": 28, "homeScore": 19, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "48.2"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "4397126"}}], "wallclock": "2022-03-16T23:33:50Z", "shootingPlay": "True", "coordinate": {"x": 24, "y": 0}, "actionType": "Layup Shot"}
 ]
 const kobeShot = () => {
-    const height = 600
-    const width = 995
+    const height = 300
+    const width = 600  
+    var courtUrl = "./readme_img/court.png";
+
     const g = d3
-        .select('.chart__holder')
+        .select('#shotc')
         .append('svg')
-        .attr('viewBox', `0 0 ${height} ${width}`)
+        .attr('viewBox', `0 0 ${width} ${height}`)
         .append('g');
 
+/*  g.append("svg:svg")
+        .attr("background-color", "#151526"); */
+
+        g.append("svg:image")
+        .attr("id", "image-url")
+        .attr("xlink:href", courtUrl)
+        .attr("width", 600)
+        .attr("height", 340);
+       
     const filteredData = shotData.filter(datum => {
         if (datum.coordinate.x < 300) {
             return datum
@@ -30,8 +41,7 @@ const kobeShot = () => {
     // First run of the visualization
     update(filteredData);
 
-
-
+  
 
     function update(data) {
         // Tooltip
@@ -39,8 +49,8 @@ const kobeShot = () => {
             .tip()
             .attr('class', 'd3-tip')
             .html(function(d) {
-                let makeOrMiss = d.scoringPlay === "True" ? 'Made' : 'Missed';
-                let text = "<strong>actionType</strong> <span style='color:gold'>" + d.actionType + '</span><br>';
+                let makeOrMiss = d.srcElement.__data__.scoringPlay === "True" ? 'Made' : 'Missed';
+                let text = "<strong>actionType</strong> <span style='color:gold'>" + d.srcElement.__data__.actionType + '</span><br>';
               /*   text += "<strong>Opponent</strong> <span style='color:gold'>" + d.opponent + '</span><br>';
                 text += "<strong>Shot Range</strong> <span style='color:gold'>" + d.action_type + '</span><br>';
                 text +=

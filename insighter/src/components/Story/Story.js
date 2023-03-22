@@ -1,6 +1,6 @@
 import './Story.css'
-import React  from "react";
-// import GenerateButton from './GenerateButton/GenerateButton';
+import React from "react";
+import GenerateButton from './GenerateButton/GenerateButton';
 
 export default class Story extends React.Component {
     constructor(props) {
@@ -17,10 +17,10 @@ export default class Story extends React.Component {
                 <div className='TaskType'>
                     Distribution
                 </div>
-                <textarea className='InputText' rows={2}>
+                <textarea className='InputText' rows="2">
                     Joel Embiid most shots were taken from mid range and happened in first quarter.
                 </textarea>
-                {/* <GenerateButton></GenerateButton> */}
+                <GenerateButton></GenerateButton>
             </div>
             
         )

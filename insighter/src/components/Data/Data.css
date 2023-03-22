@@ -11,12 +11,13 @@
 
     font: 'bold';
     font-size: 20px;
+    font-weight: 700;
     background: rgba(117, 117, 117, 0.3);
     
     width: 76.38px;
     height: 37.41px;
 
-    border-radius: 5px;
+    /* border-radius: 5px; */
     /* text-align: center; */
 }
 

@@ -13,6 +13,26 @@
     text-align: left;
 }
 
+.input-wrapper {
+    position: absolute;
+    top: 15%;
+    left: 120px;
+}
+
+.input-wrapper textarea {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 150%;
+    /* or 42px */
+
+    letter-spacing: -0.022em;
+
+    color: #000000;
+}
+  
+
 .episodeContent {
     /* background: lightpink; */
     /* height: 200px; */
@@ -51,7 +71,7 @@
 .chartArea {
     position: absolute;
     /* position: relative; */
-    top: 450px;
+    top: 400px;
     left: 10px;
     /* top: 250px; */
     /* left: 100px; */

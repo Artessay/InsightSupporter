@@ -1,0 +1,72 @@
+.selectPart {
+    margin: 5px;
+    font-size: 15px;
+
+    display: block;
+    text-align: left;
+}
+
+.selectNumber {
+    background: rgba(117, 117, 117, 0.3);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.selectTaskEdit {
+    background: lightgreen;
+
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.selectTask {
+    background: lightpink;
+
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: auto;
+}
+
+.selectText {
+    margin-left: 10px;
+}
+
+.selectDelete {
+    margin-left: 10px;
+}
+
+.selectDrop {
+    position: absolute;
+    /* top: 280px; */
+    /* left: 550px; */
+    left: 310px;
+    top: 340px;
+    border: 3px;
+    border-color: black;
+}
+
+.chooseChart {
+    position: absolute;
+    left: 580px;
+    top: 320px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 150%;
+    /* or 15px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+}
