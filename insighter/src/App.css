@@ -61,9 +61,10 @@
     position: absolute;
     /* top: 50px; */
     /* left: 70%; */
-   transform: scale(1.07); 
+    transform: scale(1.07); 
     transform-origin: left top;
-    right: 3.5%;
+    /* right: 3.5%; */
+    right: 865px;
     margin-top:20px;
 }
 

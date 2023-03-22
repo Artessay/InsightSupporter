@@ -1,4 +1,4 @@
-.container {
+.buttonContainer {
     width: 400px;
     height: 400px;
     position: absolute;
@@ -10,7 +10,7 @@
     align-items: center;
   }
   
-  .center {
+  .buttonCenter {
     width: 185px;
     height: 60px;
     position: absolute;
