@@ -1,6 +1,6 @@
 import './Story.css'
 import React  from "react";
-// import { Input } from "antd";
+// import GenerateButton from './GenerateButton/GenerateButton';
 
 export default class Story extends React.Component {
     constructor(props) {
@@ -20,15 +20,7 @@ export default class Story extends React.Component {
                 <textarea className='InputText' rows={2}>
                     Joel Embiid most shots were taken from mid range and happened in first quarter.
                 </textarea>
-                {/* <Input
-                    className='InputText'
-                    type="text"
-                    autoSize={{
-                        minRows: 1,
-                        maxRows: 2,
-                    }}
-                    placeholder="Joel Embiid most shots were taken from mid range and happened in first quarter."
-                ></Input> */}
+                {/* <GenerateButton></GenerateButton> */}
             </div>
             
         )

@@ -1,0 +1,40 @@
+.buttonContainer {
+  position: absolute;
+  left: calc(50% - 195px);
+  top: calc(15% - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.generateButton {
+  width: 185px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #FF6B6B;
+  color: #FF6B6B;
+  outline: none;
+  /* transition: 1s ease-in-out; */
+  text-align: center;
+}
+
+.generateButton:active {
+  background: #FF6B6B;
+  color: white;
+}
+
+.generateButton span {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  /* or 30px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.022em;
+
+}

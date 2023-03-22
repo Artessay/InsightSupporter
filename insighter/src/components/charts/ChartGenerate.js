@@ -20,6 +20,7 @@ function ChartGenerator( { sentenceList } ) {
                         <PieChart Data = {need.Chart_Data[0]["1"]}></PieChart>
                     );
                 } else if (need.Chart_Type === "Bar Chart") {
+                    console.log("Bar　Ｂａｒ")
                     charts.push(
                         <BarChart Data = {need.Chart_Data[0]}></BarChart>
                     );
