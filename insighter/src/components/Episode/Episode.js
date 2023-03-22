@@ -142,10 +142,11 @@ const Episode = props => {
                     
                     <div className='selectDrop'>
                         {/* <ChartSelect ></ChartSelect> */}
-                        <MyDropdown></MyDropdown>
+                        {/* <MyDropdown></MyDropdown> */}
+                        <SelectPanel></SelectPanel>
                     </div>
 
-                    <SelectPanel></SelectPanel>
+                    
 
                     <div className="chartButton">
                         {

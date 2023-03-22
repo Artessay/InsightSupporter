@@ -47,8 +47,10 @@
     position: absolute;
     /* top: 280px; */
     /* left: 550px; */
-    left: 310px;
-    top: 340px;
+    /* left: 310px; */
+    /* top: 340px; */
+    left: 330px;
+    top: 300px;
     border: 3px;
     border-color: black;
 }
