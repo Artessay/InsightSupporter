@@ -1,3 +1,4 @@
+import AreaChart from './areachart';
 import PieChart from './piechart';
 import BarChart from './barchart';
 import StackedBarChart from './stackedBarChart';
@@ -20,7 +21,6 @@ function ChartGenerator( { sentenceList } ) {
                         <PieChart Data = {need.Chart_Data[0]["1"]}></PieChart>
                     );
                 } else if (need.Chart_Type === "Bar Chart") {
-                    console.log("Bar　Ｂａｒ")
                     charts.push(
                         <BarChart Data = {need.Chart_Data[0]}></BarChart>
                     );
@@ -28,6 +28,10 @@ function ChartGenerator( { sentenceList } ) {
                     charts.push(
                         <StackedBarChart Data = {need.Chart_Data[0]}></StackedBarChart>
                     );
+                } else if (need.Chart_Type == "Area Chart" ) {
+                    charts.push(
+                        <AreaChart></AreaChart>
+                    )
                 } else {
                     // do nothing
                 }
