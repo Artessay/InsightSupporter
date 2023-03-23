@@ -9,6 +9,7 @@ import { Input, Button } from "antd";
 // import MyDropdown from "./MyDropdown/MyDropdown";
 import SelectPanel from "./SelectPanel/SelectPanel";
 import { GetChart } from "../charts/ChartGenerate";
+// import GetChartData from "../charts/Table/TableData";
 
 // const { TextArea } = Input;
 
@@ -31,7 +32,21 @@ function ChartCount(  sentenceList  ) {
     return chartNumber;
 }
 
+function GetChartData( sentenceList ) {
+    let datas = [];
+    console.log(sentenceList)
 
+    for (let i = 0; i < sentenceList.length; ++i) {
+        if (sentenceList[i].S_Ischart === "Yes") {
+            let needs = sentenceList[i].S_Chartneed;
+            for (let j = 0; j < needs.length; ++j) {
+                datas.push(needs[j].Chart_Data)
+            }
+        }
+    }
+
+    return datas;
+}
 
 const Episode = props => {
 
@@ -126,10 +141,11 @@ const Episode = props => {
         setFigureNumber(number)
     }
 
-    let tableData = listData[CE-1].E_Sentences.length > 0 
-                    ? listData[CE-1].E_Sentences[figureNumber].length > 0 
-                    ? listData[CE-1].E_Sentences[figureNumber].S_Chartneed[0].Chart_Data[0]
-                    : [] : []
+    let t_ = GetChartData(sentences)
+    console.log(t_)
+    let tableData = t_.length > 0 ? t_.at(figureNumber)[0] : [];
+    // tableData = []
+    // tableData = listData[3-1].E_Sentences[figureNumber].S_Chartneed[0].Chart_Data[0]
 
     console.log(tableData)
         return(

@@ -3,7 +3,7 @@ import './Table.css'
 
 function ScoreTable(props) {
     var {ChartData} = props
-    // console.log(ChartData)
+    console.log(ChartData)
 
     let tableList = []
     for ( let key in ChartData) {
@@ -22,7 +22,7 @@ function ScoreTable(props) {
     // console.log(tableList[0])
     // console.log(tableList)
     const keys = tableList.length>0 ? Object.keys(tableList[0]) : []
-    console.log(keys.length)
+    console.log("table key length: " + keys.length)
 
     return (
         <table className='styled-table'>
