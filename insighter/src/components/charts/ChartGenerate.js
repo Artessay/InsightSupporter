@@ -4,7 +4,7 @@ import BarChart from './barchart';
 import Shot from './Shot/Shot'
 import StackedBarChart from './stackedBarChart';
 
-function ChartGenerator( { sentenceList } ) {
+function GetChartList( {sentenceList} ) {
     let charts = [];
     // console.log(sentenceList)
 
@@ -45,7 +45,15 @@ function ChartGenerator( { sentenceList } ) {
         }
     }
 
-    return <>{charts}</>;
+    return charts;
+}
+
+function ChartGenerator( { sentenceList } ) {
+    return <>{GetChartList({sentenceList})}</>
+}
+
+export function GetChart( { sentenceList, index } ) {
+    return <>{GetChartList({sentenceList})[index]}</>
 }
 
 export default ChartGenerator;

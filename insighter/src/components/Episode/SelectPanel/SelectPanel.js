@@ -28,7 +28,7 @@ const SelectPanel = () => {
             >
                 <div>
                     <CustomSelect
-                        label="Chart Type"
+                        label="chart type"
                         options={chartOptions}
                         defaultValue="Text Chart"
                         onChange={handleTypeChange}

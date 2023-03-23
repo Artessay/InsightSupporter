@@ -35,7 +35,7 @@ class AreaChart extends React.Component{
         svg.setAttribute("y", "0px");
         svg.setAttribute("viewBox", "0 0 1280 1024");
 
-        console.log(colorlist[parseInt(10-parseInt(ChartData[0]["4"]["Percentage of Shots"])/10)])
+        // console.log(colorlist[parseInt(10-parseInt(ChartData[0]["4"]["Percentage of Shots"])/10)])
         const rect1 = document.createElementNS("http://www.w3.org/2000/svg", "rect");
         rect1.setAttribute("x", "25");
         rect1.setAttribute("y", "31");

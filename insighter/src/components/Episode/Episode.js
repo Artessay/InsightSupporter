@@ -5,9 +5,10 @@ import './Episode.css'
 import './Select.css'
 import { Input, Button } from "antd";
 // import ChartSelect from "./ChartSelect";
-import ChartGenerator from "../charts/ChartGenerate";
-import MyDropdown from "./MyDropdown/MyDropdown";
+// import ChartGenerator from "../charts/ChartGenerate";
+// import MyDropdown from "./MyDropdown/MyDropdown";
 import SelectPanel from "./SelectPanel/SelectPanel";
+import { GetChart } from "../charts/ChartGenerate";
 
 // const { TextArea } = Input;
 
@@ -30,28 +31,7 @@ function ChartCount(  sentenceList  ) {
     return chartNumber;
 }
 
-function DeleteButton( sentenceList ) {
-    if (sentenceList.length < 3) {
-        return (
-            <div className="selectSection">
-                <span className="selectNumber">
-                    {sentenceList.length + 1}
-                </span>
-                <span className="selectDelete">
-                    <Button
-                        // disabled={true}
-                        onClick={(e) => handleInsert()}
-                    >+</Button>
-                </span>
-                <span className="selectText">
-                    {/* {item.S_Insight} */}
-                </span>
-            </div>
-        )
-    } else {
-        return <></>
-    }
-}
+
 
 const Episode = props => {
 
@@ -102,6 +82,30 @@ const Episode = props => {
         props.Datalist(newData)
     }
 
+        function DeleteButton( {sentenceList} ) {
+            console.log(sentenceList.length)
+            if (sentenceList.length < 3) {
+                return (
+                    <div className="selectSection">
+                        <span className="selectNumber">
+                            {sentenceList.length + 1}
+                        </span>
+                        <span className="selectDelete">
+                            <Button
+                                // disabled={true}
+                                onClick={(e) => handleInsert()}
+                            >+</Button>
+                        </span>
+                        <span className="selectText">
+                            {/* {item.S_Insight} */}
+                        </span>
+                    </div>
+                )
+            } else {
+                return <></>
+            }
+        }
+
     const handleInsightChange = (e, index) => {
         let newData = listData;
         newData[CE-1].E_Sentences[index].S_Insight = e.target.value;
@@ -115,6 +119,12 @@ const Episode = props => {
     let counter = ChartCount(sentences);
     console.log(counter)
     const chartNumbers = Array.from({ length:  counter }, (_, index) => index);
+
+    let [figureNumber, setFigureNumber] = useState(0);
+    const handleFigureNumber = (number) => {
+        // console.log(e.target)
+        setFigureNumber(number)
+    }
 
         return(
             <div className="Episode">
@@ -162,20 +172,8 @@ const Episode = props => {
                             ))
                         }
 
-                        <div className="selectSection">
-                            <span className="selectNumber">
-                                {sentences.length + 1}
-                            </span>
-                            <span className="selectDelete">
-                                <Button
-                                    // disabled={true}
-                                    onClick={(e) => handleInsert()}
-                                >+</Button>
-                            </span>
-                            <span className="selectText">
-                                {/* {item.S_Insight} */}
-                            </span>
-                        </div>
+                        
+                        <DeleteButton sentenceList = {listData[CE-1].E_Sentences} ></DeleteButton>
                     </div>
                     
                     <div className='selectDrop'>
@@ -196,6 +194,10 @@ const Episode = props => {
                                         backgroundColor: 'rgba(117, 117, 117, 0.3)',
                                         marginBottom: 10
                                     }}
+                                    value={number}
+                                    // onClick={(e) => {handleFigureNumber(e)}}
+                                    
+                                    onClick={(e) => {handleFigureNumber(number)}}
                                 >
                                     <div className="chartButtonText">
                                         {number+1}
@@ -213,9 +215,13 @@ const Episode = props => {
                     </div>
                     {/* <StackedBarChart className='chooseChart'></StackedBarChart> */}
                     <div className='chooseChart'>
-                        <ChartGenerator 
+                        {/* <ChartGenerator 
                             sentenceList = {listData[CE-1].E_Sentences}
-                        ></ChartGenerator>
+                        ></ChartGenerator> */}
+                        <GetChart
+                            sentenceList = {listData[CE-1].E_Sentences}
+                            index = {figureNumber}
+                        ></GetChart>
                     </div>
                     
                 </div>

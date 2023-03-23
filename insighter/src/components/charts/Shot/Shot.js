@@ -130,7 +130,8 @@ export default class Shot extends React.Component {
                     height: 300,
                     display: 'flex',
                     justifyContent: 'center',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    backgroundColor: 'rgba(117, 117, 117, 0.3)'
                 }}
                 // style={{
                 //     transform: "scale(0.6)"
