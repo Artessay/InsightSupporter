@@ -135,7 +135,7 @@ const Episode = props => {
     console.log(counter)
     const chartNumbers = Array.from({ length:  counter }, (_, index) => index);
 
-    let [figureNumber, setFigureNumber] = useState(0);
+    let {figureNumber, setFigureNumber} = props;
     const handleFigureNumber = (number) => {
         // console.log(e.target)
         setFigureNumber(number)

@@ -15,7 +15,7 @@ import FlowGame from './components/charts/flowGame';
 function App() {
     var [DataSL, setDataSL] = useState(Test)
     var [CE, setCE] = useState(1)
-    
+    var [figureNumber, setFigureNumber] = useState(0);
 
     //var DataSL=Test;
     //var Current_Episode =1;
@@ -25,6 +25,7 @@ function App() {
         var DataTmp1=DataSL
         DataTmp1.Contents.Episode=(key2)
         setDataSL(DataSL=DataTmp1)
+        setFigureNumber(0)
         //console.log(DataSL)
     };
 
@@ -32,6 +33,7 @@ function App() {
         var DataTmp=DataSL
         DataTmp.Contents.Episode=(key)
         setDataSL(DataSL=DataTmp)
+        setFigureNumber(0)
         //DataSL.Contents.Episode.filter
         //console.log(DataSL)
     };
@@ -47,7 +49,7 @@ function App() {
                 <Data></Data>
             </div>
             <div className="item item-3">
-                <Episode DataSL={DataSL} CE={CE} Datalist={Datalist}></Episode>
+                <Episode DataSL={DataSL} CE={CE} Datalist={Datalist} figureNumber={figureNumber} setFigureNumber={setFigureNumber}></Episode>
             </div>
             <div className="item item-4">
                 <News DataSL={DataSL}></News>
