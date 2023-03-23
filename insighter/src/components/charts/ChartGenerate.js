@@ -2,6 +2,7 @@ import AreaChart from './areachart';
 import PieChart from './piechart';
 import BarChart from './barchart';
 import StackedBarChart from './stackedBarChart';
+import FunAreaChart from './funareachart';
 
 function ChartGenerator( { sentenceList } ) {
     let charts = [];
@@ -31,6 +32,7 @@ function ChartGenerator( { sentenceList } ) {
                 } else if (need.Chart_Type == "Area Chart" ) {
                     charts.push(
                         <AreaChart></AreaChart>
+                        // <FunAreaChart></FunAreaChart>
                     )
                 } else {
                     // do nothing

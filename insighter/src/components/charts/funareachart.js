@@ -1,33 +1,46 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as d3 from "d3";
 
-class AreaChart extends React.Component{
-    constructor(props){
-        super(props)
+function FunAreaChart(props) {
+    // constructor(props){
+    //     super(props)
 
-        this.myRef = React.createRef();
+    //     this.myRef = React.createRef();
 
-        // console.log(dataList)
+    //     // console.log(dataList)
 
-        this.state = {
-            // Define the data
-            ChartData : [
-                {
-                "1":{"Type":"ShortRange%","Percentage of Shots":"75%"},
-                "2":{"Type":"MidRange%","Percentage of Shots":"75%"},
-                "3":{"Type":"FT%","Percentage of Shots":"80%"},
-                "4":{"Type":"LongRange%","Percentage of Shots":"33.3%"},
-                "5":{"Type":"Overall%","Percentage of Shots":"68.4%"}
-                }
-            ],
+    //     this.state = {
+    //         // Define the data
+    //         ChartData : [
+    //             {
+    //             "1":{"Type":"ShortRange%","Percentage of Shots":"75%"},
+    //             "2":{"Type":"MidRange%","Percentage of Shots":"75%"},
+    //             "3":{"Type":"FT%","Percentage of Shots":"80%"},
+    //             "4":{"Type":"LongRange%","Percentage of Shots":"33.3%"},
+    //             "5":{"Type":"Overall%","Percentage of Shots":"68.4%"}
+    //             }
+    //         ],
             
-            // Define the colors
-            colorlist : ["#fc7a57","#f79c00","#fcd257","#7581a3","#8699a8","#96b1ad","#c6cebc","#dadbc7","#ffffff"],
-        }
-    }
+    //         // Define the colors
+    //         colorlist : ["#fc7a57","#f79c00","#fcd257","#7581a3","#8699a8","#96b1ad","#c6cebc","#dadbc7","#ffffff"],
+    //     }
+    // }
 
-    drawModel = () => {
-        let { ChartData, colorlist } = this.state;
+    useEffect(() => {
+        // let { ChartData, colorlist } = props;
+        let ChartData = [
+            {
+            "1":{"Type":"ShortRange%","Percentage of Shots":"75%"},
+            "2":{"Type":"MidRange%","Percentage of Shots":"75%"},
+            "3":{"Type":"FT%","Percentage of Shots":"80%"},
+            "4":{"Type":"LongRange%","Percentage of Shots":"33.3%"},
+            "5":{"Type":"Overall%","Percentage of Shots":"68.4%"}
+            }
+        ];
+        
+        // Define the colors
+        let colorlist = ["#fc7a57","#f79c00","#fcd257","#7581a3","#8699a8",
+        "#96b1ad","#c6cebc","#dadbc7","#ffffff"];
         
         const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svg.setAttribute("id", "basketball");
@@ -223,32 +236,28 @@ class AreaChart extends React.Component{
         rectg.setAttribute('fill', 'url(#colorGradient)');
         svg.appendChild(rectg);
 
-        let doc = this.myRef.current
-        doc.appendChild(svg.cloneNode(true))
-        // let elements = document.querySelectorAll(".areaChart")
-        // elements.forEach((element) => {
-        //     element.appendChild(svg.cloneNode(true));
-        //     console.log(element)
-        // });
-    }
+        // let doc = this.myRef.current
+        // doc.appendChild(svg)
+        // let elements = document.getElementsByClassName("areaChart");
+        let elements = document.querySelectorAll(".areaChart")
+        elements.forEach((element) => {
+            let newSVG = svg.cloneNode(true)
+            element.appendChild(newSVG);
+            console.log(element)
+        });
+        // for (let i = 0; i < elements.length; ++i) {
+        //     elements[i].appendChild(svg)
+        // }
+    });
 
-    componentDidMount(){
-        this.drawModel();
-    }
-
-    componentDidUpdate(){
-        // this.drawModel();
-    }
-
-    render(){
-        return (
-            <div
-                ref={this.myRef} 
-                className="areaChart"
-            >
-            </div>
-        )
-    }
+    
+    return (
+        <div
+            className="areaChart"
+        >
+        </div>
+    )
+    
 }
 
-export default AreaChart;
+export default FunAreaChart;
