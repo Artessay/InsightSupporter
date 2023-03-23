@@ -16,7 +16,7 @@ function GetChartList( {sentenceList} ) {
             let needs = sentenceList[i].S_Chartneed;
             for (let j = 0; j < needs.length; ++j) {
                 let need = needs[j];
-                console.log(need.Chart_Type)
+                // console.log(need.Chart_Type)
                 if (need.Chart_Type === "Pie Chart") {
                     charts.push(
                         <PieChart Data = {need.Chart_Data[0]["1"]}></PieChart>
@@ -36,7 +36,7 @@ function GetChartList( {sentenceList} ) {
                     )
                 } else if (need.Chart_Type === "Shot Chart" ) {
                     charts.push(
-                        <Shot></Shot>
+                        <Shot Data = {need.Chart_Data[0]}></Shot>
                     )
                 } else {
                     // do nothing

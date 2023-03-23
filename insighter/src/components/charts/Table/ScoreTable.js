@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './Table.css'
 
 function ScoreTable(props) {
@@ -11,39 +11,40 @@ function ScoreTable(props) {
             const quarterData = ChartData[key];
             //   const quarter = quarterData.Quarter;
             //   console.log(`Quarter: ${quarter}`);
-            tableList.push({
-                quarter: quarterData.Quarter,
-                shots: quarterData["Number of Shots"],
-                made: quarterData.Made
-            })
+            // tableList.push({
+            //     quarter: quarterData.Quarter,
+            //     shots: quarterData["Number of Shots"],
+            //     made: quarterData.Made
+            // })
+            tableList.push(quarterData)
         }
     }
-    
+    // console.log(tableList[0])
     // console.log(tableList)
+    const keys = tableList.length>0 ? Object.keys(tableList[0]) : []
+    console.log(keys.length)
 
     return (
         <table className='styled-table'>
             <thead>
                 <tr>
-                    <th>Quarter</th>
-                    <th>Number of Shots</th>
-                    <th>Made</th>
+                    {
+                        keys.map(key => (
+                            <th key={key}>{key}</th>
+                        ))
+                    }
                 </tr>
             </thead>
             <tbody>
                 {
                     tableList.map(
-                        item =>
-                            <tr key={item.quarter} className=''>
-                                <td className="table-row">
-                                    {item.quarter}
-                                </td>
-                                <td className="table-row">
-                                    {item.shots}
-                                </td>
-                                <td className="table-row">
-                                    {item.made}
-                                </td>
+                        (item, index) =>
+                            <tr key={index} className=''>
+                                {
+                                    keys.map(key => (
+                                        <td key={key}>{item[key]}</td>
+                                    ))
+                                }
                             </tr>
                     )
                 }

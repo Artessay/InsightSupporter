@@ -354,7 +354,7 @@
                             "Breakdown":"",
                             "Measure":"",
                             "Is_Tracking":"Yes",
-                            "Chart_Type":"Shot Chart",
+                            "Chart_Type":"Stacked Bar Chart",
                             "Chart_Title":"Shooting Performance",
                             "Chart_Data":[
                                 {

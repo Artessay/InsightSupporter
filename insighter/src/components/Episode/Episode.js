@@ -126,6 +126,12 @@ const Episode = props => {
         setFigureNumber(number)
     }
 
+    let tableData = listData[CE-1].E_Sentences.length > 0 
+                    ? listData[CE-1].E_Sentences[figureNumber].length > 0 
+                    ? listData[CE-1].E_Sentences[figureNumber].S_Chartneed[0].Chart_Data[0]
+                    : [] : []
+
+    console.log(tableData)
         return(
             <div className="Episode">
                 <div className='episodeHeader'>
@@ -210,7 +216,7 @@ const Episode = props => {
                     
                     <div className="chartArea">
                         <ScoreTable 
-                            ChartData={listData[3-1].E_Sentences[0].S_Chartneed[0].Chart_Data[0]}
+                            ChartData={tableData}
                         ></ScoreTable>
                     </div>
                     {/* <StackedBarChart className='chooseChart'></StackedBarChart> */}
