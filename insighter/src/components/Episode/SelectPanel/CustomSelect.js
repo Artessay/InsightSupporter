@@ -1,5 +1,6 @@
 import React from "react";
 import { Select } from "antd";
+import './CustomSelect.css'
 
 const { Option } = Select;
 
@@ -9,21 +10,25 @@ const CustomSelect = ({ label, options, defaultValue, onChange }) => {
   };
 
   return (
-    <div style={{ display: "flex", alignItems: "center" }}>
+    <div className="custom" style={{ display: "flex", alignItems: "center" }}>
       <label 
         style={{ 
           minWidth: 100, 
           marginRight: "10px", 
           justifyContent: 'center',
-          backgroundColor: '#383f5e',
-          color: '#fff'
+          // backgroundColor: '#383f5e',
+          // color: '#fff'
+          backgroundColor: 'black',
+          color: 'white'
         }}
       >
         {label}
       </label>
       <Select
         defaultValue={defaultValue}
-        style={{ minWidth: 120 }}
+        style={{ 
+          minWidth: 150,
+        }}
         onChange={handleSelectChange}
       >
         {options.map((option) => (

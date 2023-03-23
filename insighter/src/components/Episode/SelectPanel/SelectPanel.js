@@ -1,6 +1,15 @@
 import { Space } from "antd";
 import CustomSelect from "./CustomSelect";
 
+const chartOptions = [
+    "Text Chart", "Bar Chart", "Stacked Bar Chart", "Pie Chart",
+    "Area Chart", "Shot Chart"
+];
+
+const measureOptions = [
+    "count"
+];
+
 const typeOptions = [
     "value", "distribution", "extreme"
 ];
@@ -19,9 +28,15 @@ const SelectPanel = () => {
             >
                 <div>
                     <CustomSelect
-                        label="type"
-                        options={typeOptions}
-                        defaultValue="value"
+                        label="Chart Type"
+                        options={chartOptions}
+                        defaultValue="Text Chart"
+                        onChange={handleTypeChange}
+                    />
+                    <CustomSelect
+                        label="measure"
+                        options={measureOptions}
+                        defaultValue="count"
                         onChange={handleTypeChange}
                     />
                     <CustomSelect
@@ -31,15 +46,9 @@ const SelectPanel = () => {
                         onChange={handleTypeChange}
                     />
                     <CustomSelect
-                        label="measure"
-                        options={typeOptions}
-                        defaultValue="value"
-                        onChange={handleTypeChange}
-                    />
-                    <CustomSelect
                         label="subspace"
                         options={typeOptions}
-                        defaultValue="value"
+                        defaultValue="+"
                         onChange={handleTypeChange}
                     />
                 </div>
