@@ -245,6 +245,10 @@ class AreaChart extends React.Component{
             <div
                 ref={this.myRef} 
                 className="areaChart"
+                style={{
+                    width: 300,
+                    height: 300,
+                }}
             >
             </div>
         )

@@ -33,18 +33,21 @@ const SelectPanel = () => {
                         defaultValue="Text Chart"
                         onChange={handleTypeChange}
                     />
+                    <br></br>
                     <CustomSelect
                         label="measure"
                         options={measureOptions}
                         defaultValue="count"
                         onChange={handleTypeChange}
                     />
+                    <br></br>
                     <CustomSelect
                         label="visualization"
                         options={typeOptions}
                         defaultValue="value"
                         onChange={handleTypeChange}
                     />
+                    <br></br>
                     <CustomSelect
                         label="subspace"
                         options={typeOptions}

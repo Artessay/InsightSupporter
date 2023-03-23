@@ -30,6 +30,29 @@ function ChartCount(  sentenceList  ) {
     return chartNumber;
 }
 
+function DeleteButton( sentenceList ) {
+    if (sentenceList.length < 3) {
+        return (
+            <div className="selectSection">
+                <span className="selectNumber">
+                    {sentenceList.length + 1}
+                </span>
+                <span className="selectDelete">
+                    <Button
+                        // disabled={true}
+                        onClick={(e) => handleInsert()}
+                    >+</Button>
+                </span>
+                <span className="selectText">
+                    {/* {item.S_Insight} */}
+                </span>
+            </div>
+        )
+    } else {
+        return <></>
+    }
+}
+
 const Episode = props => {
 
     var {DataSL}=props

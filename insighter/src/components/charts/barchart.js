@@ -9,7 +9,7 @@ export default class BarChart extends React.Component {
         const {Data} = this.props;
 
         let dataList = []
-        for ( let key in Data) {
+        for ( let key in Data ) {
             if (Data.hasOwnProperty(key)) {
                 const quarterData = Data[key];
                 

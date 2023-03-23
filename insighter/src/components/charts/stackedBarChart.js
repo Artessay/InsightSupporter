@@ -9,7 +9,7 @@ export default class StackedBarChart extends React.Component {
         const {Data} = this.props;
 
         let tableList = []
-        for ( let key in Data) {
+        for ( let key in Data ) {
             if (Data.hasOwnProperty(key)) {
                 const quarterData = Data[key];
                 //   const quarter = quarterData.Quarter;

@@ -2,7 +2,6 @@ import AreaChart from './areachart';
 import PieChart from './piechart';
 import BarChart from './barchart';
 import StackedBarChart from './stackedBarChart';
-import FunAreaChart from './funareachart';
 
 function ChartGenerator( { sentenceList } ) {
     let charts = [];
