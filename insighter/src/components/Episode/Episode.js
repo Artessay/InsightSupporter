@@ -9,7 +9,7 @@ import ChartGenerator from "../charts/ChartGenerate";
 import MyDropdown from "./MyDropdown/MyDropdown";
 import SelectPanel from "./SelectPanel/SelectPanel";
 
-const { TextArea } = Input;
+// const { TextArea } = Input;
 
 function ChartCount(  sentenceList  ) {
     let chartNumber = 0;
@@ -49,11 +49,10 @@ const Episode = props => {
 
     const handleTextareaChange = (e) => {
         // console.log(e.target.value)
-        // let newData = listData;
-        listData[CE-1].E_Text = e.target.value;
-        setListData(listData)
-
         let newData = listData;
+        newData[CE-1].E_Text = e.target.value;
+        setListData(newData)
+
         props.Datalist(newData)
     }
 
@@ -78,6 +77,15 @@ const Episode = props => {
         newData[CE-1].E_Sentences.splice(index, 1);
         setListData(newData);
         props.Datalist(newData)
+    }
+
+    const handleInsightChange = (e, index) => {
+        let newData = listData;
+        newData[CE-1].E_Sentences[index].S_Insight = e.target.value;
+        setListData(newData)
+
+        props.Datalist(newData)
+        
     }
 
     // console.log(sentences)
@@ -118,7 +126,14 @@ const Episode = props => {
                                         ><b>-</b></Button>
                                     </span>
                                     <span className="selectText">
-                                        {item.S_Insight}
+                                        <textarea 
+                                            rows="1"
+                                            onChange={(e) => handleInsightChange(e, index)}
+                                            cols="80"
+                                        >
+                                            {item.S_Insight}
+                                        </textarea>
+                                        
                                     </span>
                                 </div>
                             ))

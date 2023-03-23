@@ -39,8 +39,25 @@
     margin-left: 10px;
 }
 
+.selectText textarea {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    transform: translate(0, 5px);
+    /* line-height: 150%; */
+    /* or 20px */
+
+    /* display: flex; */
+    /* align-items: center; */
+    letter-spacing: -0.022em;
+
+    color: #1E1E1E;
+}
+
 .selectDelete {
     margin-left: 10px;
+    transform: translate(0, 5px);
 }
 
 .selectDrop {
