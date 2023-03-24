@@ -6,7 +6,9 @@ import './Head.css'
 export default class Head extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.props.current);
+        this.state = {
+            date: this.props.JsonData.Date
+        }
     }
     render() {
         return(
@@ -16,7 +18,7 @@ export default class Head extends React.Component {
                 </div>
                 
                 <div className='Calendar'>
-                    Mar 17 
+                    {this.state.date}
                 </div>
 
                 <div className="DataSelect"></div>

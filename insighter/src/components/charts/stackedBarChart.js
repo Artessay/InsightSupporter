@@ -12,13 +12,7 @@ export default class StackedBarChart extends React.Component {
         for ( let key in Data ) {
             if (Data.hasOwnProperty(key)) {
                 const quarterData = Data[key];
-                // const keys = data.length>0 ? Object.keys(data[0]) : []
                 const keys = Object.keys(quarterData)
-                // console.log(quarterData)
-                // console.log(keys)
-                //   const quarter = quarterData.Quarter;
-                //   console.log(`Quarter: ${quarter}`);
-                // console.log(quarterData[keys[0]])
                 tableList.push({
                     quarter: quarterData[keys[0]],
                     miss: (Number(quarterData["Number of Shots"]) - Number(quarterData["Made"])),

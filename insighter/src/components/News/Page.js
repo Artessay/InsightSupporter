@@ -8,7 +8,6 @@ import VideoCarousel from './VideoCarousel';
 export default class Page extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.props.current);        
     }
     
     render() {
@@ -27,12 +26,12 @@ export default class Page extends React.Component {
                         height={50}
                     ></img>
                     <span>
-                        &nbsp;Joel Embiid's Shooting Distribution in the Game
+                        &nbsp;{DataSL.Title}
                     </span>
                 </div>
                 
                 <div className='text'>
-                    <p>Joel Embiid most shots were taken from mid range and happened in first quarter. </p>
+                    <p>{DataSL.Insight} </p>
 
                     <p>
                         <span 
@@ -40,10 +39,10 @@ export default class Page extends React.Component {
                                 color: 'red'
                             }}
                         >
-                            by Writer's Name&nbsp;
+                            by {DataSL.Writer}&nbsp;
                         </span>
                         <span>
-                            on Mar. 17, 2023
+                            on {DataSL.Date}
                         </span>
                     </p>
                 </div>

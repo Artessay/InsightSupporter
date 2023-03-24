@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div className='App'>
-        <Head className='header'></Head>
+        <Head className='header' JsonData={DataSL}></Head>
         <div className='content'>
             <div className="item item-1">
                 <Story JsonData={DataSL}></Story>

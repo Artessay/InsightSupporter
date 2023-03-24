@@ -6,19 +6,20 @@ export default class Story extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            insight: this.props.JsonData.Insight
+            insight: this.props.JsonData.Insight,
+            insightType: this.props.JsonData.Insight_Type,
+            taskType: this.props.JsonData.Task_Type
         }
-        console.log(this.props.Insight);
     }
 
     render() {
         return(
             <div className="story">
                 <div className='InsightType'>
-                    Single Player Performance
+                    {this.state.insightType}
                 </div>
                 <div className='TaskType'>
-                    Distribution
+                    {this.state.taskType}
                 </div>
                 <textarea className='InputText' rows="2">
                     {this.state.insight}
