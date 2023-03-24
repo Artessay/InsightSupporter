@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>折线图示例</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <svg width="500" height="300"></svg>
+
+    <script>
+      // 解析JSON数据
+      
+      Chart_Data=[
+          {
+            "1": {"Quarter": "1", "Homescore": "30", "Awayscore": "23"},
+            "2": {"Quarter": "2", "Homescore": "42", "Awayscore": "36"},
+            "3": {"Quarter": "3", "Homescore": "13", "Awayscore": "31"},
+            "4": {"Quarter": "4", "Homescore": "33", "Awayscore": "24"}
+          }
+        ]
+      // 提取数据
+      const data = [];
+      for (const key in Chart_Data[0]) {
+        if (key !== "Quarter") {
+          data.push({
+            quarter: Chart_Data[0][key].Quarter,
+            homeScore: Chart_Data[0][key].Homescore,
+            awayScore: Chart_Data[0][key].Awayscore
+          });
+        }
+      }
+
+      // 定义SVG尺寸和边距
+      const width = 500;
+      const height = 300;
+      const margin = { top: 20, right: 20, bottom: 30, left: 50 };
+      const innerWidth = width - margin.left - margin.right;
+      const innerHeight = height - margin.top - margin.bottom;
+
+      // 定义x和y比例尺
+      const x = d3.scaleBand()
+        .domain(data.map(d => d.quarter))
+        .range([0, innerWidth])
+        .padding(0.1);
+
+      const y = d3.scaleLinear()
+        .domain([0, d3.max(data, d => Math.max(d.homeScore, d.awayScore))])
+        .nice()
+        .range([innerHeight, 0]);
+
+      // 定义折线函数
+      const lineHome = d3.line()
+        .x(d => x(d.quarter) + x.bandwidth() / 2)
+        .y(d => y(d.homeScore));
+
+      const lineAway = d3.line()
+        .x(d => x(d.quarter) + x.bandwidth() / 2)
+        .y(d => y(d.awayScore));
+
+      // 创建SVG元素并添加折线路径
+      const svg = d3.select("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+      svg.append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+        .attr("stroke-width", 5)
+        .attr("d", lineHome);
+
+        svg.append("path")
+    .datum(data)
+    .attr("fill", "none")
+    .attr("stroke", "orange")
+    .attr("stroke-width", 5)
+    .attr("d", lineAway);
+
+  // 添加x和y轴
+  svg.append("g")
+    .attr("transform", `translate(0,${innerHeight})`)
+    .call(d3.axisBottom(x));
+
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+    var legend = svg.append("g")
+  .attr("class", "legend")
+  .attr("transform", "translate(20,20)");
+
+legend.append("rect")
+  .attr("width", 18)
+  .attr("height", 18)
+  .attr("x", innerWidth-margin.right-60)
+  .attr("y", innerHeight-margin.top-50)
+  .attr("fill", "steelblue");
+
+legend.append("text")
+.attr("x", innerWidth-margin.right-40)
+  .attr("y", innerHeight-margin.top-40)
+  .attr("dy", ".35em")
+  .text("Home");
+
+  
+legend.append("rect")
+  .attr("width", 18)
+  .attr("height", 18)
+  .attr("x", innerWidth-margin.right-60)
+  .attr("y", innerHeight-margin.top-30)
+  .attr("fill", "orange");
+
+legend.append("text")
+  .attr("x", innerWidth-margin.right-40)
+  .attr("y", innerHeight-margin.top-20)
+  .attr("dy", ".35em")
+  .text("Away");
+
+
+
+</script>
+</body>
+
+</html>
