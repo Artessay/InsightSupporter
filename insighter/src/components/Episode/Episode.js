@@ -137,9 +137,9 @@ const Episode = props => {
                 <div className='episodeHeader'>
                     <b>Episode {CE}</b>: 
                     <div className="input-wrapper">
-                        <textarea rows="1">
-                            {listData[CE-1].E_Title}
-                        </textarea>
+                        <textArea rows="1">
+                            {props.DataSL.Contents.Episode[CE-1].E_Title}
+                        </textArea>
                     </div>
                     
                     
@@ -161,13 +161,13 @@ const Episode = props => {
                                         ><b>-</b></Button>
                                     </span>
                                     <span className="selectText">
-                                        <textarea 
+                                        <textArea 
                                             rows="1"
                                             onChange={(e) => handleInsightChange(e, index)}
                                             cols="80"
                                         >
                                             {item.S_Insight}
-                                        </textarea>
+                                        </textArea>
                                         
                                     </span>
                                 </div>
