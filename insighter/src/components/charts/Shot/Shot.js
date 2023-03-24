@@ -62,8 +62,8 @@ export default class Shot extends React.Component {
                 .tip()
                 .attr('class', 'd3-tip')
                 .html(function(d) {
-                    let makeOrMiss = d.srcElement.__data__.scoringPlay === "True" ? 'Made' : 'Missed';
-                    let text = "<strong>actionType</strong> <span style='color:gold'>" + d.srcElement.__data__.actionType + '</span><br>';
+                    let makeOrMiss = d.srcElement.__data__.Isscore === "True" ? 'Made' : 'Missed';
+                    let text = "<strong>actionType</strong> <span style='color:gold'>" + d.srcElement.__data__.Action_Type+ '</span><br>';
                 /*   text += "<strong>Opponent</strong> <span style='color:gold'>" + d.opponent + '</span><br>';
                     text += "<strong>Shot Range</strong> <span style='color:gold'>" + d.action_type + '</span><br>';
                     text +=
