@@ -1,0 +1,383 @@
+{
+    "Origin":"./data/summary_401360853.json",
+    "Insight": "Joel Embiid's most shots were taken from midrange and happened in the first quarter.",
+    "Data":[{
+        "Strong_Relation":[
+            {"id": "4013608539", "sequenceNumber": "9", "type": {"id": "92", "text": "Jump Shot"}, "text": "Joel Embiid makes 18-foot jumper", "awayScore": 2, "homeScore": 0, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "11:24"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:11:08Z", "shootingPlay": "True", "coordinate": {"x": 28, "y": 18}, "actionType": "Jump Shot"}, 
+            {"id": "40136085327", "sequenceNumber": "27", "type": {"id": "137", "text": "Turnaround Fade Away Jump Shot"}, "text": "Joel Embiid makes 12-foot two point shot", "awayScore": 6, "homeScore": 2, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "9:35"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:13:48Z", "shootingPlay": "True", "coordinate": {"x": 27, "y": 12}, "actionType": "Turnaround Fade Away Jump Shot"}, 
+            {"id": "40136085350", "sequenceNumber": "50", "type": {"id": "137", "text": "Turnaround Fade Away Jump Shot"}, "text": "Joel Embiid makes 11-foot two point shot", "awayScore": 16, "homeScore": 4, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "7:02"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:20:24Z", "shootingPlay": "True", "coordinate": {"x": 15, "y": 4}, "actionType": "Turnaround Fade Away Jump Shot"}, 
+            {"id": "40136085359", "sequenceNumber": "59", "type": {"id": "137", "text": "Turnaround Fade Away Jump Shot"}, "text": "Joel Embiid makes 12-foot two point shot", "awayScore": 21, "homeScore": 6, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "5:57"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:21:28Z", "shootingPlay": "True", "coordinate": {"x": 22, "y": 12}, "actionType": "Turnaround Fade Away Jump Shot"}, 
+            {"id": "40136085377", "sequenceNumber": "77", "type": {"id": "115", "text": "Driving Dunk Shot"}, "text": "Joel Embiid makes driving dunk (James Harden assists)", "awayScore": 24, "homeScore": 10, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "4:32"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "3992"}}], "wallclock": "2022-03-16T23:24:56Z", "shootingPlay": "True", "coordinate": {"x": 26, "y": 0}, "actionType": "Driving Dunk Shot"}, 
+            {"id": "40136085394", "sequenceNumber": "94", "type": {"id": "131", "text": "Pullup Jump Shot"}, "text": "Joel Embiid makes pullup jump shot (Tyrese Maxey assists)", "awayScore": 26, "homeScore": 10, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "3:34"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "4431678"}}], "wallclock": "2022-03-16T23:26:22Z", "shootingPlay": "True", "coordinate": {"x": 25, "y": 10}, "actionType": "Pullup Jump Shot"}, 
+            {"id": "401360853138", "sequenceNumber": "138", "type": {"id": "95", "text": "Layup Shot"}, "text": "Moses Brown blocks Joel Embiid's layup", "awayScore": 28, "homeScore": 19, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "48.2"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "4397126"}}], "wallclock": "2022-03-16T23:33:50Z", "shootingPlay": "True", "coordinate": {"x": 24, "y": 0}, "actionType": "Layup Shot"}
+        ],
+        "Low_Relation":[
+          {"id": "4013608534", "sequenceNumber": "4", "type": {"id": "615", "text": "Jumpball"}, "text": "Joel Embiid vs. Evan Mobley (Darius Garland gains possession)", "awayScore": 0, "homeScore": 0, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "12:00"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "5"}, "participants": [{"athlete": {"id": "4432158"}}, {"athlete": {"id": "3059318"}}, {"athlete": {"id": "4396907"}}], "wallclock": "2022-03-16T23:10:36Z", "shootingPlay": "False", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "else"},
+           {"id": "4013608538", "sequenceNumber": "8", "type": {"id": "155", "text": "Defensive Rebound"}, "text": "Joel Embiid defensive rebound", "awayScore": 0, "homeScore": 0, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "11:38"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:10:54Z", "shootingPlay": "False", "coordinate": {"x": 29, "y": 7}, "actionType": "Defensive Rebound"}, 
+           {"id": "4013608539", "sequenceNumber": "9", "type": {"id": "92", "text": "Jump Shot"}, "text": "Joel Embiid makes 18-foot jumper", "awayScore": 2, "homeScore": 0, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "11:24"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:11:08Z", "shootingPlay": "True", "coordinate": {"x": 28, "y": 18}, "actionType": "Jump Shot"}, {"id": "40136085311", "sequenceNumber": "11", "type": {"id": "155", "text": "Defensive Rebound"}, "text": "Joel Embiid defensive rebound", "awayScore": 2, "homeScore": 0, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "10:57"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:11:35Z", "shootingPlay": "False", "coordinate": {"x": 25, "y": 1}, "actionType": "Defensive Rebound"}, 
+           {"id": "40136085315", "sequenceNumber": "15", "type": {"id": "155", "text": "Defensive Rebound"}, "text": "Joel Embiid defensive rebound", "awayScore": 2, "homeScore": 0, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "10:35"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:11:57Z", "shootingPlay": "False", "coordinate": {"x": 17, "y": 10}, "actionType": "Defensive Rebound"}, 
+           {"id": "40136085327", "sequenceNumber": "27", "type": {"id": "137", "text": "Turnaround Fade Away Jump Shot"}, "text": "Joel Embiid makes 12-foot two point shot", "awayScore": 6, "homeScore": 2, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "9:35"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:13:48Z", "shootingPlay": "True", "coordinate": {"x": 27, "y": 12}, "actionType": "Turnaround Fade Away Jump Shot"}, 
+           {"id": "40136085331", "sequenceNumber": "31", "type": {"id": "155", "text": "Defensive Rebound"}, "text": "Joel Embiid defensive rebound", "awayScore": 6, "homeScore": 2, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "9:11"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:14:55Z", "shootingPlay": "False", "coordinate": {"x": 27, "y": 7}, "actionType": "Defensive Rebound"}, 
+           {"id": "40136085332", "sequenceNumber": "32", "type": {"id": "130", "text": "Floating Jump Shot"}, "text": "Tyrese Maxey makes 9-foot two point shot (Joel Embiid assists)", "awayScore": 8, "homeScore": 2, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "9:05"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "4431678"}}, {"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:15:02Z", "shootingPlay": "True", "coordinate": {"x": 32, "y": 6}, "actionType": "assist"}, 
+           {"id": "40136085349", "sequenceNumber": "49", "type": {"id": "155", "text": "Defensive Rebound"}, "text": "Joel Embiid defensive rebound", "awayScore": 14, "homeScore": 4, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "7:11"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:20:14Z", "shootingPlay": "False", "coordinate": {"x": 37, "y": 27}, "actionType": "Defensive Rebound"}, 
+           {"id": "40136085350", "sequenceNumber": "50", "type": {"id": "137", "text": "Turnaround Fade Away Jump Shot"}, "text": "Joel Embiid makes 11-foot two point shot", "awayScore": 16, "homeScore": 4, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "7:02"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:20:24Z", "shootingPlay": "True", "coordinate": {"x": 15, "y": 4}, "actionType": "Turnaround Fade Away Jump Shot"},
+            {"id": "40136085355", "sequenceNumber": "55", "type": {"id": "146", "text": "Running Pullup Jump Shot"}, "text": "Tyrese Maxey makes 26-foot running pullup jump shot (Joel Embiid assists)", "awayScore": 19, "homeScore": 4, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "6:38"}, "scoringPlay": "True", "scoreValue": 3, "team": {"id": "20"}, "participants": [{"athlete": {"id": "4431678"}}, {"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:20:47Z", "shootingPlay": "True", "coordinate": {"x": 45, "y": 16}, "actionType": "assist"},
+             {"id": "40136085359", "sequenceNumber": "59", "type": {"id": "137", "text": "Turnaround Fade Away Jump Shot"}, "text": "Joel Embiid makes 12-foot two point shot", "awayScore": 21, "homeScore": 6, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "5:57"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:21:28Z", "shootingPlay": "True", "coordinate": {"x": 22, "y": 12}, "actionType": "Turnaround Fade Away Jump Shot"}, 
+             {"id": "40136085371", "sequenceNumber": "71", "type": {"id": "98", "text": "Free Throw - 1 of 2"}, "text": "Joel Embiid makes free throw 1 of 2", "awayScore": 22, "homeScore": 10, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "4:59"}, "scoringPlay": "True", "scoreValue": 1, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:23:56Z", "shootingPlay": "True", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "Free Throw - 1 of 2"}, 
+             {"id": "40136085374", "sequenceNumber": "74", "type": {"id": "99", "text": "Free Throw - 2 of 2"}, "text": "Joel Embiid misses free throw 2 of 2", "awayScore": 22, "homeScore": 10, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "4:59"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:23:56Z", "shootingPlay": "True", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "Free Throw - 2 of 2"}, 
+             {"id": "40136085377", "sequenceNumber": "77", "type": {"id": "115", "text": "Driving Dunk Shot"}, "text": "Joel Embiid makes driving dunk (James Harden assists)", "awayScore": 24, "homeScore": 10, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "4:32"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "3992"}}], "wallclock": "2022-03-16T23:24:56Z", "shootingPlay": "True", "coordinate": {"x": 26, "y": 0}, "actionType": "Driving Dunk Shot"},
+              {"id": "40136085380", "sequenceNumber": "80", "type": {"id": "155", "text": "Defensive Rebound"}, "text": "Joel Embiid defensive rebound", "awayScore": 24, "homeScore": 10, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "4:03"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:25:24Z", "shootingPlay": "False", "coordinate": {"x": 9, "y": 22}, "actionType": "Defensive Rebound"}, 
+              {"id": "40136085394", "sequenceNumber": "94", "type": {"id": "131", "text": "Pullup Jump Shot"}, "text": "Joel Embiid makes pullup jump shot (Tyrese Maxey assists)", "awayScore": 26, "homeScore": 10, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "3:34"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "4431678"}}], "wallclock": "2022-03-16T23:26:22Z", "shootingPlay": "True", "coordinate": {"x": 25, "y": 10}, "actionType": "Pullup Jump Shot"}, 
+              {"id": "401360853127", "sequenceNumber": "127", "type": {"id": "63", "text": "Lost Ball Turnover"}, "text": "Joel Embiid lost ball turnover (Dylan Windler steals)", "awayScore": 26, "homeScore": 13, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "3:04"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "3906786"}}], "wallclock": "2022-03-16T23:30:40Z", "shootingPlay": "False", "coordinate": {"x": 10, "y": 8}, "actionType": "Lost Ball Turnover"}, 
+              {"id": "401360853122", "sequenceNumber": "122", "type": {"id": "155", "text": "Defensive Rebound"}, "text": "Joel Embiid defensive rebound", "awayScore": 26, "homeScore": 15, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "2:24"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:31:33Z", "shootingPlay": "False", "coordinate": {"x": 36, "y": 19}, "actionType": "Defensive Rebound"}, 
+              {"id": "401360853138", "sequenceNumber": "138", "type": {"id": "95", "text": "Layup Shot"}, "text": "Moses Brown blocks Joel Embiid's layup", "awayScore": 28, "homeScore": 19, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "48.2"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "4397126"}}], "wallclock": "2022-03-16T23:33:50Z", "shootingPlay": "True", "coordinate": {"x": 24, "y": 0}, "actionType": "Layup Shot"}, 
+              {"id": "401360853140", "sequenceNumber": "140", "type": {"id": "156", "text": "Offensive Rebound"}, "text": "Joel Embiid offensive rebound", "awayScore": 28, "homeScore": 19, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "45.1"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:33:53Z", "shootingPlay": "False", "coordinate": {"x": 24, "y": 0}, "actionType": "Offensive Rebound"}, 
+              {"id": "401360853143", "sequenceNumber": "143", "type": {"id": "584", "text": "Substitution"}, "text": "DeAndre Jordan enters the game for Joel Embiid", "awayScore": 28, "homeScore": 19, "period": {"number": 1, "displayValue": "1st Quarter"}, "clock": {"displayValue": "44.8"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3442"}}, {"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:34:02Z", "shootingPlay": "False", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "else"}, 
+              {"id": "401360853245", "sequenceNumber": "245", "type": {"id": "584", "text": "Substitution"}, "text": "Joel Embiid enters the game for DeAndre Jordan", "awayScore": 52, "homeScore": 40, "period": {"number": 2, "displayValue": "2nd Quarter"}, "clock": {"displayValue": "6:07"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "3442"}}], "wallclock": "2022-03-16T23:50:53Z", "shootingPlay": "False", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "Substitution"},
+               {"id": "401360853249", "sequenceNumber": "249", "type": {"id": "156", "text": "Offensive Rebound"}, "text": "Joel Embiid offensive rebound", "awayScore": 52, "homeScore": 40, "period": {"number": 2, "displayValue": "2nd Quarter"}, "clock": {"displayValue": "5:46"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:53:32Z", "shootingPlay": "False", "coordinate": {"x": 25, "y": 1}, "actionType": "Offensive Rebound"}, 
+               {"id": "401360853250", "sequenceNumber": "250", "type": {"id": "125", "text": "Layup Shot Putback"}, "text": "Joel Embiid makes two point shot", "awayScore": 54, "homeScore": 40, "period": {"number": 2, "displayValue": "2nd Quarter"}, "clock": {"displayValue": "5:45"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:53:36Z", "shootingPlay": "True", "coordinate": {"x": 25, "y": 0}, "actionType": "Layup Shot Putback"}, 
+               {"id": "401360853258", "sequenceNumber": "258", "type": {"id": "155", "text": "Defensive Rebound"}, "text": "Joel Embiid defensive rebound", "awayScore": 54, "homeScore": 42, "period": {"number": 2, "displayValue": "2nd Quarter"}, "clock": {"displayValue": "4:52"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:55:15Z", "shootingPlay": "False", "coordinate": {"x": 29, "y": 5}, "actionType": "Defensive Rebound"}, 
+               {"id": "401360853266", "sequenceNumber": "266", "type": {"id": "137", "text": "Turnaround Fade Away Jump Shot"}, "text": "Joel Embiid makes 26-foot three point shot", "awayScore": 59, "homeScore": 44, "period": {"number": 2, "displayValue": "2nd Quarter"}, "clock": {"displayValue": "4:03"}, "scoringPlay": "True", "scoreValue": 3, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:57:06Z", "shootingPlay": "True", "coordinate": {"x": 9, "y": 20}, "actionType": "Turnaround Fade Away Jump Shot"}, 
+               {"id": "401360853273", "sequenceNumber": "273", "type": {"id": "45", "text": "Personal Foul"}, "text": "Joel Embiid personal foul", "awayScore": 59, "homeScore": 46, "period": {"number": 2, "displayValue": "2nd Quarter"}, "clock": {"displayValue": "3:28"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-16T23:58:29Z", "shootingPlay": "False", "coordinate": {"x": 31, "y": 4}, "actionType": "Personal Foul"}, {"id": "401360853280", "sequenceNumber": "280", "type": {"id": "96", "text": "Dunk Shot"}, "text": "Joel Embiid makes dunk (Georges Niang assists)", "awayScore": 61, "homeScore": 47, "period": {"number": 2, "displayValue": "2nd Quarter"}, "clock": {"displayValue": "3:10"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "2990969"}}], "wallclock": "2022-03-16T23:59:50Z", "shootingPlay": "True", "coordinate": {"x": 25, "y": 0}, "actionType": "Dunk Shot"}, 
+               {"id": "401360853283", "sequenceNumber": "283", "type": {"id": "137", "text": "Turnaround Fade Away Jump Shot"}, "text": "Joel Embiid misses 10-foot two point shot", "awayScore": 61, "homeScore": 49, "period": {"number": 2, "displayValue": "2nd Quarter"}, "clock": {"displayValue": "2:40"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:00:21Z", "shootingPlay": "True", "coordinate": {"x": 29, "y": 9}, "actionType": "Turnaround Fade Away Jump Shot"}, 
+               {"id": "401360853285", "sequenceNumber": "285", "type": {"id": "45", "text": "Personal Foul"}, "text": "Joel Embiid personal foul", "awayScore": 61, "homeScore": 49, "period": {"number": 2, "displayValue": "2nd Quarter"}, "clock": {"displayValue": "2:34"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:00:29Z", "shootingPlay": "False", "coordinate": {"x": 31, "y": 10}, "actionType": "Personal Foul"}, {"id": "401360853298", "sequenceNumber": "298", "type": {"id": "92", "text": "Jump Shot"}, "text": "Danny Green makes 23-foot three point jumper (Joel Embiid assists)", "awayScore": 64, "homeScore": 52, "period": {"number": 2, "displayValue": "2nd Quarter"}, "clock": {"displayValue": "1:47"}, "scoringPlay": "True", "scoreValue": 3, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3988"}}, {"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:05:29Z", "shootingPlay": "True", "coordinate": {"x": 2, "y": -1}, "actionType": "assist"}, 
+               {"id": "401360853303", "sequenceNumber": "303", "type": {"id": "156", "text": "Offensive Rebound"}, "text": "Joel Embiid offensive rebound", "awayScore": 64, "homeScore": 54, "period": {"number": 2, "displayValue": "2nd Quarter"}, "clock": {"displayValue": "1:03"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:06:12Z", "shootingPlay": "False", "coordinate": {"x": 42, "y": 9}, "actionType": "Offensive Rebound"}, 
+               {"id": "401360853304", "sequenceNumber": "304", "type": {"id": "95", "text": "Layup Shot"}, "text": "Tobias Harris makes layup (Joel Embiid assists)", "awayScore": 66, "homeScore": 54, "period": {"number": 2, "displayValue": "2nd Quarter"}, "clock": {"displayValue": "1:00"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "6440"}}, {"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:06:15Z", "shootingPlay": "True", "coordinate": {"x": 26, "y": 1}, "actionType": "assist"}, 
+               {"id": "401360853310", "sequenceNumber": "310", "type": {"id": "584", "text": "Substitution"}, "text": "Georges Niang enters the game for Joel Embiid", "awayScore": 66, "homeScore": 56, "period": {"number": 2, "displayValue": "2nd Quarter"}, "clock": {"displayValue": "36.8"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "2990969"}}, {"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:06:57Z", "shootingPlay": "False", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "else"}, 
+               {"id": "401360853320", "sequenceNumber": "320", "type": {"id": "584", "text": "Substitution"}, "text": "Joel Embiid enters the game for Danny Green", "awayScore": 72, "homeScore": 59, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "12:00"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "3988"}}], "wallclock": "2022-03-17T00:22:30Z", "shootingPlay": "False", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "Substitution"}, 
+               {"id": "401360853334", "sequenceNumber": "334", "type": {"id": "92", "text": "Jump Shot"}, "text": "Joel Embiid misses 26-foot three point jumper", "awayScore": 72, "homeScore": 61, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "10:50"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:24:42Z", "shootingPlay": "True", "coordinate": {"x": 40, "y": 21}, "actionType": "Jump Shot"}, 
+               {"id": "401360853337", "sequenceNumber": "337", "type": {"id": "155", "text": "Defensive Rebound"}, "text": "Joel Embiid defensive rebound", "awayScore": 72, "homeScore": 61, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "10:40"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:24:52Z", "shootingPlay": "False", "coordinate": {"x": 24, "y": 2}, "actionType": "Defensive Rebound"}, 
+               {"id": "401360853340", "sequenceNumber": "340", "type": {"id": "98", "text": "Free Throw - 1 of 2"}, "text": "Joel Embiid makes free throw 1 of 2", "awayScore": 73, "homeScore": 61, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "10:40"}, "scoringPlay": "True", "scoreValue": 1, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:25:23Z", "shootingPlay": "True", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "Free Throw - 1 of 2"}, 
+               {"id": "401360853341", "sequenceNumber": "341", "type": {"id": "99", "text": "Free Throw - 2 of 2"}, "text": "Joel Embiid makes free throw 2 of 2", "awayScore": 74, "homeScore": 61, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "10:40"}, "scoringPlay": "True", "scoreValue": 1, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:25:39Z", "shootingPlay": "True", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "Free Throw - 2 of 2"}, 
+               {"id": "401360853358", "sequenceNumber": "358", "type": {"id": "156", "text": "Offensive Rebound"}, "text": "Joel Embiid offensive rebound", "awayScore": 74, "homeScore": 68, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "8:15"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:31:28Z", "shootingPlay": "False", "coordinate": {"x": 25, "y": 2}, "actionType": "Offensive Rebound"}, 
+               {"id": "401360853359", "sequenceNumber": "359", "type": {"id": "94", "text": "Tip Shot"}, "text": "Joel Embiid misses tip shot", "awayScore": 74, "homeScore": 68, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "8:15"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:31:31Z", "shootingPlay": "True", "coordinate": {"x": 25, "y": 0}, "actionType": "Tip Shot"}, 
+               {"id": "401360853360", "sequenceNumber": "360", "type": {"id": "156", "text": "Offensive Rebound"}, "text": "Joel Embiid offensive rebound", "awayScore": 74, "homeScore": 68, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "8:15"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:31:31Z", "shootingPlay": "False", "coordinate": {"x": 25, "y": 0}, "actionType": "Offensive Rebound"}, 
+               {"id": "401360853361", "sequenceNumber": "361", "type": {"id": "125", "text": "Layup Shot Putback"}, "text": "Joel Embiid makes two point shot", "awayScore": 76, "homeScore": 68, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "8:15"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:31:35Z", "shootingPlay": "True", "coordinate": {"x": 25, "y": 0}, "actionType": "Layup Shot Putback"},
+                {"id": "401360853364", "sequenceNumber": "364", "type": {"id": "97", "text": "Free Throw - 1 of 1"}, "text": "Joel Embiid makes free throw 1 of 1", "awayScore": 77, "homeScore": 68, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "8:15"}, "scoringPlay": "True", "scoreValue": 1, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:32:00Z", "shootingPlay": "True", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "Free Throw - 1 of 1"}, 
+                {"id": "401360853367", "sequenceNumber": "367", "type": {"id": "151", "text": "Cutting Dunk Shot"}, "text": "Joel Embiid makes 1-foot dunk (James Harden assists)", "awayScore": 79, "homeScore": 68, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "7:48"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "3992"}}], "wallclock": "2022-03-17T00:32:28Z", "shootingPlay": "True", "coordinate": {"x": 24, "y": 1}, "actionType": "Cutting Dunk Shot"}, 
+                {"id": "401360853389", "sequenceNumber": "389", "type": {"id": "132", "text": "Step Back Jump Shot"}, "text": "Joel Embiid misses 18-foot step back jumpshot", "awayScore": 83, "homeScore": 78, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "5:31"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:36:17Z", "shootingPlay": "True", "coordinate": {"x": 22, "y": 17}, "actionType": "Step Back Jump Shot"}, 
+                {"id": "401360853398", "sequenceNumber": "398", "type": {"id": "155", "text": "Defensive Rebound"}, "text": "Joel Embiid defensive rebound", "awayScore": 83, "homeScore": 78, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "4:44"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:37:04Z", "shootingPlay": "False", "coordinate": {"x": 37, "y": 23}, "actionType": "Defensive Rebound"}, 
+                {"id": "401360853414", "sequenceNumber": "414", "type": {"id": "92", "text": "Jump Shot"}, "text": "Joel Embiid misses three point jumper", "awayScore": 85, "homeScore": 80, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "3:04"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:41:53Z", "shootingPlay": "True", "coordinate": {"x": 25, "y": 27}, "actionType": "Jump Shot"}, 
+                {"id": "401360853417", "sequenceNumber": "417", "type": {"id": "155", "text": "Defensive Rebound"}, "text": "Joel Embiid defensive rebound", "awayScore": 85, "homeScore": 80, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "2:52"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:42:06Z", "shootingPlay": "False", "coordinate": {"x": 26, "y": 1}, "actionType": "Defensive Rebound"}, 
+                {"id": "401360853418", "sequenceNumber": "418", "type": {"id": "63", "text": "Lost Ball Turnover"}, "text": "Joel Embiid lost ball turnover (Moses Brown steals)", "awayScore": 85, "homeScore": 80, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "2:49"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "4397126"}}], "wallclock": "2022-03-17T00:42:08Z", "shootingPlay": "False", "coordinate": {"x": 12, "y": 19}, "actionType": "Lost Ball Turnover"}, 
+                {"id": "401360853441", "sequenceNumber": "441", "type": {"id": "584", "text": "Substitution"}, "text": "James Harden enters the game for Joel Embiid", "awayScore": 85, "homeScore": 87, "period": {"number": 3, "displayValue": "3rd Quarter"}, "clock": {"displayValue": "1:36"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3992"}}, {"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T00:45:07Z", "shootingPlay": "False", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "else"}, 
+                {"id": "401360853527", "sequenceNumber": "527", "type": {"id": "584", "text": "Substitution"}, "text": "Joel Embiid enters the game for DeAndre Jordan", "awayScore": 93, "homeScore": 96, "period": {"number": 4, "displayValue": "4th Quarter"}, "clock": {"displayValue": "7:20"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "3442"}}], "wallclock": "2022-03-17T01:02:17Z", "shootingPlay": "False", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "Substitution"}, 
+                {"id": "401360853534", "sequenceNumber": "534", "type": {"id": "132", "text": "Step Back Jump Shot"}, "text": "Joel Embiid makes 18-foot step back jumpshot", "awayScore": 98, "homeScore": 98, "period": {"number": 4, "displayValue": "4th Quarter"}, "clock": {"displayValue": "6:00"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T01:03:53Z", "shootingPlay": "True", "coordinate": {"x": 17, "y": 16}, "actionType": "Step Back Jump Shot"}, 
+                {"id": "401360853539", "sequenceNumber": "539", "type": {"id": "97", "text": "Free Throw - 1 of 1"}, "text": "Joel Embiid makes free throw 1 of 1", "awayScore": 99, "homeScore": 98, "period": {"number": 4, "displayValue": "4th Quarter"}, "clock": {"displayValue": "6:00"}, "scoringPlay": "True", "scoreValue": 1, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T01:04:28Z", "shootingPlay": "True", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "Free Throw - 1 of 1"}, 
+                {"id": "401360853544", "sequenceNumber": "544", "type": {"id": "98", "text": "Free Throw - 1 of 2"}, "text": "Joel Embiid makes free throw 1 of 2", "awayScore": 100, "homeScore": 98, "period": {"number": 4, "displayValue": "4th Quarter"}, "clock": {"displayValue": "5:32"}, "scoringPlay": "True", "scoreValue": 1, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T01:05:33Z", "shootingPlay": "True", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "Free Throw - 1 of 2"}, 
+                {"id": "401360853549", "sequenceNumber": "549", "type": {"id": "99", "text": "Free Throw - 2 of 2"}, "text": "Joel Embiid misses free throw 2 of 2", "awayScore": 100, "homeScore": 98, "period": {"number": 4, "displayValue": "4th Quarter"}, "clock": {"displayValue": "5:32"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T01:05:33Z", "shootingPlay": "True", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "Free Throw - 2 of 2"}, 
+                {"id": "401360853573", "sequenceNumber": "573", "type": {"id": "98", "text": "Free Throw - 1 of 2"}, "text": "Joel Embiid makes free throw 1 of 2", "awayScore": 106, "homeScore": 104, "period": {"number": 4, "displayValue": "4th Quarter"}, "clock": {"displayValue": "2:44"}, "scoringPlay": "True", "scoreValue": 1, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T01:12:55Z", "shootingPlay": "True", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "Free Throw - 1 of 2"}, 
+                {"id": "401360853574", "sequenceNumber": "574", "type": {"id": "99", "text": "Free Throw - 2 of 2"}, "text": "Joel Embiid makes free throw 2 of 2", "awayScore": 107, "homeScore": 104, "period": {"number": 4, "displayValue": "4th Quarter"}, "clock": {"displayValue": "2:44"}, "scoringPlay": "True", "scoreValue": 1, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T01:13:13Z", "shootingPlay": "True", "coordinate": {"x": -214748340, "y": -214748365}, "actionType": "Free Throw - 2 of 2"}, 
+                {"id": "401360853578", "sequenceNumber": "578", "type": {"id": "155", "text": "Defensive Rebound"}, "text": "Joel Embiid defensive rebound", "awayScore": 107, "homeScore": 104, "period": {"number": 4, "displayValue": "4th Quarter"}, "clock": {"displayValue": "2:11"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T01:13:48Z", "shootingPlay": "False", "coordinate": {"x": 12, "y": 13}, "actionType": "Defensive Rebound"}, 
+                {"id": "401360853579", "sequenceNumber": "579", "type": {"id": "63", "text": "Lost Ball Turnover"}, "text": "Joel Embiid lost ball turnover (Lauri Markkanen steals)", "awayScore": 107, "homeScore": 104, "period": {"number": 4, "displayValue": "4th Quarter"}, "clock": {"displayValue": "1:49"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "4066336"}}], "wallclock": "2022-03-17T01:14:10Z", "shootingPlay": "False", "coordinate": {"x": 13, "y": 13}, "actionType": "Lost Ball Turnover"}, 
+                {"id": "401360853585", "sequenceNumber": "585", "type": {"id": "92", "text": "Jump Shot"}, "text": "Tyrese Maxey makes 27-foot three point jumper (Joel Embiid assists)", "awayScore": 110, "homeScore": 106, "period": {"number": 4, "displayValue": "4th Quarter"}, "clock": {"displayValue": "1:19"}, "scoringPlay": "True", "scoreValue": 3, "team": {"id": "20"}, "participants": [{"athlete": {"id": "4431678"}}, {"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T01:15:33Z", "shootingPlay": "True", "coordinate": {"x": 2, "y": 13}, "actionType": "assist"}, 
+                {"id": "401360853592", "sequenceNumber": "592", "type": {"id": "110", "text": "Driving Layup Shot"}, "text": "Joel Embiid makes driving layup (Tobias Harris assists)", "awayScore": 112, "homeScore": 108, "period": {"number": 4, "displayValue": "4th Quarter"}, "clock": {"displayValue": "27.4"}, "scoringPlay": "True", "scoreValue": 2, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}, {"athlete": {"id": "6440"}}], "wallclock": "2022-03-17T01:18:38Z", "shootingPlay": "True", "coordinate": {"x": 25, "y": 0}, "actionType": "Driving Layup Shot"}, 
+                {"id": "401360853607", "sequenceNumber": "607", "type": {"id": "45", "text": "Personal Foul"}, "text": "Joel Embiid personal foul", "awayScore": 114, "homeScore": 110, "period": {"number": 4, "displayValue": "4th Quarter"}, "clock": {"displayValue": "15.4"}, "scoringPlay": "False", "scoreValue": 0, "team": {"id": "20"}, "participants": [{"athlete": {"id": "3059318"}}], "wallclock": "2022-03-17T01:23:07Z", "shootingPlay": "False", "coordinate": {"x": 43, "y": 31}, "actionType": "Personal Foul"}
+
+        ]
+    }],
+    "Video":{},
+    "NLP_NER":{
+        "Player": [{"text": "Joel Embiid", "start": 0, "end": 11, "probability": 0.9995680183079081}], 
+        "Team": "", 
+        "When": [{"text": "the first quarter", "start": 66, "end": 83, "probability": 0.7457077858885341}], 
+        "Where": [{"text": "midrange", "start": 41, "end": 49, "probability": 0.993964308988339}]},
+    "Insight_Type":"Single Player Performance",
+    "Task_Type":"Distribution",
+    "Task_All":"Compare",
+    "Basic_Info":{
+        "Who":"Joel Embiid",
+        "When":"First quarter",
+        "Where":"Midrange",
+        "What":"Shots"
+    },
+    "Title":"Joel Embiid's Shooting Distribution in the Game",
+    "Writer":"Writer’s Name",
+    "Date":"Mar.7,2023 ",
+    "Insight_Episodes":
+        [{"Episode":"Episode 1: Introduction","Sentence":["- Briefly introduce the game and Joel Embiid's performance"]},
+        {"Episode":"Episode 2: Joel Embiid's Shot Attempts","Sentence":["- Provide the total number of shots Joel Embiid attempted in the game", "- Mention the percentage of shots he made"]},
+        {"Episode":"Episode 3: Distribution of Shots by Quarter","Sentence":["- Break down the number of shots Joel Embiid took in each quarter", "- Highlight the quarter where he took the most shots"]},
+        {"Episode":"Episode 4: Distribution of Shots by Shot Type","Sentence":["- Categorize Joel Embiid's shots by type (midrange, three-point, layup, etc.)", "- Mention the percentage of shots he took from each type"]},
+        {"Episode":"Episode 5: Analysis of Midrange Shots","Sentence":["- Focus on Joel Embiid's midrange shots", "- Provide the number of midrange shots he attempted and made", "- Compare his midrange shooting percentage to his overall shooting percentage"]},
+        {"Episode":"Episode 6: Conclusion","Sentence":["- Summarize Joel Embiid's shooting performance in the game", "- Provide insights on his shooting distribution and effectiveness"]}
+    ],
+    "Episode_Relation":["Temporal","Elaboration","Similarity","Elaboration","Elaboration"],
+   "Contents":{
+    "Episode":[
+        {
+            "Id":"1",
+            "E_Title":"Introduction",
+            "E_Sentences":[
+                {
+                    "S_Insight":"Briefly introduce the game and Joel Embiid's performance",
+                    "S_Task":"Value",
+                    "S_Ischart":"No"
+                    
+                }
+            ],
+            "E_Text":"The game being referred to is not specified, but based on the provided statistics, it appears to be a basketball game in which Joel Embiid played for approximately 35 minutes. Embiid had an impressive performance, scoring 35 points on 13 out of 19 field goal attempts, making 1 out of 3 three-point attempts and 8 out of 10 free throw attempts. He also grabbed 17 rebounds and dished out 5 assists, but had 3 turnovers and committed 3 personal fouls. Despite Embiid's strong individual performance, his team was trailing by 4 point, suggesting a closely contested game."
+        },
+        {
+            "Id":"2",
+            "E_Title":"Joel Embiid's Shot Attempts",
+            "E_Sentences":[
+                {
+                    "S_Insight":"Provide the total number of shots Joel Embiid attempted in the game",
+                    "S_Task":"Value",
+                    "S_Ischart":"No"
+                    
+                },
+                {
+                    "S_Insight":"Mention the percentage of shots he made",
+                    "S_Task":"Proportion",
+                    "S_Ischart":"Yes",
+                    "S_Chartneed":[
+                        {
+                            "Subspcae":[{"Athlete":"Joel Embiid","Isshot":"True"}],
+                            "Breakdown":"Isscore",
+                            "Measure":"Count",
+                            "Is_Tracking":"No",
+                            "Chart_Type":"Pie Chart",
+                            "Chart_Title":"The Percentage of Shots",
+                            "Chart_Data":[
+                                {
+                            	"1":{"Made":"13","Miss":"19"}
+                				}
+                            ]
+                        }
+                    ]
+                    
+                }
+            ],
+       		"E_Text":"Joel Embiid attempted 19 shots in the game, and out of those 19 shots, he made 13 of them, resulting in a shooting percentage of 68.4%. To visually represent this, a pie chart can be used to show the percentage of shots made by Embiid."
+        },
+        {
+            "Id":"3",
+            "E_Title":"Distribution of Shots by Quarter",
+            "E_Sentences":[
+                {
+                    "S_Insight":"Break down the number of shots Joel Embiid took in each quarter",
+                    "S_Task":"Distribution",
+                    "S_Ischart":"Yes",
+                    "S_Chartneed":[
+                        {
+                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True"}],
+                            "Breakdown":"Quarter",
+                            "Measure":"Count",
+                            "Is_Tracking":"No",
+                            "Chart_Type":"Stacked Bar Chart",
+                            "Chart_Title":"Distribution of Shots by Quarter",
+                            "Chart_Data":[
+                                {
+                            	"1":{"Quarter":"1","Number of Shots":"7","Made":"6"},
+                                "2":{"Quarter":"2","Number of Shots":"3","Made":"2"},
+                                "3":{"Quarter":"3","Number of Shots":"5","Made":"2"},
+                                "4":{"Quarter":"4","Number of Shots":"2","Made":"2"}
+                				}
+                            ]
+                        }
+                    ]
+                    
+                },
+                {
+                    "S_Insight":"Highlight the quarter where he took the most shots",
+                    "S_Task":"Extreme",
+                    "S_Ischart":"No"
+                    
+                }
+            ],
+       		"E_Text":"Embiid was dominating in the first half, hitting nine out of eleven, probably the biggest reason for the 76ers 26-point lead. But that was because he was making most of his mid-range jumpers(6/8), which is not very sustainable. He only hit 3/9 in the second half, and none of his shots were near the rim!"
+        },
+        {
+            "Id":"4",
+            "E_Title":"Distribution of Shots by Shot Type",
+            "E_Sentences":[
+                {
+                    "S_Insight":"Categorize Joel Embiid's shots by type (midrange, three-point, layup, etc.)",
+                    "S_Task":"Categorization",
+                    "S_Ischart":"Yes",
+                    "S_Chartneed":[
+                        {
+                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True"}],
+                            "Breakdown":"ShotType",
+                            "Measure":"",
+                            "Is_Tracking":"Yes",
+                            "Chart_Type":"Shot Chart",
+                            "Chart_Title":"Shots Categorized by Type",
+                            "Chart_Data":[
+                                {
+                                    "1":{"Text":"Joel Embiid makes 18-foot jumper","x":"8","y":"6","Iscore":"True","Action_Type":"Jump Shot"},
+                                    "2":{"Text":"Joel Embiid makes 12-foot two point shot","x":"27","y":"12","Iscore":"True","Action_Type":"Turnaround Fade Away Jump Shot"},
+                                    "3":{"Text":"Joel Embiid makes 11-foot two point shot","x":"15","y":"4","Iscore":"True","Action_Type":"Turnaround Fade Away Jump Shot"},
+                                    "4":{"Text":"Joel Embiid makes 12-foot two point shot","x":"22","y":"12","Iscore":"True","Action_Type":"Turnaround Fade Away Jump Shot"},
+                                    "5":{"Text":"Joel Embiid makes pullup jump shot (Tyrese Maxey assists)","x":"25","y":"10","Iscore":"True","Action_Type":"Pullup Jump Shot"},
+                                    "6":{"Text":"Joel Embiid misses 10-foot two point shot","x":"29","y":"9","Iscore":"False","Action_Type":"Turnaround Fade Away Jump Shot"},
+                                    "7":{"Text":"Joel Embiid misses 18-foot step back jumpshot","x":"22","y":"17","Iscore":"False","Action_Type":"Step Back Jump Shot"},
+                                    "8":{"Text":"Joel Embiid makes 18-foot step back jumpshot","x":"17","y":"16","Iscore":"True","Action_Type":"Step Back Jump Shot"},
+                                    "9":{"Text":"Joel Embiid makes 26-foot three point shot","x":"9","y":"20","Iscore":"True","Action_Type":"Turnaround Fade Away Jump Shot"},
+                                    "10":{"Text":"Joel Embiid misses 26-foot three point jumper","x":"40","y":"21","Iscore":"False","Action_Type":"Jump Shot"},
+                                    "11":{"Text":"Joel Embiid misses three point jumper","x":"25","y":"27","Iscore":"False","Action_Type":"Jump Shot"},
+                                    "12":{"Text":"Joel Embiid misses tip shot","x":"25","y":"0","Iscore":"True","Action_Type":"Tip Shot"},
+                                    "13":{"Text":"Joel Embiid makes driving dunk (James Harden assists)","x":"26","y":"0","Iscore":"True","Action_Type":"Driving Dunk Shot"},
+                                    "14":{"Text":"Joel Embiid makes dunk (Georges Niang assists)","x":"25","y":"0","Iscore":"True","Action_Type":"Dunk Shot"},
+                                    "15":{"Text":"Joel Embiid makes 1-foot dunk (James Harden assists)","x":"24","y":"1","Iscore":"True","Action_Type":"Cutting Dunk Shot"},
+                                    "16":{"Text":"Moses Brown blocks Joel Embiid‘s layup","x":"24","y":"0","Iscore":"True","Action_Type":"Layup Shot"},
+                                    "17":{"Text":"Joel Embiid makes two point shot","x":"25","y":"0","Iscore":"True","Action_Type":"Layup Shot Putback"},
+                                    "18":{"Text":"Joel Embiid makes two point shot","x":"25","y":"0","Iscore":"True","Action_Type":"ayup Shot Putback"},
+                                    "19":{"Text":"Joel Embiid makes driving layup (Tobias Harris assists)","x":"25","y":"0","Iscore":"True","Action_Type":"Driving Layup Shot"}
+                                }
+                            ]
+                        }
+                    ]
+                    
+                },
+                {
+                    "S_Insight":"Mention the percentage of shots he took from each type",
+                    "S_Task":"Categorization",
+                    "S_Ischart":"Yes",
+                    "S_Chartneed":[
+                        {
+                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True","Isscore":"True"}],
+                            "Breakdown":"ShotType",
+                            "Measure":"% on Made",
+                            "Is_Tracking":"No",
+                            "Chart_Type":"IsoType Chart",
+                            "Chart_Title":"The Percentage of Shots from Each Type",
+                            "Chart_Data":[
+                                {
+                            	"1":{"Type":"Jump Shot","Number of Shots":"11","Made":"7","Percentage of Shots":"63.6%"},
+                                "2":{"Type":"Bank","Number of Shots":"0","Made":"0","Percentage of Shots":"0,0%"},
+                                "3":{"Type":"Layup","Number of Shots":"4","Made":"3","Percentage of Shots":"75.0%"},
+                                "4":{"Type":"Dunk","Number of Shots":"3","Made":"3","Percentage of Shots":"100%"},
+                                "5":{"Type":"Tip","Number of Shots":"1","Made":"0","Percentage of Shots":"0.0%"}
+                				}
+                            ]
+                        }
+                    ]
+                    
+                }
+            ],
+       		"E_Text":"Embiid was dominating in the first half, hitting nine out of eleven, probably the biggest reason for the 76ers 26-point lead. But that was because he was making most of his mid-range jumpers(6/8), which is not very sustainable. He only hit 3/9 in the second half, and none of his shots were near the rim!"
+        },
+        {
+            "Id":"5",
+            "E_Title":"Analysis of Midrange Shots",
+            "E_Sentences":[
+                {
+                    "S_Insight":"Focus on Joel Embiid's midrange shots",
+                    "S_Task":"Value",
+                    "S_Ischart":"Yes",
+                    "S_Chartneed":[
+                        {
+                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True","ShotRange":"MidRange"}],
+                            "Breakdown":"",
+                            "Measure":"",
+                            "Is_Tracking":"Yes",
+                            "Chart_Type":"Shot Chart",
+                            "Chart_Title":"Midrange Shots",
+                            "Chart_Data":[
+                                {
+                            	"1":{"Text":"Joel Embiid makes 18-foot jumper","x":"8","y":"6","Iscore":"True","Action_Type":"Jump Shot"},
+                                "2":{"Text":"Joel Embiid makes 12-foot two point shot","x":"27","y":"12","Iscore":"True","Action_Type":"Turnaround Fade Away Jump Shot"},
+                                "3":{"Text":"Joel Embiid makes 11-foot two point shot","x":"15","y":"4","Iscore":"True","Action_Type":"Turnaround Fade Away Jump Shot"},
+                                "4":{"Text":"Joel Embiid makes 12-foot two point shot","x":"22","y":"12","Iscore":"True","Action_Type":"Turnaround Fade Away Jump Shot"},
+                                "5":{"Text":"Joel Embiid makes pullup jump shot (Tyrese Maxey assists)","x":"25","y":"10","Iscore":"True","Action_Type":"Pullup Jump Shot"},
+                                "6":{"Text":"Joel Embiid misses 10-foot two point shot","x":"29","y":"9","Iscore":"False","Action_Type":"Turnaround Fade Away Jump Shot"},
+                                "7":{"Text":"Joel Embiid misses 18-foot step back jumpshot","x":"22","y":"17","Iscore":"False","Action_Type":"Step Back Jump Shot"},
+                                "8":{"Text":"Joel Embiid makes 18-foot step back jumpshot","x":"17","y":"16","Iscore":"True","Action_Type":"Step Back Jump Shot"}
+                				}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "S_Insight":"Provide the number of midrange shots he attempted and made",
+                    "S_Task":"Value",
+                    "S_Ischart":"Yes",
+                    "S_Chartneed":[
+                        {
+                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True","ShotRange":"MidRange"}],
+                            "Breakdown":"",
+                            "Measure":"Count",
+                            "Is_Tracking":"No",
+                            "Chart_Type":"Text",
+                            "Chart_Title":"The Number of Midrange Shots",
+                            "Chart_Data":[
+                                {
+                            	"1":{"Type":"MidRange","Number of Shots":"8","Made":"6"}
+                				}
+                            ]
+                        }
+                    ]
+                    
+                },
+                {
+                    "S_Insight":"Compare his midrange shooting percentage to his overall shooting percentage",
+                    "S_Task":"Difference",
+                    "S_Ischart":"Yes",
+                    "S_Chartneed":[
+                        {
+                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True","Isscore":"True"}],
+                            "Breakdown":"ShotRange",
+                            "Measure":"% on Made",
+                            "Is_Tracking":"Yes",
+                            "Chart_Type":"Area Chart",
+                            "Chart_Title":"The Percentage of Shots",
+                            "Chart_Data":[
+                                {
+                            	"1":{"Type":"MidRange%","Percentage of Shots":"75%"},
+                                "2":{"Type":"LongRange%","Percentage of Shots":"33.3%"},
+                                "3":{"Type":"ShortRange%","Percentage of Shots":"75%"},
+                                "4":{"Type":"FT%","Percentage of Shots":"80%"},
+                                "5":{"Type":"Overall%","Percentage of Shots":"68.4%"}
+                				}
+                            ]
+                        }
+                    ]
+                    
+                }
+            ],
+       		"E_Text":"Embiid was dominating in the first half, hitting nine out of eleven, probably the biggest reason for the 76ers 26-point lead. But that was because he was making most of his mid-range jumpers(6/8), which is not very sustainable. He only hit 3/9 in the second half, and none of his shots were near the rim!"
+        },
+        {
+            "Id":"6",
+            "E_Title":"Conclusion",
+            "E_Sentences":[
+                {
+                    "S_Insight":"Summarize Joel Embiid's shooting performance in the game",
+                    "S_Task":"Value",
+                    "S_Ischart":"Yes",
+                    "S_Chartneed":[
+                        {
+                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True"}],
+                            "Breakdown":"",
+                            "Measure":"",
+                            "Is_Tracking":"Yes",
+                            "Chart_Type":"Stacked Bar Chart",
+                            "Chart_Title":"Shooting Performance",
+                            "Chart_Data":[
+                                {
+                            	"1":{"Type":"MidRange","Number of Shots":"11","Made":"6"},
+                                "2":{"Type":"3PT","Number of Shots":"3","Made":"2"},
+                                "3":{"Type":"Layup","Number of Shots":"2","Made":"2"},
+                                "4":{"Type":"Dunk","Number of Shots":"3","Made":"2"}
+                				}
+                            ]
+                        }
+                    ]
+
+                },
+                {
+                    "S_Insight":"Provide insights on his shooting distribution and effectiveness",
+                    "S_Task":"Value",
+                    "S_Ischart":"No"
+                    
+                }
+            ],
+       		"E_Text":"Embiid was dominating in the first half, hitting nine out of eleven, probably the biggest reason for the 76ers 26-point lead. But that was because he was making most of his mid-range jumpers(6/8), which is not very sustainable. He only hit 3/9 in the second half, and none of his shots were near the rim!"
+        }
+    ]
+    
+}
+}

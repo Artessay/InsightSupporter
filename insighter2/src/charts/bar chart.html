@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bar Chart Example</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <script>
+      // Set the dimensions of the canvas
+      var margin = {top: 50, right: 20, bottom: 30, left: 40};
+      var width = 500 - margin.left - margin.right;
+      var height = 500 - margin.top - margin.bottom;
+
+      // Define the data
+      var data = [
+        { type: "Midrange", value: 11 },
+        { type: "3pt", value: 3 },
+        { type: "Layup", value: 2 },
+        { type: "Dunk", value: 3 }
+      ];
+      var colors = ["#98abc5"];
+
+      // Create the SVG canvas
+      var svg = d3.select("body")
+                  .append("svg")
+                  .attr("width", width + margin.left + margin.right)
+                  .attr("height", height + margin.top + margin.bottom)
+                  .append("g")
+                  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      // Define the x and y scales
+      var x = d3.scaleBand()
+                .range([0, width])
+                .padding(0.1)
+                .domain(data.map(function(d) { return d.type; }));
+
+      var y = d3.scaleLinear()
+                .range([height, 0])
+                .domain([0, d3.max(data, function(d) { return d.value; })]);
+
+      // Draw the x-axis
+      svg.append("g")
+         .attr("transform", "translate(0," + height + ")")
+         .call(d3.axisBottom(x));
+
+      // Draw the y-axis
+      svg.append("g")
+         .call(d3.axisLeft(y));
+
+      // Draw the bars
+      svg.selectAll(".bar")
+         .data(data)
+         .enter()
+         .append("rect")
+         .attr("class", "bar")
+         .attr("x", function(d) { return x(d.type); })
+         .attr("width", x.bandwidth())
+         .attr("y", function(d) { return y(d.value); })
+         .attr("height", function(d) { return height - y(d.value); })
+         .attr("fill", "#98abc5");
+
+      // Add title
+      svg.append("text")
+         .attr("x", (width / 2))
+         .attr("y", 0 - (margin.top / 2))
+         .attr("text-anchor", "middle")
+         .style("font-size", "16px")
+         .text("Shots Categorized by Type");
+
+    </script>
+  </body>
+</html>
