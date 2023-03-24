@@ -8,13 +8,9 @@ import { GetChart } from "../charts/ChartGenerate";
 
 function ChartCount(  sentenceList  ) {
     let chartNumber = 0;
-    // console.log(sentenceList)
 
     for (let i = 0; i < sentenceList.length; ++i) {
-        // console.log(sentenceList[i])
         if (sentenceList[i].S_Ischart === "Yes") {
-            // console.log("chart")
-            // console.log(sentenceList[i].S_Chartneed)
             let needs = sentenceList[i].S_Chartneed;
             for (let j = 0; j < needs.length; ++j) {
                 ++chartNumber;
@@ -27,7 +23,6 @@ function ChartCount(  sentenceList  ) {
 
 function GetChartData( sentenceList ) {
     let datas = [];
-    console.log(sentenceList)
 
     for (let i = 0; i < sentenceList.length; ++i) {
         if (sentenceList[i].S_Ischart === "Yes") {
@@ -44,9 +39,7 @@ function GetChartData( sentenceList ) {
 const Episode = props => {
 
     var {DataSL}=props
-    //console.log(DataSL)
     var {CE}=props
-    //console.log(CE)
 
     var Data_Episode_Name = [];
     for (var i=0;i< DataSL.Contents.Episode.length;i++){
@@ -59,7 +52,6 @@ const Episode = props => {
     //setListData(Data_Episode_Name)
 
     const handleTextareaChange = (e) => {
-        // console.log(e.target.value)
         let newData = listData;
         newData[CE-1].E_Text = e.target.value;
         setListData(newData)
@@ -91,7 +83,6 @@ const Episode = props => {
     }
 
         function DeleteButton( {sentenceList} ) {
-            console.log(sentenceList.length)
             if (sentenceList.length < 3) {
                 return (
                     <div className="selectSection">

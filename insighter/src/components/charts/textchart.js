@@ -8,107 +8,59 @@ class TextChart extends React.Component{
         this.myRef = React.createRef();
 
         const { Data } = this.props;
-        let dataList = [
-            Number(Data.Made),
-            Number(Data.Miss)
-        ]
-
-        // console.log(dataList)
 
         this.state = {
             // Define the data
-            data : dataList,
-            
-            // Define the colors
-            colors : ["#98abc5", "#8a89a6"],
+            data : Data,
         }
     }
 
     drawModel = () => {
-        let { data, colors } = this.state;
-        // console.log(data, data[0], sum(data), data[0]/sum(data));
-        // let oWrapper = this.refs.wrapper;
-        let width = 300;
-        let height = 300;
-        let radius = Math.min(width, height) / 2;
+        let { data } = this.state;
+        
+        // 定义SVG尺寸和边距
+        const width = 300;
+        const height = 300;
+        const margin = { top: 20, right: 20, bottom: 20, left: 20 };
+        const innerWidth = width - margin.left - margin.right;
+        const innerHeight = height - margin.top - margin.bottom;
 
-        // Define the pie layout
-        let pie = d3.pie();
+        const svg = d3
+            .select(this.myRef.current)
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+            // .append("g");
+                    
 
-        // Generate the pie slices
-        let arc = d3.arc()
-                    .innerRadius(0)
-                    .outerRadius(radius);
-
-        // Create the SVG canvas
-        // d3.selectAll('svg').remove()
-
-        // let svg = d3.selectAll('.pieChart')
-        let svg = d3.select(this.myRef.current)
-                    .append('svg')
-                    .attr('width',width)
-                    .attr('height',height)
-                    // .attr("transform","translate("+left+","+0+")");
-
-        // Create the groups for the pie slices
-        var arcs = svg.selectAll("arc")
-                    .data(pie(data))
-                    .enter()
-                    .append("g")
-                    .attr("class", "arc")
-                    .attr("transform", "translate(" + radius + "," + radius + ")");
-
-        // Draw the pie slices
-        arcs.append("path")
-            .attr("fill", function(d, i) { return colors[i]; })
-            .attr("d", arc);
-
-        // Add the percentage text in the center of the pie chart
-        arcs.append("text")
+        svg
+            .append("text")
+            // .append("div")
+            // .attr("x", width/2)
+            // .attr("y", ((innerHeight/2)-margin.top-20))
+            .attr("transform", `translate(${width/2},${innerHeight/2-margin.top-20})`)
+            .style("font-size", "32px")
             .attr("text-anchor", "middle")
-            .attr("font-size", "2em")
-            .attr("y", 10)
-            .text(function(d) { return d3.format(".1%")(data[0]/sum(data)); });
+            .style("font-weight", "bold")
+            .style("text-decoration", "underline")
+            .attr("fill", "steelblue")
+            // .style("color", "steelblue")
+            .text(data["1"]["title"]);
 
-        // Helper function to calculate the sum of an array
-        function sum(arr) {
-            return arr.reduce(function(a, b) { return a + b; }, 0);
-        }
 
-        // Add the legend
-        var legend = svg.selectAll(".legend")
-                        .data(colors)
-                        .enter()
-                        .append("g")
-                        .attr("class", "legend")
-                        .attr("transform", function(d, i) { return "translate(-10," + (i * 30 + 10) + ")"; });
-
-        // Add legend rectangles
-        legend.append("rect")
-            .attr("width", 20)
-            .attr("height", 20)
-            .style("fill", function(d, i) { return colors[i]; });
-
-        // Add legend text
-        legend.append("text")
-            .attr("x", 30)
-            .attr("y", 10)
+        svg
+            .append("text")
+            // .append("div")
+            // .attr("x", width/2)
+            // .attr("y", ((innerHeight/2)+margin.top))
+            .attr("transform", `translate(${width/2},${innerHeight/2+margin.top})`)
+            .style("font-weight", "bolder")
+            .style("font-size", "72px")
+            .attr("text-anchor", "middle")
             .attr("dy", ".35em")
-            .text(function(d, i) {
-                if (i === 0) {
-                    return "Made";
-                } else {
-                    return "Miss";
-                }
-            });
-
-        // Add title
-        svg.append("text")
-            .attr("x", (width / 2))
-            .attr("y", -20)
-            .attr("text-anchor", "middle")
-            .style("font-size", "16px")
-            .text("Percentage of Shots");
+            .attr("fill", "orange")
+            // .style("color", "orange")
+            .text(data["1"]["text"]);
     }
 
     componentDidMount(){
