@@ -3,6 +3,7 @@ import PieChart from './piechart';
 import BarChart from './barchart';
 import Shot from './Shot/Shot'
 import StackedBarChart from './stackedBarChart';
+import LineChart from './linechart';
 
 function GetChartList( {sentenceList} ) {
     let charts = [];
@@ -37,6 +38,10 @@ function GetChartList( {sentenceList} ) {
                 } else if (need.Chart_Type === "Shot Chart" ) {
                     charts.push(
                         <Shot Data = {need.Chart_Data[0]}></Shot>
+                    )
+                } else if (need.Chart_Type === "Line Chart" ) {
+                    charts.push(
+                        <LineChart Data = {need.Chart_Data[0]}></LineChart>
                     )
                 } else {
                     // do nothing
