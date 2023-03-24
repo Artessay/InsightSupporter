@@ -12,10 +12,11 @@ export default class BarChart extends React.Component {
         for ( let key in Data ) {
             if (Data.hasOwnProperty(key)) {
                 const quarterData = Data[key];
+                const keys = Object.keys(quarterData)
                 
                 dataList.push({
-                    type: quarterData["Type"],
-                    value: Number(quarterData["Number of Shots"])
+                    type: quarterData[keys[0]],
+                    value: Number(quarterData[keys[1]])
                 })
             }
         }

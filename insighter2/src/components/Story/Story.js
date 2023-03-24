@@ -5,20 +5,24 @@ import GenerateButton from './GenerateButton/GenerateButton';
 export default class Story extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.props.current);
+        this.state = {
+            insight: this.props.JsonData.Insight,
+            insightType: this.props.JsonData.Insight_Type,
+            taskType: this.props.JsonData.Task_Type
+        }
     }
 
     render() {
         return(
             <div className="story">
                 <div className='InsightType'>
-                    Single Player Performance
+                    {this.state.insightType}
                 </div>
                 <div className='TaskType'>
-                    Distribution
+                    {this.state.taskType}
                 </div>
                 <textarea className='InputText' rows="2">
-                    Joel Embiid most shots were taken from mid range and happened in first quarter.
+                    {this.state.insight}
                 </textarea>
                 <GenerateButton></GenerateButton>
             </div>

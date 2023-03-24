@@ -1,7 +1,7 @@
 .buttonContainer {
   position: absolute;
   left: calc(50% - 195px);
-  top: calc(15% - 100px);
+  top: calc(15% - 90px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@
   
 .generateButton {
   width: 185px;
-  height: 60px;
+  height: 40px;
   cursor: pointer;
   background: transparent;
   border: 1px solid #FF6B6B;

@@ -1,27 +1,16 @@
 import React  from "react";
-import { useRef,useEffect,useState } from 'react';
+import { useState } from 'react';
 import ScoreTable from "../charts/Table/ScoreTable";
 import './Episode.css'
-import './Select.css'
-import { Input, Button } from "antd";
-// import ChartSelect from "./ChartSelect";
-// import ChartGenerator from "../charts/ChartGenerate";
-// import MyDropdown from "./MyDropdown/MyDropdown";
+import { Button } from "antd";
 import SelectPanel from "./SelectPanel/SelectPanel";
 import { GetChart } from "../charts/ChartGenerate";
-// import GetChartData from "../charts/Table/TableData";
-
-// const { TextArea } = Input;
 
 function ChartCount(  sentenceList  ) {
     let chartNumber = 0;
-    // console.log(sentenceList)
 
     for (let i = 0; i < sentenceList.length; ++i) {
-        // console.log(sentenceList[i])
         if (sentenceList[i].S_Ischart === "Yes") {
-            // console.log("chart")
-            // console.log(sentenceList[i].S_Chartneed)
             let needs = sentenceList[i].S_Chartneed;
             for (let j = 0; j < needs.length; ++j) {
                 ++chartNumber;
@@ -34,7 +23,6 @@ function ChartCount(  sentenceList  ) {
 
 function GetChartData( sentenceList ) {
     let datas = [];
-    console.log(sentenceList)
 
     for (let i = 0; i < sentenceList.length; ++i) {
         if (sentenceList[i].S_Ischart === "Yes") {
@@ -51,9 +39,7 @@ function GetChartData( sentenceList ) {
 const Episode = props => {
 
     var {DataSL}=props
-    //console.log(DataSL)
     var {CE}=props
-    //console.log(CE)
 
     var Data_Episode_Name = [];
     for (var i=0;i< DataSL.Contents.Episode.length;i++){
@@ -66,7 +52,6 @@ const Episode = props => {
     //setListData(Data_Episode_Name)
 
     const handleTextareaChange = (e) => {
-        // console.log(e.target.value)
         let newData = listData;
         newData[CE-1].E_Text = e.target.value;
         setListData(newData)
@@ -98,7 +83,6 @@ const Episode = props => {
     }
 
         function DeleteButton( {sentenceList} ) {
-            console.log(sentenceList.length)
             if (sentenceList.length < 3) {
                 return (
                     <div className="selectSection">
@@ -153,13 +137,9 @@ const Episode = props => {
                 <div className='episodeHeader'>
                     <b>Episode {CE}</b>: 
                     <div className="input-wrapper">
-                        {/* <input 
-                            type="text"
-                            defaultValue=
-                        ></input> */}
-                        <textarea rows="1">
-                            {DataSL.Contents.Episode[CE-1].E_Title}
-                        </textarea>
+                        <textArea rows="1">
+                            {props.DataSL.Contents.Episode[CE-1].E_Title}
+                        </textArea>
                     </div>
                     
                     
@@ -181,13 +161,13 @@ const Episode = props => {
                                         ><b>-</b></Button>
                                     </span>
                                     <span className="selectText">
-                                        <textarea 
+                                        <textArea 
                                             rows="1"
                                             onChange={(e) => handleInsightChange(e, index)}
                                             cols="80"
                                         >
                                             {item.S_Insight}
-                                        </textarea>
+                                        </textArea>
                                         
                                     </span>
                                 </div>
@@ -232,6 +212,7 @@ const Episode = props => {
                     
                     <div className="chartArea">
                         <ScoreTable 
+                            className="chartAreaTable"
                             ChartData={tableData}
                         ></ScoreTable>
                     </div>

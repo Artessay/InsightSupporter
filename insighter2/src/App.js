@@ -6,7 +6,7 @@ import Episode from './components/Episode/Episode'
 import StoryLine from './components/StoryLine/StoryLine'
 // import View from './components/View/View'
 import News from './components/News/News';
-import Test from '../src/data/Test.json' 
+import Test from '../src/data/Test_new.json' 
 import { useState } from 'react';
 import FlowGame from './components/charts/flowGame';
 
@@ -16,9 +16,6 @@ function App() {
     var [DataSL, setDataSL] = useState(Test)
     var [CE, setCE] = useState(1)
     var [figureNumber, setFigureNumber] = useState(0);
-
-    //var DataSL=Test;
-    //var Current_Episode =1;
 
     var DataAll = (key, key2) => {
         setCE(key+1)
@@ -40,10 +37,10 @@ function App() {
 
   return (
     <div className='App'>
-        <Head className='header'></Head>
+        <Head className='header' JsonData={DataSL}></Head>
         <div className='content'>
             <div className="item item-1">
-                <Story></Story>
+                <Story JsonData={DataSL}></Story>
             </div>
             <div className="item item-2">
                 <Data></Data>

@@ -12,10 +12,9 @@ export default class StackedBarChart extends React.Component {
         for ( let key in Data ) {
             if (Data.hasOwnProperty(key)) {
                 const quarterData = Data[key];
-                //   const quarter = quarterData.Quarter;
-                //   console.log(`Quarter: ${quarter}`);
+                const keys = Object.keys(quarterData)
                 tableList.push({
-                    quarter: "Q" + quarterData.Quarter,
+                    quarter: quarterData[keys[0]],
                     miss: (Number(quarterData["Number of Shots"]) - Number(quarterData["Made"])),
                     made: Number(quarterData.Made)
                 })
@@ -33,18 +32,6 @@ export default class StackedBarChart extends React.Component {
     drawModel = () => {
         const margin = {top: 30, right: 0, bottom: 30, left: 30};
         const width = 300, height = 300;
-
-        // Append the SVG object to the body of the page
-        // var svg = d3.select("stackedBarChart")
-        //             .append("svg")
-        //             .attr("width", width + margin.left + margin.right)
-        //             .attr("height", height + margin.top + margin.bottom)
-        //             .append("g")
-        //             .attr("transform",
-        //                   "translate(" + margin.left + "," + margin.top + ")");
-        
-        // d3.selectAll('.stackedBarChart').remove();
-        // let svg = d3.selectAll('.stackedBarChart')
         
         let svg = d3.select(this.myRef.current)
                     .append('svg') 
@@ -52,13 +39,6 @@ export default class StackedBarChart extends React.Component {
                     .attr('height', height)
                     // .attr("transform","translate("+margin.left+","+margin.top+")");
 
-        // Parse the data
-        // var data = [
-        //     {quarter: "Q1", miss: 1, made: 6},
-        //     {quarter: "Q2", miss: 0, made: 3},
-        //     {quarter: "Q3", miss: 3, made: 2},
-        //     {quarter: "Q4", miss: 0, made: 2}
-        // ];
         let { data, colors } = this.state;
 
         // Transpose the data into layers
@@ -151,8 +131,8 @@ export default class StackedBarChart extends React.Component {
         // Add y axis label
         svg.append("text")
            .attr("transform", "rotate(-90)")
-           .attr("y", 0 + margin.left)  // @TODO
-           .attr("x", 0 + (height / 2)) // @TODO
+           .attr("y", 0 + margin.left) 
+           .attr("x", 0 + (height / 2))
            .attr("dy", "1em")
            .style("text-anchor", "middle");
     }
