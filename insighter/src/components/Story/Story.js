@@ -5,7 +5,10 @@ import GenerateButton from './GenerateButton/GenerateButton';
 export default class Story extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.props.current);
+        this.state = {
+            insight: this.props.JsonData.Insight
+        }
+        console.log(this.props.Insight);
     }
 
     render() {
@@ -18,7 +21,7 @@ export default class Story extends React.Component {
                     Distribution
                 </div>
                 <textarea className='InputText' rows="2">
-                    Joel Embiid most shots were taken from mid range and happened in first quarter.
+                    {this.state.insight}
                 </textarea>
                 <GenerateButton></GenerateButton>
             </div>

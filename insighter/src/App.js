@@ -17,9 +17,6 @@ function App() {
     var [CE, setCE] = useState(1)
     var [figureNumber, setFigureNumber] = useState(0);
 
-    //var DataSL=Test;
-    //var Current_Episode =1;
-
     var DataAll = (key, key2) => {
         setCE(key+1)
         var DataTmp1=DataSL
@@ -43,7 +40,7 @@ function App() {
         <Head className='header'></Head>
         <div className='content'>
             <div className="item item-1">
-                <Story></Story>
+                <Story JsonData={DataSL}></Story>
             </div>
             <div className="item item-2">
                 <Data></Data>
