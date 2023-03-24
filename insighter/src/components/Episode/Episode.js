@@ -137,10 +137,6 @@ const Episode = props => {
                 <div className='episodeHeader'>
                     <b>Episode {CE}</b>: 
                     <div className="input-wrapper">
-                        {/* <input 
-                            type="text"
-                            defaultValue=
-                        ></input> */}
                         <textarea rows="1">
                             {listData[CE-1].E_Title}
                         </textarea>
@@ -240,14 +236,14 @@ const Episode = props => {
                             defaultValue={listData[CE-1].E_Text}
                             onInput={(e) => handleTextareaChange(e)}
                         ></TextArea> */}
-                        <textarea
+                        <textArea
                             className='episodeTextArea'
                             rows={4}
                             // defaultValue={listData[CE-1].E_Text}
                             onInput={(e) => handleTextareaChange(e)}
                         >
                             {listData[CE-1].E_Text}
-                        </textarea>
+                        </textArea>
                     </div>
                 </div>
             </div>
