@@ -1,17 +1,10 @@
 import React  from "react";
-import { useRef,useEffect,useState } from 'react';
+import { useState } from 'react';
 import ScoreTable from "../charts/Table/ScoreTable";
 import './Episode.css'
-import './Select.css'
-import { Input, Button } from "antd";
-// import ChartSelect from "./ChartSelect";
-// import ChartGenerator from "../charts/ChartGenerate";
-// import MyDropdown from "./MyDropdown/MyDropdown";
+import { Button } from "antd";
 import SelectPanel from "./SelectPanel/SelectPanel";
 import { GetChart } from "../charts/ChartGenerate";
-// import GetChartData from "../charts/Table/TableData";
-
-// const { TextArea } = Input;
 
 function ChartCount(  sentenceList  ) {
     let chartNumber = 0;
@@ -232,6 +225,7 @@ const Episode = props => {
                     
                     <div className="chartArea">
                         <ScoreTable 
+                            className="chartAreaTable"
                             ChartData={tableData}
                         ></ScoreTable>
                     </div>
