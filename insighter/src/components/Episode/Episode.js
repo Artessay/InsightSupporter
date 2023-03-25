@@ -115,7 +115,7 @@ const Episode = props => {
     }
 
     let counter = ChartCount(sentences);
-    console.log(counter)
+    // console.log(counter)
     const chartNumbers = Array.from({ length:  counter }, (_, index) => index);
 
     let {figureNumber, setFigureNumber} = props;
@@ -131,7 +131,7 @@ const Episode = props => {
                 <div className='episodeHeader'>
                     <b>Episode {CE}</b>: 
                     <div className="input-wrapper">
-                        <textArea rows="1">
+                        <textArea rows="1" cols="26">
                             {props.DataSL.Contents.Episode[CE-1].E_Title}
                         </textArea>
                     </div>

@@ -31,7 +31,7 @@ function GetDatas( {sentenceList} ) {
 const SelectPanel = (props) => {
     const { sentenceList, index } = props;
     let data = GetDatas({sentenceList});
-    console.log(data)
+    // console.log(data)
 
     const handleTypeChange = (value, option) => {
         console.log(`Selected ${value} with option ${option}`);

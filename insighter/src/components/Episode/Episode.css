@@ -19,7 +19,9 @@
     left: 120px;
 }
 
-.input-wrapper textarea {
+.input-wrapper textArea {
+    width: 800px;
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
