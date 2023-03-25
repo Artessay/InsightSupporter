@@ -5,6 +5,7 @@ import Shot from './Shot/Shot'
 import StackedBarChart from './stackedBarChart';
 import LineChart from './linechart';
 import TextChart from './textchart';
+import IsoTypeChart from './isotypechart';
 
 function GetChartList( {sentenceList} ) {
     let charts = [];
@@ -47,6 +48,10 @@ function GetChartList( {sentenceList} ) {
                 } else if (need.Chart_Type === "Text Chart" ) {
                     charts.push(
                         <TextChart Data = {need.Chart_Data[0]}></TextChart>
+                    )
+                } else if (need.Chart_Type === "IsoType Chart" ) {
+                    charts.push(
+                        <IsoTypeChart Data = {need.Chart_Data[0]}></IsoTypeChart>
                     )
                 } else {
                     // do nothing
