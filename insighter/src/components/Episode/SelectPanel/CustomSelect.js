@@ -25,6 +25,7 @@ const CustomSelect = ({ label, options, defaultValue, onChange }) => {
         {label}
       </label>
       <Select
+        key={defaultValue}
         defaultValue={defaultValue}
         style={{ 
           minWidth: 150,
