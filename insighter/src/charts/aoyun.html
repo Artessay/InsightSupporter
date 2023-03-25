@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>D3 Circle Chart</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <div id="chart"></div>
+    <script>
+      
+        var Chart_Data=[ {
+                            	"1":{"Type":"Jump Shot","Number of Shots":"11","Made":"7","Percentage of Shots":"63.6%"},
+                                "2":{"Type":"Bank","Number of Shots":"0","Made":"0","Percentage of Shots":"0,0%"},
+                                "3":{"Type":"Layup","Number of Shots":"4","Made":"3","Percentage of Shots":"75.0%"},
+                                "4":{"Type":"Dunk","Number of Shots":"3","Made":"3","Percentage of Shots":"100%"},
+                                "5":{"Type":"Tip","Number of Shots":"1","Made":"0","Percentage of Shots":"0.0%"}
+                				}
+                            ]
+        // 数据
+        var data_chart=[]
+        var data_name=[]
+        for (var key in Chart_Data[0]) {
+            if (Chart_Data[0].hasOwnProperty(key)) {
+                var tmp=parseInt(Chart_Data[0][key]["Number of Shots"])
+ if (tmp==0) tmp=10
+ else tmp=parseInt(Chart_Data[0][key]["Number of Shots"])-parseInt(Chart_Data[0][key]["Made"])
+ var data1 = [
+        {name:"Made",value: parseInt(Chart_Data[0][key]["Made"])},
+        {name:"Miss",value:tmp},
+        ];
+        var name=Chart_Data[0][key]["Type"]+"\n"+parseInt(Chart_Data[0][key]["Made"])+"/"+parseInt(Chart_Data[0][key]["Number of Shots"])
+data_chart.push(data1)
+data_name.push(name)
+            }
+        }
+        console.log(data_chart)
+        // 图表容器
+        var svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", 300)
+            .attr("height", 300);
+
+        // 定义圆环图参数
+        var outerRadius = 45;
+        var innerRadius = 35;
+        var arc = d3.arc()
+            .outerRadius(outerRadius)
+            .innerRadius(innerRadius);
+        var pie = d3.pie()
+            .sort(null)
+            .value(function(data) {
+              return data.value; });
+        // 绘制第一行三个圆环图
+        var g1 = svg.append("g")
+            .attr("transform", "translate(50,50)");
+        var g2 = svg.append("g")
+            .attr("transform", "translate(150,50)");
+        var g3 = svg.append("g")
+            .attr("transform", "translate(250,50)");
+        var g4 = svg.append("g")
+            .attr("transform", "translate(100,150)");
+        var g5 = svg.append("g")
+            .attr("transform", "translate(200,150)");
+var colorlist=["#8A89A6","white"]
+        g1.selectAll("path")
+            .data(pie(data_chart[0]))
+            .enter()
+            .append("path")
+            .attr("d", arc)
+            .attr("stroke", "black")
+            .style("fill", function(d) { return colorlist[d.index]; });
+        
+            g1.append("text")           
+            .attr("text-anchor", "middle")
+            .style("font-size", "8px")
+            .text(data_name[0]);
+        g2.selectAll("path")
+            .data(pie(data_chart[1]))
+            .enter()
+            .append("path")
+            .attr("d", arc)
+            .attr("stroke", "black")
+            .style("fill", function(d) { return  colorlist[d.index]; });
+            g2.append("text")           
+            .attr("text-anchor", "middle")
+            .style("font-size", "8px")
+            .text(data_name[1]);
+        g3.selectAll("path")
+            .data(pie(data_chart[2]))
+            .enter()
+            .append("path")
+            .attr("d", arc)
+            .attr("stroke", "black")
+            .style("fill", function(d) { return  colorlist[d.index]; });
+            g3.append("text")           
+            .attr("text-anchor", "middle")
+            .style("font-size", "8px")
+            .text(data_name[2]);
+        // 绘制第二行两个圆环图
+        g4.selectAll("path")
+            .data(pie(data_chart[3]))
+            .enter()
+            .append("path")
+            .attr("d", arc)
+            .attr("stroke", "black")
+            .style("fill", function(d) { return  colorlist[d.index]; });
+            g4.append("text")           
+            .attr("text-anchor", "middle")
+            .style("font-size", "8px")
+            .text(data_name[3]);
+        g5.selectAll("path")
+            .data(pie(data_chart[4]))
+            .enter()
+            .append("path")
+            .attr("d", arc)
+            .attr("stroke", "black")
+            .style("fill", function(d) { return  colorlist[d.index]; });
+            g5.append("text")           
+            .attr("text-anchor", "middle")
+            .style("font-size", "8px")
+            .text(data_name[4]);
+    </script>
+</body>
+</html>

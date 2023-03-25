@@ -2,11 +2,40 @@
 import { Grid, List, Button, Card } from 'antd';
 import { useState } from 'react';
 import ChartGenerator from "../charts/ChartGenerate";
+import { GetChart } from "../charts/ChartGenerate";
 // import './Card.css'
 import close from '../../icon/cancel.png';
 // const { Item } = List;
 const { useBreakpoint } = Grid;
 // const data = ['Item 1', 'Item 2', 'Item 3'];
+function GetChartData( sentenceList ) {
+  let datas = [];
+
+  for (let i = 0; i < sentenceList.length; ++i) {
+      if (sentenceList[i].S_Ischart === "Yes") {
+          let needs = sentenceList[i].S_Chartneed;
+          for (let j = 0; j < needs.length; ++j) {
+              datas.push(needs[j].Chart_Data)
+          }
+      }
+  }
+
+  return datas;
+}
+function ChartCount(  sentenceList  ) {
+  let chartNumber = 0;
+
+  for (let i = 0; i < sentenceList.length; ++i) {
+      if (sentenceList[i].S_Ischart === "Yes") {
+          let needs = sentenceList[i].S_Chartneed;
+          for (let j = 0; j < needs.length; ++j) {
+              ++chartNumber;
+          }
+      }
+  }
+
+  return chartNumber;
+}
 const StoryLine = props => {
 
   const screens = useBreakpoint();
@@ -18,8 +47,9 @@ const StoryLine = props => {
     //console.log( DataSL.Insight_Episodes[i])
   }
 
+
   const [listData,setListData] = useState(Data_Episode_Name);
-//console.log(Data_Episode_Name)
+
   const handleAdd = () => {
     const newData = [...listData];
     newData.push({Id: String(DataSL.Contents.Episode.length+1), E_Title: 'New Episode', E_Sentences: [{S_Insight: "Insight Text", S_Task: 'Task Type', S_Ischart: 'No'}], E_Text: 'None'}
@@ -73,7 +103,7 @@ const StoryLine = props => {
                 marginLeft:0
               }} type="link" danger onClick={() => handleRemove(index)}>×</Button>}  */
             style={{
-              height: 280,
+              height: 235,
               width: 300,
               marginLeft:20,
               marginTop:10,
@@ -84,7 +114,43 @@ const StoryLine = props => {
         {/*  <Card title={"Episode"+ item.Id +item.E_Title} extra={<Button type="link"  danger onClick={() => handleRemove(index)}>×</Button>} > */}
             {/* <p>Card content</p>
             <p>Card content</p> */}
-            
+           <div>
+            <div style={{display:"flex"}}>
+
+           <div style={{ width: "65px", height: "40px", transform: "scale(0.2)" ,marginTop:-20}}>
+    { <GetChart style={{float:"left"}}
+                            sentenceList = {item.E_Sentences}
+                            index = {0}
+                        ></GetChart>}
+
+    {/*  <ChartGenerator
+                            sentenceList = {item.E_Sentences}
+                        ></ChartGenerator> */}
+</div>
+<div style={{ width: "65px", height: "40px", transform: "scale(0.2)" ,marginTop:-20}}>
+
+                           { <GetChart style={{float:"right"}}
+                            sentenceList = {item.E_Sentences}
+                            index = {1}
+                        ></GetChart>}
+    {/*  <ChartGenerator
+                            sentenceList = {item.E_Sentences}
+                        ></ChartGenerator> */}
+</div>
+<div style={{ width: "65px", height: "40px", transform: "scale(0.2)" ,marginTop:-20}}>
+
+                           { <GetChart style={{float:"right"}}
+                            sentenceList = {item.E_Sentences}
+                            index = {2}
+                        ></GetChart>}
+    {/*  <ChartGenerator
+                            sentenceList = {item.E_Sentences}
+                        ></ChartGenerator> */}
+</div>
+              
+</div>
+           </div>
+           <div style={{marginTop:50}}>
             {item.E_Sentences.map((k, i) => (
         <p align="left" style={{
           height: 40,
@@ -92,11 +158,7 @@ const StoryLine = props => {
           marginTop:-10
         }}key={i}>{"-- "+ k.S_Insight}</p>
       ))}
-     <div style={{ width: "40px", height: "30px", transform: "scale(0.2)" }}>
-     <ChartGenerator 
-                            sentenceList = {item.E_Sentences}
-                        ></ChartGenerator>
-</div>
+        </div> 
     {/*   <p 
              style={{
                height: 40,
