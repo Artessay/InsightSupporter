@@ -33,7 +33,7 @@ import two_s from'../../icon/2_s.png';
 class FlowGame extends Component {
     
     componentDidMount() {
-      console.log("Game Flow")
+      // console.log("Game Flow")
       this.drawChart();
     }
 

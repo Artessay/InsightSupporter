@@ -44,6 +44,16 @@ const SelectPanel = (props) => {
         }
 
         let chartData = data[index];
+        let subspace = chartData.Subspace[0]
+        let subspaceKey = Object.keys(subspace);
+        // console.log(subspaceKey)
+        let subspaceValue = [];
+        let subspaceList = [];
+        for (let i = 0; i < subspaceKey.length; ++i) {
+            subspaceValue.push(subspace[subspaceKey[i]]);
+            subspaceList.push(subspaceKey[i] + ' = ' + subspaceValue[i]);
+        }
+        // console.log(subspaceList)
 
         return (
             <div id="select-panel">
@@ -76,7 +86,7 @@ const SelectPanel = (props) => {
                         <br></br>
                         <CustomSelect
                             label="subspace"
-                            options={typeOptions}
+                            options={subspaceList}
                             defaultValue="+"
                             onChange={handleTypeChange}
                         />
