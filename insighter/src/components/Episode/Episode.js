@@ -82,28 +82,28 @@ const Episode = props => {
         props.Datalist(newData)
     }
 
-        function DeleteButton( {sentenceList} ) {
-            if (sentenceList.length < 3) {
-                return (
-                    <div className="selectSection">
-                        <span className="selectNumber">
-                            {sentenceList.length + 1}
-                        </span>
-                        <span className="selectDelete">
-                            <Button
-                                // disabled={true}
-                                onClick={(e) => handleInsert()}
-                            >+</Button>
-                        </span>
-                        <span className="selectText">
-                            {/* {item.S_Insight} */}
-                        </span>
-                    </div>
-                )
-            } else {
-                return <></>
-            }
+    function DeleteButton( {sentenceList} ) {
+        if (sentenceList.length < 3) {
+            return (
+                <div className="selectSection">
+                    <span className="selectNumber">
+                        {sentenceList.length + 1}
+                    </span>
+                    <span className="selectDelete">
+                        <Button
+                            // disabled={true}
+                            onClick={(e) => handleInsert()}
+                        >+</Button>
+                    </span>
+                    <span className="selectText">
+                        {/* {item.S_Insight} */}
+                    </span>
+                </div>
+            )
+        } else {
+            return <></>
         }
+    }
 
     const handleInsightChange = (e, index) => {
         let newData = listData;
@@ -114,24 +114,18 @@ const Episode = props => {
         
     }
 
-    // console.log(sentences)
     let counter = ChartCount(sentences);
     console.log(counter)
     const chartNumbers = Array.from({ length:  counter }, (_, index) => index);
 
     let {figureNumber, setFigureNumber} = props;
     const handleFigureNumber = (number) => {
-        // console.log(e.target)
         setFigureNumber(number)
     }
 
     let t_ = GetChartData(sentences)
-    console.log(t_)
     let tableData = t_.length > 0 ? t_.at(figureNumber)[0] : [];
-    // tableData = []
-    // tableData = listData[3-1].E_Sentences[figureNumber].S_Chartneed[0].Chart_Data[0]
 
-    console.log(tableData)
         return(
             <div className="Episode">
                 <div className='episodeHeader'>
@@ -179,9 +173,8 @@ const Episode = props => {
                     </div>
                     
                     <div className='selectDrop'>
-                        {/* <ChartSelect ></ChartSelect> */}
-                        {/* <MyDropdown></MyDropdown> */}
-                        <SelectPanel></SelectPanel>
+                        <SelectPanel sentenceList = {listData[CE-1].E_Sentences}
+                            index = {figureNumber}></SelectPanel>
                     </div>
 
                     
@@ -190,15 +183,12 @@ const Episode = props => {
                         {
                             chartNumbers.map((number) => (
                                 <Button
-                                    // type="primary"
                                     size="large"
                                     style={{
                                         backgroundColor: 'rgba(117, 117, 117, 0.3)',
                                         marginBottom: 10
                                     }}
                                     value={number}
-                                    // onClick={(e) => {handleFigureNumber(e)}}
-                                    
                                     onClick={(e) => {handleFigureNumber(number)}}
                                 >
                                     <div className="chartButtonText">
@@ -216,11 +206,8 @@ const Episode = props => {
                             ChartData={tableData}
                         ></ScoreTable>
                     </div>
-                    {/* <StackedBarChart className='chooseChart'></StackedBarChart> */}
+                    
                     <div className='chooseChart'>
-                        {/* <ChartGenerator 
-                            sentenceList = {listData[CE-1].E_Sentences}
-                        ></ChartGenerator> */}
                         <GetChart
                             sentenceList = {listData[CE-1].E_Sentences}
                             index = {figureNumber}
@@ -230,16 +217,9 @@ const Episode = props => {
                 </div>
                 <div className="episodeFooter">
                     <div style={{margin: 5}}>
-                        {/* <b>Text:</b> {DataSL.Contents.Episode[CE-1].E_Text} */}
-                        {/* <TextArea
-                            rows={4}
-                            defaultValue={listData[CE-1].E_Text}
-                            onInput={(e) => handleTextareaChange(e)}
-                        ></TextArea> */}
                         <textArea
                             className='episodeTextArea'
                             rows={4}
-                            // defaultValue={listData[CE-1].E_Text}
                             onInput={(e) => handleTextareaChange(e)}
                         >
                             {listData[CE-1].E_Text}

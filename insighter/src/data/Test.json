@@ -134,7 +134,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Athlete":"Joel Embiid","Isshot":"True"}],
+                            "Subspace":[{"Athlete":"Joel Embiid","Isshot":"True"}],
                             "Breakdown":"Isscore",
                             "Measure":"Count",
                             "Is_Tracking":"No",
@@ -162,7 +162,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True"}],
+                            "Subspace":[{"Athlete":"Joel Embiid", "Isshot":"True"}],
                             "Breakdown":"Quarter",
                             "Measure":"Count",
                             "Is_Tracking":"No",
@@ -199,7 +199,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True"}],
+                            "Subspace":[{"Athlete":"Joel Embiid", "Isshot":"True"}],
                             "Breakdown":"ShotType",
                             "Measure":"",
                             "Is_Tracking":"No",
@@ -224,7 +224,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True","Isscore":"True"}],
+                            "Subspace":[{"Athlete":"Joel Embiid", "Isshot":"True","Isscore":"True"}],
                             "Breakdown":"ShotType",
                             "Measure":"% on Made",
                             "Is_Tracking":"No",
@@ -256,7 +256,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True","ShotRange":"MidRange"}],
+                            "Subspace":[{"Athlete":"Joel Embiid", "Isshot":"True","ShotRange":"MidRange"}],
                             "Breakdown":"",
                             "Measure":"",
                             "Is_Tracking":"Yes",
@@ -283,7 +283,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True","ShotRange":"MidRange"}],
+                            "Subspace":[{"Athlete":"Joel Embiid", "Isshot":"True","ShotRange":"MidRange"}],
                             "Breakdown":"",
                             "Measure":"Count",
                             "Is_Tracking":"No",
@@ -304,7 +304,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True","Isscore":"True"}],
+                            "Subspace":[{"Athlete":"Joel Embiid", "Isshot":"True","Isscore":"True"}],
                             "Breakdown":"ShotRange",
                             "Measure":"% on Made",
                             "Is_Tracking":"Yes",
@@ -336,7 +336,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Athlete":"Joel Embiid", "Isshot":"True"}],
+                            "Subspace":[{"Athlete":"Joel Embiid", "Isshot":"True"}],
                             "Breakdown":"",
                             "Measure":"",
                             "Is_Tracking":"Yes",

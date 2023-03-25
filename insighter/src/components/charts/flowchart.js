@@ -33,7 +33,7 @@ export default class FlowChart extends React.Component {
           }
         }
       } 
-      console.log(focus_low)
+    //   console.log(focus_low)
 
 
 
@@ -55,7 +55,7 @@ export default class FlowChart extends React.Component {
       //console.log(data)
       
       // 定义画布尺寸和边距
-      const margin = { top: 50, right: 50, bottom: 50, left: 50 };
+    //   const margin = { top: 50, right: 50, bottom: 50, left: 50 };
       const width = 400;
       const height = 110;
 

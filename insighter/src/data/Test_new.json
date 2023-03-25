@@ -16572,7 +16572,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Isshot":"True"}],
+                            "Subspace":[{"Isshot":"True"}],
                             "Breakdown":"",
                             "Measure":"",
                             "Is_Tracking":"No",
@@ -19279,7 +19279,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Isshot":"True"}],
+                            "Subspace":[{"Isshot":"True"}],
                             "Breakdown":"Team",
                             "Measure":"Count",
                             "Is_Tracking":"No",
@@ -19314,7 +19314,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Quarter":"3","Isshot":"True"}],
+                            "Subspace":[{"Quarter":"3","Isshot":"True"}],
                             "Breakdown":"Team",
                             "Measure":"Count",
                             "Is_Tracking":"No",
@@ -19344,7 +19344,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Team":"Philadelphia 76ers", "Isshot":"True","Quarter":"3"}],
+                            "Subspace":[{"Team":"Philadelphia 76ers", "Isshot":"True","Quarter":"3"}],
                             "Breakdown":"",
                             "Measure":"",
                             "Is_Tracking":"Yes",
@@ -19382,7 +19382,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Team":"Philadelphia 76ers", "Isshot":"True","Quarter":"3"}],
+                            "Subspace":[{"Team":"Philadelphia 76ers", "Isshot":"True","Quarter":"3"}],
                             "Breakdown":"ShotRange",
                             "Measure":"% on Made",
                             "Is_Tracking":"Yes",
@@ -19414,7 +19414,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Quarter":"3","ActionType":"Rebound"}],
+                            "Subspace":[{"Quarter":"3","ActionType":"Rebound"}],
                             "Breakdown":"Team",
                             "Measure":"Count",
                             "Is_Tracking":"No",
@@ -19435,7 +19435,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Team":"Philadelphia 76ers", "Isshot":"True"}],
+                            "Subspace":[{"Team":"Philadelphia 76ers", "Isshot":"True"}],
                             "Breakdown":"Quarter",
                             "Measure":"Count",
                             "Is_Tracking":"No",
@@ -19466,7 +19466,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Team":"Philadelphia 76ers", "Isshot":"True","Quarter":"4"}],
+                            "Subspace":[{"Team":"Philadelphia 76ers", "Isshot":"True","Quarter":"4"}],
                             "Breakdown":"Isscore",
                             "Measure":"Count",
                             "Is_Tracking":"No",
@@ -19499,7 +19499,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{"Isscore":"True"}],
+                            "Subspace":[{"Isscore":"True"}],
                             "Breakdown":"Quarter",
                             "Measure":"Count",
                             "Is_Tracking":"Yes",
@@ -19523,7 +19523,7 @@
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
-                            "Subspcae":[{}],
+                            "Subspace":[{}],
                             "Breakdown":"",
                             "Measure":"",
                             "Is_Tracking":"No",
