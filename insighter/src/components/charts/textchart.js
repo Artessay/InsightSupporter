@@ -10,13 +10,14 @@ class TextChart extends React.Component{
         const { Data } = this.props;
 
         this.state = {
-            // Define the data
             data : Data,
+            colors : ["#98abc5", "#8a89a6"],
+            // colors : ["steelblue", "orange"],
         }
     }
 
     drawModel = () => {
-        let { data } = this.state;
+        let { data, colors } = this.state;
         
         // 定义SVG尺寸和边距
         const width = 300;
@@ -43,8 +44,7 @@ class TextChart extends React.Component{
             .attr("text-anchor", "middle")
             .style("font-weight", "bold")
             .style("text-decoration", "underline")
-            .attr("fill", "steelblue")
-            // .style("color", "steelblue")
+            .attr("fill", colors[0])
             .text(data["1"]["title"]);
 
 
@@ -58,8 +58,7 @@ class TextChart extends React.Component{
             .style("font-size", "72px")
             .attr("text-anchor", "middle")
             .attr("dy", ".35em")
-            .attr("fill", "orange")
-            // .style("color", "orange")
+            .attr("fill", colors[1])
             .text(data["1"]["text"]);
     }
 
@@ -75,7 +74,7 @@ class TextChart extends React.Component{
         return (
             <div
                 ref={this.myRef} 
-                className="pieChart"
+                className="textChart"
             >
             </div>
         )

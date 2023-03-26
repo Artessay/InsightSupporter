@@ -23,11 +23,13 @@ export default class LineChart extends React.Component {
 
         this.state = {
             data : dataList,
+            colors : ["#98abc5", "#8a89a6"],
+            // colors : ["steelblue", "orange"],
         }
     }
 
     drawModel = () => {
-        let { data } = this.state;
+        let { data, colors } = this.state;
         // console.log("line chart")
         // console.log(data)
 
@@ -75,7 +77,7 @@ export default class LineChart extends React.Component {
             .datum(data)
             .attr("transform", `translate(${margin.left},0)`)
             .attr("fill", "none")
-            .attr("stroke", "steelblue")
+            .attr("stroke", colors[0])
             .attr("stroke-width", 5)
             .attr("d", lineHome);
 
@@ -83,7 +85,7 @@ export default class LineChart extends React.Component {
             .datum(data)
             .attr("transform", `translate(${margin.left},0)`)
             .attr("fill", "none")
-            .attr("stroke", "orange")
+            .attr("stroke", colors[1])
             .attr("stroke-width", 5)
             .attr("d", lineAway);
 
@@ -106,7 +108,7 @@ export default class LineChart extends React.Component {
         .attr("transform", `translate(${margin.left},0)`)
         .attr("x", innerWidth-margin.right-60)
         .attr("y", innerHeight-margin.top-50)
-        .attr("fill", "steelblue");
+        .attr("fill", colors[0]);
 
         legend.append("text")
         .attr("transform", `translate(${margin.left},0)`)
@@ -122,7 +124,7 @@ export default class LineChart extends React.Component {
         .attr("transform", `translate(${margin.left},0)`)
         .attr("x", innerWidth-margin.right-60)
         .attr("y", innerHeight-margin.top-30)
-        .attr("fill", "orange");
+        .attr("fill", colors[1]);
 
         legend.append("text")
         .attr("transform", `translate(${margin.left},0)`)
