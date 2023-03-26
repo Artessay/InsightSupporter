@@ -1,5 +1,6 @@
 import { Space } from "antd";
 import CustomSelect from "./CustomSelect";
+import Subspace from "./Subspace";
 
 const chartOptions = [
     "Area Chart", "Bar Chart", "Flow Chart", 
@@ -85,11 +86,20 @@ const SelectPanel = (props) => {
                             onChange={handleTypeChange}
                         />
                         <br></br>
-                        <CustomSelect
+                        {/* <CustomSelect
                             label="subspace"
                             options={subspaceList}
                             defaultValue="+"
                             onChange={handleTypeChange}
+                        /> */}
+                        <Subspace
+                            label="subspace"
+                            options={subspaceList}
+                            defaultValue="+"
+                            onChange={handleTypeChange}
+                            style={{
+                                // position: "relative", 
+                            }}
                         />
                     </div>
                 </Space>

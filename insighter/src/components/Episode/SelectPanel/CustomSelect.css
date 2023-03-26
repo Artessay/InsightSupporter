@@ -5,4 +5,8 @@
 .custom ant-select-selector {
     border: 2px solid black;
 }
-   
+
+.subspace label {
+    align-self: flex-start;
+    margin-top: 5px;
+}
