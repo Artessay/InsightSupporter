@@ -19352,24 +19352,24 @@
                             "Chart_Title":"Shots of the 76ers",
                             "Chart_Data":[
                                 {
-                                    "1":{"Text":"Matisse Thybulle misses 24-foot three point jumper","x":"2","y":"2","Iscore":"False","Action_Type":"Jump Shot"},
-                                    "2":{"Text":"Joel Embiid misses 26-foot three point jumper","x":"40","y":"21","Iscore":"False","Action_Type":"Jump Shot"},
-                                    "3":{"Text":"James Harden misses 27-foot step back jumpshot","x":"43","y":"21","Iscore":"False","Action_Type":"Step Back Jump Shot"},
-                                    "4":{"Text":"Tyrese Maxey misses two point shot","x":"25","y":"2","Iscore":"False","Action_Type":"Reverse Layup Shot"},
-                                    "5":{"Text":"Joel Embiid misses tip shot","x":"25","y":"0","Iscore":"False","Action_Type":"Tip Shot"},
-                                    "6":{"Text":"Joel Embiid makes two point shot","x":"25","y":"0","Iscore":"True","Action_Type":"Layup Shot Putback"},
-                                    "7":{"Text":"Joel Embiid makes 1-foot dunk (James Harden assists)","x":"24","y":"1","Iscore":"True","Action_Type":"Cutting Dunk Shot"},
-                                    "8":{"Text":"Tobias Harris misses 14-foot two point shot","x":"14","y":"8","Iscore":"False","Action_Type":"Turnaround Fade Away Jump Shot"},
-                                    "9":{"Text":"James Harden makes 13-foot two point shot","x":"21","y":"13","Iscore":"True","Action_Type":"Fade Away Jump Shot"},
-                                    "10":{"Text":"Tyrese Maxey makes driving dunk (James Harden assists)","x":"25","y":"2","Iscore":"True","Action_Type":"Driving Dunk Shot"},
-                                    "11":{"Text":"Joel Embiid misses 18-foot step back jumpshot","x":"22","y":"17","Iscore":"False","Action_Type":"Step Back Jump Shot"},
-                                    "12":{"Text":"James Harden misses 26-foot step back jumpshot","x":"37","y":"24","Iscore":"False","Action_Type":"Step Back Jump Shot"},
-                                    "13":{"Text":"Tyrese Maxey makes 12-foot driving floating jump shot (Tobias Harris assists)","x":"28","y":"11","Iscore":"True","Action_Type":"Driving Floating Jump Shot"},
-                                    "14":{"Text":"Joel Embiid misses three point jumper","x":"25","y":"27","Iscore":"False","Action_Type":"Jump Shot"},
-                                    "15":{"Text":"Tyrese Maxey misses 28-foot three point jumper","x":"28","y":"28","Iscore":"False","Action_Type":"Jump Shot"},
-                                    "16":{"Text":"Danny Green misses 24-foot three point jumper","x":"48","y":"7","Iscore":"False","Action_Type":"Jump Shot"},
-                                    "17":{"Text":"James Harden misses 26-foot step back jumpshot","x":"44","y":"18","Iscore":"False","Action_Type":"Step Back Jump Shot"},
-                                    "18":{"Text":"'James Harden misses driving floating jump shot","x":"30","y":"6","Iscore":"False","Action_Type":"Driving Floating Jump Shot"}
+                                    "1":{"Text":"Matisse Thybulle misses 24-foot three point jumper","x":"2","y":"2","Isscore":"False","Action_Type":"Jump Shot"},
+                                    "2":{"Text":"Joel Embiid misses 26-foot three point jumper","x":"40","y":"21","Isscore":"False","Action_Type":"Jump Shot"},
+                                    "3":{"Text":"James Harden misses 27-foot step back jumpshot","x":"43","y":"21","Isscore":"False","Action_Type":"Step Back Jump Shot"},
+                                    "4":{"Text":"Tyrese Maxey misses two point shot","x":"25","y":"2","Isscore":"False","Action_Type":"Reverse Layup Shot"},
+                                    "5":{"Text":"Joel Embiid misses tip shot","x":"25","y":"0","Isscore":"False","Action_Type":"Tip Shot"},
+                                    "6":{"Text":"Joel Embiid makes two point shot","x":"25","y":"0","Isscore":"True","Action_Type":"Layup Shot Putback"},
+                                    "7":{"Text":"Joel Embiid makes 1-foot dunk (James Harden assists)","x":"24","y":"1","Isscore":"True","Action_Type":"Cutting Dunk Shot"},
+                                    "8":{"Text":"Tobias Harris misses 14-foot two point shot","x":"14","y":"8","Isscore":"False","Action_Type":"Turnaround Fade Away Jump Shot"},
+                                    "9":{"Text":"James Harden makes 13-foot two point shot","x":"21","y":"13","Isscore":"True","Action_Type":"Fade Away Jump Shot"},
+                                    "10":{"Text":"Tyrese Maxey makes driving dunk (James Harden assists)","x":"25","y":"2","Isscore":"True","Action_Type":"Driving Dunk Shot"},
+                                    "11":{"Text":"Joel Embiid misses 18-foot step back jumpshot","x":"22","y":"17","Isscore":"False","Action_Type":"Step Back Jump Shot"},
+                                    "12":{"Text":"James Harden misses 26-foot step back jumpshot","x":"37","y":"24","Isscore":"False","Action_Type":"Step Back Jump Shot"},
+                                    "13":{"Text":"Tyrese Maxey makes 12-foot driving floating jump shot (Tobias Harris assists)","x":"28","y":"11","Isscore":"True","Action_Type":"Driving Floating Jump Shot"},
+                                    "14":{"Text":"Joel Embiid misses three point jumper","x":"25","y":"27","Isscore":"False","Action_Type":"Jump Shot"},
+                                    "15":{"Text":"Tyrese Maxey misses 28-foot three point jumper","x":"28","y":"28","Isscore":"False","Action_Type":"Jump Shot"},
+                                    "16":{"Text":"Danny Green misses 24-foot three point jumper","x":"48","y":"7","Isscore":"False","Action_Type":"Jump Shot"},
+                                    "17":{"Text":"James Harden misses 26-foot step back jumpshot","x":"44","y":"18","Isscore":"False","Action_Type":"Step Back Jump Shot"},
+                                    "18":{"Text":"'James Harden misses driving floating jump shot","x":"30","y":"6","Isscore":"False","Action_Type":"Driving Floating Jump Shot"}
                                 }
                             ]
                         }

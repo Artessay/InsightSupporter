@@ -98,9 +98,6 @@ const SelectPanel = (props) => {
                             options={subspaceList}
                             defaultValue="+"
                             onChange={handleTypeChange}
-                            style={{
-                                // position: "relative", 
-                            }}
                         />
                     </div>
                 </Space>

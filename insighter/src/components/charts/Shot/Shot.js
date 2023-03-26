@@ -102,7 +102,7 @@ export default class Shot extends React.Component {
                 .enter()
                 .append('circle')
                 .attr('class', 'enter')
-                .attr('fill', (d) => shotColor(d.scoringPlay === "True"))
+                .attr('fill', (d) => shotColor(d.Isscore === "True"))
                 .on('mouseover', tip.show)
                 .on('mouseout', tip.hide)
                 .merge(circles)
