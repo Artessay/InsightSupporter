@@ -35,7 +35,7 @@ function GetChartList( {sentenceList} ) {
                     );
                 } else if (need.Chart_Type === "Area Chart" ) {
                     charts.push(
-                        <AreaChart></AreaChart>
+                        <AreaChart Data = {need.Chart_Data}></AreaChart>
                         // <FunAreaChart></FunAreaChart>
                     )
                 } else if (need.Chart_Type === "Shot Chart" ) {

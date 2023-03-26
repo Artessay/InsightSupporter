@@ -7,19 +7,9 @@ class AreaChart extends React.Component{
 
         this.myRef = React.createRef();
 
-        // console.log(dataList)
-
         this.state = {
             // Define the data
-            ChartData : [
-                {
-                "1":{"Type":"ShortRange%","Percentage of Shots":"75%"},
-                "2":{"Type":"MidRange%","Percentage of Shots":"75%"},
-                "3":{"Type":"FT%","Percentage of Shots":"80%"},
-                "4":{"Type":"LongRange%","Percentage of Shots":"33.3%"},
-                "5":{"Type":"Overall%","Percentage of Shots":"68.4%"}
-                }
-            ],
+            ChartData : this.props.Data,
             
             // Define the colors
             colorlist : ["#fc7a57","#f79c00","#fcd257","#7581a3","#8699a8","#96b1ad","#c6cebc","#dadbc7","#ffffff"],
