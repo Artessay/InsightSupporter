@@ -13,8 +13,9 @@ const measureOptions = [
     "count", "% on Made", ""
 ];
 
-const typeOptions = [
-    "value", "distribution", "extreme"
+const subspaceOptions = [
+    "Athlete","Team","Isscore","Isshot",
+    "Quarter","ShotType","ShotRange","ActionType"
 ];
 
 function GetDatas( {sentenceList} ) {
@@ -81,7 +82,7 @@ const SelectPanel = (props) => {
                         <br></br>
                         <CustomSelect
                             label="breakdown"
-                            options={typeOptions}
+                            options={subspaceOptions}
                             defaultValue={chartData.Breakdown}
                             onChange={handleTypeChange}
                         />
