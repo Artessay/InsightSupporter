@@ -47,7 +47,7 @@ export default class Page extends React.Component {
                     </p>
                 </div>
                     
-                    <VideoCarousel className='video'></VideoCarousel>
+                <VideoCarousel className='video'></VideoCarousel>
                 <div className='text'>
                     <div className='paragraph'>
                         {
@@ -56,12 +56,13 @@ export default class Page extends React.Component {
                                     <p className='subtitle'>
                                         {item.E_Title}:
                                     </p>
-                                    {/* {
-                                        for (let sentence in item.E_Sentences) {
-                                            return <div>haha</div>
-                                        }
-                                    } */}
-                                    <p className='pageChart'>
+                                    <p className='pageChart'
+                                        style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                        }}
+                                    >
                                         <ChartGenerator sentenceList={item.E_Sentences}></ChartGenerator>
                                     </p>
                                     
