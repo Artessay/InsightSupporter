@@ -181,21 +181,26 @@ const Episode = props => {
 
                     <div className="chartButton">
                         {
-                            chartNumbers.map((number) => (
-                                <Button
-                                    size="large"
-                                    style={{
-                                        backgroundColor: 'rgba(117, 117, 117, 0.3)',
-                                        marginBottom: 10
-                                    }}
-                                    value={number}
-                                    onClick={(e) => {handleFigureNumber(number)}}
-                                >
-                                    <div className="chartButtonText">
-                                        {number+1}
-                                    </div>
-                                </Button>
-                            ))
+                            chartNumbers.map((number) => {
+                                // console.log(number, figureNumber)
+                                const bgColor = (number === figureNumber) ? "rgb(255, 107, 107)" : "rgba(117, 117, 117, 0.3)"
+                                return (
+                                    <Button
+                                        key={number}
+                                        size="large"
+                                        style={{
+                                            backgroundColor: bgColor,
+                                            marginBottom: 10
+                                        }}
+                                        value={number}
+                                        onClick={(e) => {handleFigureNumber(number)}}
+                                    >
+                                        <div className="chartButtonText">
+                                            {number+1}
+                                        </div>
+                                    </Button>
+                                );
+                            })
                         }
                         
                     </div>
