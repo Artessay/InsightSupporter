@@ -31,7 +31,7 @@ const Subspace = ({ label, options, defaultValue, onChange }) => {
             {
                 options.map((option, index) => (
                     <Select
-                        key={index}
+                        key={option}
                         defaultValue={option}
                         style={{ 
                         minWidth: 150,

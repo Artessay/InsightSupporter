@@ -19261,7 +19261,7 @@
                     
                 }
             ],
-            "E_Text":"The game being referred to is not specified, but based on the provided statistics, it appears to be a basketball game in which Joel Embiid played for approximately 35 minutes. Embiid had an impressive performance, scoring 35 points on 13 out of 19 field goal attempts, making 1 out of 3 three-point attempts and 8 out of 10 free throw attempts. He also grabbed 17 rebounds and dished out 5 assists, but had 3 turnovers and committed 3 personal fouls. Despite Embiid's strong individual performance, his team was trailing by 4 point, suggesting a closely contested game."
+            "E_Text":"On March 17, 2022, in a regular season NBA game, the Philadelphia 76ers played against the Cleveland Cavaliers. The 76ers started the game strong with a 16-4 run and maintained a 13-point lead at halftime. Both teams showed high offensive efficiency in the third quarter. The Cavaliers came back and won the quarter by 18 points, leading the 76ers by 5 points going into the fourth quarter. The 76ers had a disastrous performance in the third quarter, but managed to complete a comeback in the fourth quarter, ultimately winning the game 118-114."
         },
         {
             "Id":"2",
@@ -19296,7 +19296,7 @@
                     
                 }
             ],
-       		"E_Text":"Joel Embiid attempted 19 shots in the game, and out of those 19 shots, he made 13 of them, resulting in a shooting percentage of 68.4%. To visually represent this, a pie chart can be used to show the percentage of shots made by Embiid."
+       		"E_Text":"The Philadelphia 76ers dominated both ends of offense and defense in the first half, making a strong start. In particular, regarding shooting accuracy, the stacker bar chart shows the number of shots and hits for both teams. The 76ers had more shots and a higher hit rate, leading them to take the lead at halftime with a 13-point advantage after scoring 72 points."
         },
         {
             "Id":"3",
@@ -19332,7 +19332,7 @@
                 }
                     
             ],
-       		"E_Text":"Embiid was dominating in the first half, hitting nine out of eleven, probably the biggest reason for the 76ers 26-point lead. But that was because he was making most of his mid-range jumpers(6/8), which is not very sustainable. He only hit 3/9 in the second half, and none of his shots were near the rim!"
+       		"E_Text":"During the third quarter, the Philadelphia 76ers were outscored by the Cleveland Cavaliers. The 76ers lost by 18 points during this period and were overtaken by 5 points. The 76ers performed poorly in the third quarter, especially on the offensive end. A stacked bar chart illustrates the 76ers' performance in the third quarter, showing that their shooting accuracy was half as low as that of the Cavaliers."
         },
         {
             "Id":"4",
@@ -19402,7 +19402,7 @@
                     
                 }
             ],
-       		"E_Text":"Embiid was dominating in the first half, hitting nine out of eleven, probably the biggest reason for the 76ers 26-point lead. But that was because he was making most of his mid-range jumpers(6/8), which is not very sustainable. He only hit 3/9 in the second half, and none of his shots were near the rim!"
+       		"E_Text":"During the third quarter, the 76ers missed a lot of shots. The shot chart displays all of the 76ers' shots in the third quarter, and it is evident that they missed many of their shots, especially from long-range three-pointers, where they attempted seven shots but did not make any. Although they were still efficient in shooting from short-range, their mid-range shooting had a success rate of only 40%."
         },
         {
             "Id":"5",
@@ -19446,7 +19446,7 @@
                             	"1":{"Quarter":"1","Number of Shots":"23","Made":"11"},
                                 "2":{"Quarter":"2","Number of Shots":"19","Made":"12"},
                                 "3":{"Quarter":"3","Number of Shots":"18","Made":"5"},
-                                "4":{"Quarter":"4","Number of Shots":"14","Made":"9"}
+                                "4":{"Quarter":"4","Number of Shots":"15","Made":"9"}
                 				}
                             ]
                         }
@@ -19454,7 +19454,7 @@
                     
                 }
             ],
-       		"E_Text":"Embiid was dominating in the first half, hitting nine out of eleven, probably the biggest reason for the 76ers 26-point lead. But that was because he was making most of his mid-range jumpers(6/8), which is not very sustainable. He only hit 3/9 in the second half, and none of his shots were near the rim!"
+       		"E_Text":"Next, we will discuss the reason for the struggles in the third quarter. First, in terms of rebounds, the 76ers were lacking on the inside compared to the Cavaliers, with five fewer rebounds in a single quarter. Secondly, looking at the time, the 76ers had a poor shooting touch in this quarter, with both the number of shots taken and the number of shots made being very low."
         },
         {
             "Id":"6",
@@ -19487,7 +19487,7 @@
                     
                 }
             ],
-       		"E_Text":"Embiid was dominating in the first half, hitting nine out of eleven, probably the biggest reason for the 76ers 26-point lead. But that was because he was making most of his mid-range jumpers(6/8), which is not very sustainable. He only hit 3/9 in the second half, and none of his shots were near the rim!"
+       		"E_Text":"In the fourth quarter, the 76ers regained their form and found their touch on the offensive end. A pie chart shows that the 76ers had a 66.7% shooting percentage in the fourth quarter. They ended up winning the fourth quarter by 9 points."
         },
         {
             "Id":"7",
@@ -19539,7 +19539,7 @@
                     
                 }
             ],
-       		"E_Text":"Embiid was dominating in the first half, hitting nine out of eleven, probably the biggest reason for the 76ers 26-point lead. But that was because he was making most of his mid-range jumpers(6/8), which is not very sustainable. He only hit 3/9 in the second half, and none of his shots were near the rim!"
+       		"E_Text":"Overall, despite being ahead in the first two quarters, the 76ers were completely restricted on the offensive end in the third quarter, losing the initiative. Although they were overtaken in the third quarter, the 76ers still completed a comeback in the fourth quarter and ultimately won the game 118-114."
         }
     ]
     

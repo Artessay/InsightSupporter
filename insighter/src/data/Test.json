@@ -116,7 +116,7 @@
                     
                 }
             ],
-            "E_Text":"The game being referred to is not specified, but based on the provided statistics, it appears to be a basketball game in which Joel Embiid played for approximately 35 minutes. Embiid had an impressive performance, scoring 35 points on 13 out of 19 field goal attempts, making 1 out of 3 three-point attempts and 8 out of 10 free throw attempts. He also grabbed 17 rebounds and dished out 5 assists, but had 3 turnovers and committed 3 personal fouls. Despite Embiid's strong individual performance, his team was trailing by 4 point, suggesting a closely contested game."
+            "E_Text":"On March 17, 2022, the Philadelphia 76ers faced off against the Cleveland Cavaliers in a regular season NBA game, with the 76ers prevailing 118-114 over the Cavaliers. Joel Embiid played for 35 minutes and scored 37 points, shooting 13-19 and getting 17 rebounds and 5 assists to help his team secure the victory. Embiid's mid-range shooting played an important role in the game, helping the 76ers take the lead in the first half."
         },
         {
             "Id":"2",
@@ -150,7 +150,7 @@
                     
                 }
             ],
-       		"E_Text":"Joel Embiid attempted 19 shots in the game, and out of those 19 shots, he made 13 of them, resulting in a shooting percentage of 68.4%. To visually represent this, a pie chart can be used to show the percentage of shots made by Embiid."
+       		"E_Text":"Joel Embiid attempted 19 shots in the game, and out of those 19 shots, he made 13 of them, resulting in a shooting percentage of 68.4%. The pie chart in the picture represents Embiid's shooting performance today."
         },
         {
             "Id":"3",
@@ -244,7 +244,7 @@
                     
                 }
             ],
-       		"E_Text":"Embiid was dominating in the first half, hitting nine out of eleven, probably the biggest reason for the 76ers 26-point lead. But that was because he was making most of his mid-range jumpers(6/8), which is not very sustainable. He only hit 3/9 in the second half, and none of his shots were near the rim!"
+       		"E_Text":"Jump shot is Embiid's primary shooting method, with 7 out of 11 attempts successful. Embiid's layups and dunks are very consistent and have a high success rate. As a center, Embiid has the ability to attack and shoot while holding the ball. In today's game, the mid-range shot was his main scoring method."
         },
         {
             "Id":"5",
@@ -324,7 +324,7 @@
                     
                 }
             ],
-       		"E_Text":"Embiid was dominating in the first half, hitting nine out of eleven, probably the biggest reason for the 76ers 26-point lead. But that was because he was making most of his mid-range jumpers(6/8), which is not very sustainable. He only hit 3/9 in the second half, and none of his shots were near the rim!"
+       		"E_Text":"Embiid, as a center, also took a lot of mid-range shots in this game. The shot chart shows his mid-range shooting points and accuracy. Embiid took 8 mid-range shots and made 6 of them, for a shooting percentage of 75%. The area chart illustrates Embiid's shooting proficiency at various distances in this game, with close-range and mid-range shots being Embiid's dominant areas."
         },
         {
             "Id":"6",
@@ -376,7 +376,7 @@
                     
                 }
             ],
-       		"E_Text":"Embiid was dominating in the first half, hitting nine out of eleven, probably the biggest reason for the 76ers 26-point lead. But that was because he was making most of his mid-range jumpers(6/8), which is not very sustainable. He only hit 3/9 in the second half, and none of his shots were near the rim!"
+       		"E_Text":"The Shot Chart displays Joel Embiid's shooting performance, with most of his points coming from close range and mid-range shots. In a word, He dominated the game in the first half and helped the 76ers secure a victory."
         }
     ]
     
