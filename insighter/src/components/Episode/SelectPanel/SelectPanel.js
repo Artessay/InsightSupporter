@@ -5,10 +5,11 @@ const chartOptions = [
     "Area Chart", "Bar Chart", "Flow Chart", 
     "IsoType Chart", "Line Chart", "Pie Chart",
     "Shot Chart", "Stacked Bar Chart", "Text Chart", 
+    ""
 ];
 
 const measureOptions = [
-    "count"
+    "count", "% on Made", ""
 ];
 
 const typeOptions = [
