@@ -1,5 +1,6 @@
 import React from "react";
 import * as d3 from "d3";
+import Title from "antd/es/skeleton/Title";
 
 class PieChart extends React.Component{
     constructor(props){
@@ -105,10 +106,10 @@ class PieChart extends React.Component{
         // Add title
         svg.append("text")
             .attr("x", (width / 2))
-            .attr("y", -20)
+            .attr("y", -20)   // @TODO
             .attr("text-anchor", "middle")
             .style("font-size", "16px")
-            .text("Percentage of Shots");
+            .text(this.props.Title);
     }
 
     componentDidMount(){

@@ -23,7 +23,7 @@ function GetChartList( {sentenceList} ) {
                 // console.log(need.Chart_Type)
                 if (need.Chart_Type === "Pie Chart") {
                     charts.push(
-                        <PieChart Data = {need.Chart_Data[0]["1"]}></PieChart>
+                        <PieChart Data = {need.Chart_Data[0]["1"]} Title={need.Chart_Title}></PieChart>
                     );
                 } else if (need.Chart_Type === "Bar Chart") {
                     charts.push(
