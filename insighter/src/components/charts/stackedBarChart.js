@@ -25,7 +25,8 @@ export default class StackedBarChart extends React.Component {
 
         this.state = {
             data: tableList,
-            colors: ["#98abc5", "#8a89a6"]
+            colors: ["#98abc5", "#8a89a6"],
+            title: this.props.Title,
         }
     }
 
@@ -39,7 +40,7 @@ export default class StackedBarChart extends React.Component {
                     .attr('height', height)
                     // .attr("transform","translate("+margin.left+","+margin.top+")");
 
-        let { data, colors } = this.state;
+        let { data, colors, title } = this.state;
 
         // Transpose the data into layers
         var dataset = d3.stack()
@@ -120,7 +121,7 @@ export default class StackedBarChart extends React.Component {
            .attr("y", 0 + (margin.top / 2)) // @TODO
            .attr("text-anchor", "middle")
            .style("font-size", "16px")
-           .text("Distribution of Shots by Quarter");
+           .text(title);
 
         // Add x axis label
         svg.append("text")

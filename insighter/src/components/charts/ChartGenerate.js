@@ -27,11 +27,11 @@ function GetChartList( {sentenceList} ) {
                     );
                 } else if (need.Chart_Type === "Bar Chart") {
                     charts.push(
-                        <BarChart Data = {need.Chart_Data[0]}></BarChart>
+                        <BarChart Data = {need.Chart_Data[0]} Title={need.Chart_Title}></BarChart>
                     );
                 } else if (need.Chart_Type === "Stacked Bar Chart") {
                     charts.push(
-                        <StackedBarChart Data = {need.Chart_Data[0]}></StackedBarChart>
+                        <StackedBarChart Data = {need.Chart_Data[0]} Title={need.Chart_Title}></StackedBarChart>
                     );
                 } else if (need.Chart_Type === "Area Chart" ) {
                     charts.push(

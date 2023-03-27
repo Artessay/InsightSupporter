@@ -23,18 +23,13 @@ export default class BarChart extends React.Component {
 
         this.state = {
             data : dataList,
-            // [
-            //     { type: "Midrange", value: 11 },
-            //     { type: "3pt", value: 3 },
-            //     { type: "Layup", value: 2 },
-            //     { type: "Dunk", value: 3 }
-            // ],
-            colors : ["#98abc5"]
+            colors : ["#98abc5"],
+            title : this.props.Title,
         }
     }
 
     drawModel = () => {
-        let { data, colors } = this.state;
+        let { data, colors, title } = this.state;
 
         const width = 300, height = 300;
         const margin = {top: 30, right: 0, bottom: 30, left: 30};
@@ -88,7 +83,7 @@ export default class BarChart extends React.Component {
         .attr("y", 0 + (top / 2))
         .attr("text-anchor", "middle")
         .style("font-size", "16px")
-        .text("Shots Categorized by Type")
+        .text(title)
         .attr("transform", "translate(0," + (margin.top/2) + ")");
     }
 
