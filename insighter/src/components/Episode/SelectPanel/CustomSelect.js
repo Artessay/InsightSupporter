@@ -29,6 +29,7 @@ const CustomSelect = ({ label, options, defaultValue, onChange }) => {
         defaultValue={defaultValue}
         style={{ 
           minWidth: 150,
+          maxWidth: 150,
         }}
         onChange={handleSelectChange}
       >

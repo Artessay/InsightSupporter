@@ -35,6 +35,7 @@ const Subspace = ({ label, options, defaultValue, onChange }) => {
                         defaultValue={option}
                         style={{ 
                         minWidth: 150,
+                        maxWidth: 150,
                         }}
                         onChange={handleSelectChange}
                     >
