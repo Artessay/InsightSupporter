@@ -19419,7 +19419,7 @@
                             "Measure":"Count",
                             "Is_Tracking":"No",
                             "Chart_Type":"Bar Chart",
-                            "Chart_Title":"Difference of rebounds",
+                            "Chart_Title":"Difference of Rebounds",
                             "Chart_Data":[
                                 {
                                     "1":{"Team":"Philadelphia 76ers","Number of Rebounds":"9"},

@@ -154,7 +154,7 @@ drawDashedLineWithLabel(Lline.x, Lline.label);
 
     render() {
         return (
-            <div ref={this.myRef} className="flowChart"></div>
+            <div ref={this.myRef} style={{ transform: "scale(0.8)"}}className="flowChart"></div>
         )
     }
 }

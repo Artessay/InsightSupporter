@@ -55,7 +55,7 @@ export default class StackedBarChart extends React.Component {
 
         // Set the y scale
         var y = d3.scaleLinear()
-                  .domain([0, d3.max(dataset, function(d) { return d3.max(d, function(d) { return d[1]; }); })])
+                  .domain([0, 1.2*d3.max(dataset, function(d) { return d3.max(d, function(d) { return d[1]; }); })])
                   .range([height-margin.bottom, margin.top]);
 
         // Draw the bars
@@ -79,8 +79,8 @@ export default class StackedBarChart extends React.Component {
            .attr("transform", "translate(0," + (height-margin.bottom) + ")")
            .call(d3.axisBottom(x))
            .selectAll("text")
-           .attr("transform", "rotate(-45)")
-           .style("text-anchor", "end");
+           .style("text-anchor", "center");
+
 
         // Add the y axis
         svg.append("g")

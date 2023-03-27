@@ -12,7 +12,7 @@ class AreaChart extends React.Component{
             ChartData : this.props.Data,
             
             // Define the colors
-            colorlist : ["#fc7a57","#f79c00","#fcd257","#7581a3","#8699a8","#96b1ad","#c6cebc","#dadbc7","#ffffff"],
+            colorlist : ["#fc7a57","#f79c00","#fcd257","#7581a3","#8699a8","#96b1ad","#c6cebc","#dadbc7","#eeefff","#eeeeee","#eeeeee","#ffffff"],
         }
     }
 
@@ -141,13 +141,17 @@ class AreaChart extends React.Component{
         path6.setAttribute("class", "Md");
         path6.setAttribute("fill", colorlist[parseInt(10-parseInt(ChartData[0]["2"]["Percentage of Shots"])/10)]);
         path6.setAttribute("d", "M839,281v176v74v156.2c102-47,184.7-128.8,232.8-230.2c0.4-0.8,0.8-1.6,1.2-2.4V281H839z");
+        var ftp=parseInt(ChartData[0]["3"]["Percentage of Shots"])/10
+        if(ftp==10){
+ftp=8
+        }
 
         const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
         circle.setAttribute("cx", "639"); // set the x position of the center of the circle
         circle.setAttribute("cy", "531"); // set the y position of the center of the circle
         circle.setAttribute("r", "50"); // set the radius of the circle
         circle.setAttribute("class", "FT");
-        circle.setAttribute("fill", colorlist[parseInt(10-2-parseInt(ChartData[0]["3"]["Percentage of Shots"])/10)]);
+        circle.setAttribute("fill", colorlist[parseInt(10-2-ftp)]);
 
         const textc = document.createElementNS("http://www.w3.org/2000/svg", "text");
         textc.setAttribute("x", "639");
