@@ -47,7 +47,7 @@ export default class News extends React.Component {
                             numbers.map((number) => (
                                 < >
                                     <div className='verticalLine'></div>
-                                    <Button shape='circle' onClick={(e) => this.handleClick(e)} value={number+1}>{number+1}</Button>
+                                    <Button key={number} shape='circle' onClick={(e) => this.handleClick(e)} value={number+1}>{number+1}</Button>
                                 </>
                             ))
                         }

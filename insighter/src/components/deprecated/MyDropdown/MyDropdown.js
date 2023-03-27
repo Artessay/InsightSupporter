@@ -35,7 +35,7 @@ export default class MyDropdown extends React.Component {
                     >
                         {
                             this.state.options.map((item) => (
-                                <option value={item}>{item}</option>
+                                <option key={item} value={item}>{item}</option>
                             )) 
                         }
                     </select>

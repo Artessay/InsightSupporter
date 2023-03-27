@@ -142,7 +142,7 @@ const Episode = props => {
                     <div className="selectPart">
                         {
                             sentences.map((item, index) => (
-                                <div className="selectSection">
+                                <div className="selectSection" key={index}>
                                     <span className="selectNumber">
                                         {index+1}
                                     </span>

@@ -52,7 +52,7 @@ export default class Page extends React.Component {
                     <div className='paragraph'>
                         {
                             listData.map((item, index) => (
-                                <div>
+                                <div key={index}>
                                     <p className='subtitle'>
                                         {item.E_Title}:
                                     </p>
