@@ -5,7 +5,7 @@ import Data from './components/Data/Data'
 import Episode from './components/Episode/Episode'
 import StoryLine from './components/StoryLine/StoryLine'
 import News from './components/News/News';
-import Test from '../src/data/Test_new.json' 
+import Test from '../src/data/Test.json' 
 import { useState } from 'react';
 import FlowGame from './components/charts/flowGame';
 

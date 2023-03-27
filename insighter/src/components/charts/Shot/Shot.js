@@ -24,7 +24,7 @@ export default class Shot extends React.Component {
 
     drawModel = () => {
         const height = 300
-        const width = 600  
+        const width = 300  
         var courtUrl = "./img/court.png";
 
         let { data } = this.state;
@@ -42,8 +42,8 @@ export default class Shot extends React.Component {
             g.append("svg:image")
             .attr("id", "image-url")
             .attr("xlink:href", courtUrl)
-            .attr("width", 600)
-            .attr("height", 340);
+            .attr("width", 300)
+            .attr("height", 300);
         
         const filteredData = data.filter(datum => {
             if (datum.x < 300) {
@@ -57,24 +57,7 @@ export default class Shot extends React.Component {
     
 
         function update(data) {
-            // Tooltip
-            const tip = d3
-                .tip()
-                .attr('class', 'd3-tip')
-                .html(function(d) {
-                    let makeOrMiss = d.srcElement.__data__.Isscore === "True" ? 'Made' : 'Missed';
-                    let text = "<strong>actionType</strong> <span style='color:gold'>" + d.srcElement.__data__.Action_Type+ '</span><br>';
-                /*   text += "<strong>Opponent</strong> <span style='color:gold'>" + d.opponent + '</span><br>';
-                    text += "<strong>Shot Range</strong> <span style='color:gold'>" + d.action_type + '</span><br>';
-                    text +=
-                        "<strong>Shot Distance</strong> <span style='color:gold'>" +
-                        d.shot_distance +
-                        ' feet' +
-                        '</span><br>';
-                    text += "<strong>Made or Missed</strong> <span style='color:gold'>" + makeOrMiss + '</span><br>'; */
-                    return text;
-                });
-            g.call(tip);
+
 
             //colors for circles
             const shotColor = d3
@@ -87,7 +70,7 @@ export default class Shot extends React.Component {
         
 
             // JOIN new data with old elements.
-            const circles = g.selectAll('circle').data(data, function(d) {
+            const circles = g.selectAll('circle').data(data, function(d) {        
                 return d;
             });
 
@@ -103,14 +86,12 @@ export default class Shot extends React.Component {
                 .append('circle')
                 .attr('class', 'enter')
                 .attr('fill', (d) => shotColor(d.Isscore === "True"))
-                .on('mouseover', tip.show)
-                .on('mouseout', tip.hide)
                 .merge(circles)
                 .transition(t)
-                .attr('cy', (d) => d.y * 10 + 55)
-                .attr('cx', (d) => d.x * 10 + 55)
-                .attr('opacity', '0.6')
-                .attr('r', 8);
+                .attr('cy', (d) => d.y * 5 + 90)
+                .attr('cx', (d) => d.x * 5.5 + 15)
+                .attr('opacity', '1')
+                .attr('r', 5);
         }
     }
 

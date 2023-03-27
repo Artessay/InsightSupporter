@@ -311,11 +311,10 @@
                             "Chart_Type":"Area Chart",
                             "Chart_Title":"The Percentage of Shots",
                             "Chart_Data":[
-                                {
-                            	"1":{"Type":"MidRange%","Percentage of Shots":"75%"},
-                                "2":{"Type":"LongRange%","Percentage of Shots":"33.3%"},
-                                "3":{"Type":"ShortRange%","Percentage of Shots":"75%"},
-                                "4":{"Type":"FT%","Percentage of Shots":"80%"},
+                                {"1":{"Type":"ShortRange%","Percentage of Shots":"75%"},
+                            	"2":{"Type":"MidRange%","Percentage of Shots":"75%"},
+                                "3":{"Type":"FT%","Percentage of Shots":"80%"},
+                                "4":{"Type":"LongRange%","Percentage of Shots":"33.3%"},
                                 "5":{"Type":"Overall%","Percentage of Shots":"68.4%"}
                 				}
                             ]
