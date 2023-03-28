@@ -126,6 +126,23 @@ const Episode = props => {
     let t_ = GetChartData(sentences)
     let tableData = t_.length > 0 ? t_.at(figureNumber)[0] : [];
 
+    const Tf = () => {
+        if (listData[CE-1].E_Sentences) {
+            return (
+                <div className="chartArea">
+                    <ScoreTable 
+                        className="chartAreaTable"
+                        ChartData={tableData}
+                    ></ScoreTable>
+                </div>
+                )
+            
+        }
+        else {
+            return <></>
+        }
+    };
+
         return(
             <div className="Episode">
                 <div className='episodeHeader'>
@@ -177,7 +194,7 @@ const Episode = props => {
                             index = {figureNumber}></SelectPanel>
                     </div>
 
-                    
+                    <Tf></Tf>
 
                     <div className="chartButton">
                         {
@@ -205,12 +222,8 @@ const Episode = props => {
                         
                     </div>
                     
-                    <div className="chartArea">
-                        <ScoreTable 
-                            className="chartAreaTable"
-                            ChartData={tableData}
-                        ></ScoreTable>
-                    </div>
+                    
+                    
                     
                     <div className='chooseChart'>
                         <GetChart
