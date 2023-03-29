@@ -73,6 +73,7 @@ function ChartGenerator( { sentenceList } ) {
 }
 
 export function GetChart( { sentenceList, index } ) {
+    // forceUpdate();
     return <>{GetChartList({sentenceList})[index]}</>
 }
 

@@ -227,6 +227,7 @@ const Episode = props => {
                     
                     <div className='chooseChart'>
                         <GetChart
+                            key={CE-1}
                             sentenceList = {listData[CE-1].E_Sentences}
                             index = {figureNumber}
                         ></GetChart>
