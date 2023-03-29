@@ -236,13 +236,14 @@ const Episode = props => {
                 </div>
                 <div className="episodeFooter">
                     <div style={{margin: 5}}>
-                        <textArea
+                        <textarea
+                            key={CE-1}
                             className='episodeTextArea'
                             rows={4}
                             onInput={(e) => handleTextareaChange(e)}
                         >
                             {listData[CE-1].E_Text}
-                        </textArea>
+                        </textarea>
                     </div>
                 </div>
             </div>
