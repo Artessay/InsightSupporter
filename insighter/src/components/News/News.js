@@ -8,7 +8,7 @@ const taskColor = {
     'Proportion': '#FEB563',
     'Distribution': '#B3DE69',
     'Categorization': '#8DD3C7',
-    'Trend': '#EEFF00',
+    'Trend': '#B3DE69',
     'Difference': '#22EEFF'
 };
 
