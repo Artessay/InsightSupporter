@@ -41,10 +41,10 @@ export default class News extends React.Component {
         const listLength = DataSL.Contents.Episode.length;
         const numbers = Array.from({ length: listLength }, (_, index) => index);
 
-        numbers.map((number) => (
-            console.log(DataSL.Contents.Episode[number].E_Sentences[0].S_Task)
-            // console.log(taskColor[DataSL.Contents.Episode[number].E_Sentences[0].S_Task]);
-        ))
+        // numbers.map((number) => (
+        //     console.log(DataSL.Contents.Episode[number].E_Sentences[0].S_Task)
+        //     // console.log(taskColor[DataSL.Contents.Episode[number].E_Sentences[0].S_Task]);
+        // ))
         
         return(
             <div className="News">
