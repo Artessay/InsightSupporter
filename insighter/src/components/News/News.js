@@ -29,7 +29,7 @@ export default class News extends React.Component {
             group: e.target.value
         })
 
-        console.log(e.target.value)
+        // console.log(e.target.value)
         
     }
 

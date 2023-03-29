@@ -32,6 +32,8 @@ function App() {
         //console.log(DataSL)
     };
 
+    let [updateFlag, setUpdateFlag] = useState(false);
+
   return (
     <div className='App'>
         <Head className='header' JsonData={DataSL}></Head>
@@ -43,7 +45,10 @@ function App() {
                 <Data></Data>
             </div>
             <div className="item item-3">
-                <Episode DataSL={DataSL} CE={CE} Datalist={Datalist} figureNumber={figureNumber} setFigureNumber={setFigureNumber}></Episode>
+                <Episode DataSL={DataSL} CE={CE} Datalist={Datalist} 
+                figureNumber={figureNumber} setFigureNumber={setFigureNumber}
+                updateFlag={updateFlag} setUpdateFlag={setUpdateFlag}
+                ></Episode>
             </div>
             <div className="item item-4">
                 <News DataSL={DataSL}></News>

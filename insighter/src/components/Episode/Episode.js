@@ -40,6 +40,7 @@ const Episode = props => {
 
     var {DataSL}=props
     var {CE}=props
+    let {updateFlag, setUpdateFlag}=props
 
     var Data_Episode_Name = [];
     for (var i=0;i< DataSL.Contents.Episode.length;i++){
@@ -57,6 +58,11 @@ const Episode = props => {
         setListData(newData)
 
         props.Datalist(newData)
+
+        if (updateFlag === false)
+            setUpdateFlag(true)
+        else
+            setUpdateFlag(false)
     }
 
     // let [sentences, setSentences] = useState(listData[CE-1].E_Sentences);
@@ -177,8 +183,8 @@ const Episode = props => {
                                             rows="1"
                                             onChange={(e) => handleInsightChange(e, index)}
                                             cols="80"
+                                            value={item.S_Insight}
                                         >
-                                            {item.S_Insight}
                                         </textarea>
                                         
                                     </span>
