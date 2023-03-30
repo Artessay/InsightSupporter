@@ -155,6 +155,11 @@ const Episode = props => {
         setListData(newData)
 
         props.Datalist(newData)
+
+        if (updateFlag === false)
+            setUpdateFlag(true)
+        else
+            setUpdateFlag(false)
     };
 
         return(
