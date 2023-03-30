@@ -227,10 +227,10 @@ icons.append("svg:image")
       return assist_s;
   }
 })
-.attr("x", xScale(d.x)-4) // 图像在数据点上的水平偏移量
-.attr("y", yScale(d.y)-4) // 图像在数据点上的垂直偏移量
-.attr("width", 8) // 图像的宽度
-.attr("height", 8)
+.attr("x", xScale(d.x)-6) // 图像在数据点上的水平偏移量
+.attr("y", yScale(d.y)-6) // 图像在数据点上的垂直偏移量
+.attr("width", 12) // 图像的宽度
+.attr("height", 12)
 .on("mouseover", function() { // 鼠标悬停时显示文本
   text.style("display", "block");
   rect.style("display", "block");
@@ -268,10 +268,10 @@ if(d.text.includes("three")){
       return three_s;
   }
 })
-.attr("x", xScale(d.x)-4) // 图像在数据点上的水平偏移量
-.attr("y", yScale(d.y)-4) // 图像在数据点上的垂直偏移量
-.attr("width", 8) // 图像的宽度
-.attr("height", 8) 
+.attr("x", xScale(d.x)-6) // 图像在数据点上的水平偏移量
+.attr("y", yScale(d.y)-6) // 图像在数据点上的垂直偏移量
+.attr("width", 12) // 图像的宽度
+.attr("height", 12) 
 .on("mouseover", function() { // 鼠标悬停时显示文本
   text.style("display", "block");
   rect.style("display", "block");
@@ -307,10 +307,10 @@ var text = group.append("text")
       return two_s;
   }
 })
-.attr("x", xScale(d.x)-4) // 图像在数据点上的水平偏移量
-.attr("y", yScale(d.y)-4) // 图像在数据点上的垂直偏移量
-.attr("width", 8) // 图像的宽度
-.attr("height", 8)
+.attr("x", xScale(d.x)-6) // 图像在数据点上的水平偏移量
+.attr("y", yScale(d.y)-6) // 图像在数据点上的垂直偏移量
+.attr("width", 12) // 图像的宽度
+.attr("height", 12)
 .on("mouseover", function() { // 鼠标悬停时显示文本
   text.style("display", "block");
   rect.style("display", "block");
@@ -349,10 +349,10 @@ icons.append("svg:image")
 })
 //.attr("cx", function(d) { return xScale(d.x)-4; })
 //.attr("cy", function(d) { return yScale(d.y)-4; })
-.attr("x", xScale(d.x)-4) // 图像在数据点上的水平偏移量
-.attr("y", yScale(d.y)-4) // 图像在数据点上的垂直偏移量
-.attr("width", 8) // 图像的宽度
-.attr("height", 8)// 图像的高度
+.attr("x", xScale(d.x)-6) // 图像在数据点上的水平偏移量
+.attr("y", yScale(d.y)-6) // 图像在数据点上的垂直偏移量
+.attr("width", 12) // 图像的宽度
+.attr("height", 12)// 图像的高度
 .on("mouseover", function() { // 鼠标悬停时显示文本
   text.style("display", "block");
   rect.style("display", "block");
@@ -389,10 +389,10 @@ icons.append("svg:image")
       return assist_s;
   }
 })
-.attr("x", xScale(d.x)-4) // 图像在数据点上的水平偏移量
-.attr("y", yScale(d.y)-4) // 图像在数据点上的垂直偏移量
-.attr("width", 8) // 图像的宽度
-.attr("height", 8)
+.attr("x", xScale(d.x)-6) // 图像在数据点上的水平偏移量
+.attr("y", yScale(d.y)-6) // 图像在数据点上的垂直偏移量
+.attr("width", 12) // 图像的宽度
+.attr("height", 12)
 .on("mouseover", function() { // 鼠标悬停时显示文本
   text.style("display", "block");
   rect.style("display", "block");
@@ -428,10 +428,10 @@ icons.append("svg:image")
       return stl_s;
   }
 })
-.attr("x", xScale(d.x)-4) // 图像在数据点上的水平偏移量
-.attr("y", yScale(d.y)-4) // 图像在数据点上的垂直偏移量
-.attr("width", 8) // 图像的宽度
-.attr("height", 8)
+.attr("x", xScale(d.x)-6) // 图像在数据点上的水平偏移量
+.attr("y", yScale(d.y)-6) // 图像在数据点上的垂直偏移量
+.attr("width", 12) // 图像的宽度
+.attr("height", 12)
 .on("mouseover", function() { // 鼠标悬停时显示文本
   text.style("display", "block");
   rect.style("display", "block");
@@ -467,10 +467,10 @@ icons.append("svg:image")
       return blk_s;
   }
 })
-.attr("x", xScale(d.x)-4) // 图像在数据点上的水平偏移量
-.attr("y", yScale(d.y)-4) // 图像在数据点上的垂直偏移量
-.attr("width", 8) // 图像的宽度
-.attr("height", 8)
+.attr("x", xScale(d.x)-6) // 图像在数据点上的水平偏移量
+.attr("y", yScale(d.y)-6) // 图像在数据点上的垂直偏移量
+.attr("width", 12) // 图像的宽度
+.attr("height", 12)
 .on("mouseover", function() { // 鼠标悬停时显示文本
   text.style("display", "block");
   rect.style("display", "block");
@@ -501,15 +501,15 @@ var text = group.append("text")
 icons.append("svg:image")
 .attr("xlink:href", function() {
   if (d.re === "Low") {
-      return ft;
+      //return ft;
   } else if (d.re === "Strong") {
-      return ft_s;
+      //return ft_s;
   }
 })
-.attr("x", xScale(d.x)-4) // 图像在数据点上的水平偏移量
-.attr("y", yScale(d.y)-4) // 图像在数据点上的垂直偏移量
-.attr("width", 8) // 图像的宽度
-.attr("height", 8)
+.attr("x", xScale(d.x)-6) // 图像在数据点上的水平偏移量
+.attr("y", yScale(d.y)-6) // 图像在数据点上的垂直偏移量
+.attr("width", 12) // 图像的宽度
+.attr("height", 12)
 .on("mouseover", function() { // 鼠标悬停时显示文本
   text.style("display", "block");
   rect.style("display", "block");
@@ -545,10 +545,10 @@ icons.append("svg:image")
       return pf_s;
   }
 })
-.attr("x", xScale(d.x)-4) // 图像在数据点上的水平偏移量
+.attr("x", xScale(d.x)-6) // 图像在数据点上的水平偏移量
 .attr("y", 97) // 图像在数据点上的垂直偏移量
-.attr("width", 8) // 图像的宽度
-.attr("height", 8)
+.attr("width", 12) // 图像的宽度
+.attr("height", 12)
 .on("mouseover", function() { // 鼠标悬停时显示文本
   text.style("display", "block");
   rect.style("display", "block");
@@ -584,10 +584,10 @@ icons.append("svg:image")
       return to_s;
   }
 })
-.attr("x", xScale(d.x)-4) // 图像在数据点上的水平偏移量
+.attr("x", xScale(d.x)-6) // 图像在数据点上的水平偏移量
 .attr("y", 97) // 图像在数据点上的垂直偏移量
-.attr("width", 8) // 图像的宽度
-.attr("height", 8)
+.attr("width", 12) // 图像的宽度
+.attr("height", 12)
 .on("mouseover", function() { // 鼠标悬停时显示文本
   text.style("display", "block");
   rect.style("display", "block");
@@ -623,10 +623,10 @@ icons.append("svg:image")
       return dr_s;
   }
 })
-.attr("x", xScale(d.x)-4) // 图像在数据点上的水平偏移量
+.attr("x", xScale(d.x)-6) // 图像在数据点上的水平偏移量
 .attr("y", 97) // 图像在数据点上的垂直偏移量
-.attr("width", 8) // 图像的宽度
-.attr("height", 8)
+.attr("width", 12) // 图像的宽度
+.attr("height", 12)
 .on("mouseover", function() { // 鼠标悬停时显示文本
   text.style("display", "block");
   rect.style("display", "block");
@@ -663,10 +663,10 @@ icons.append("svg:image")
       return or_s;
   }
 })
-.attr("x", xScale(d.x)-4) // 图像在数据点上的水平偏移量
+.attr("x", xScale(d.x)-6) // 图像在数据点上的水平偏移量
 .attr("y", -105) // 图像在数据点上的垂直偏移量
-.attr("width", 8) // 图像的宽度
-.attr("height", 8)
+.attr("width", 12) // 图像的宽度
+.attr("height", 12)
 .on("mouseover", function() { // 鼠标悬停时显示文本
   text.style("display", "block");
   rect.style("display", "block");
