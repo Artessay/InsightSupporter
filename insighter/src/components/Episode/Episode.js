@@ -149,13 +149,23 @@ const Episode = props => {
         }
     };
 
+    const handleTitleChange =(e) => {
+        let newData = listData;
+        newData[CE-1].E_Title = e.target.value;
+        setListData(newData)
+
+        props.Datalist(newData)
+    };
+
         return(
             <div className="Episode">
                 <div className='episodeHeader'>
                     <b > Episode {CE}:</b>
                     <div className="input-wrapper">
-                        <textarea rows="1" cols="26" key={CE-1}>
-                            {props.DataSL.Contents.Episode[CE-1].E_Title}
+                        <textarea rows="1" cols="26" key={CE-1}
+                            onChange={handleTitleChange}
+                        >
+                            {listData[CE-1].E_Title}
                         </textarea>
                     </div>
                     
@@ -183,8 +193,8 @@ const Episode = props => {
                                             rows="1"
                                             onChange={(e) => handleInsightChange(e, index)}
                                             cols="80"
-                                            value={item.S_Insight}
                                         >
+                                            {item.S_Insight}
                                         </textarea>
                                         
                                     </span>
