@@ -664,7 +664,7 @@ icons.append("svg:image")
   }
 })
 .attr("x", xScale(d.x)-6) // 图像在数据点上的水平偏移量
-.attr("y", -105) // 图像在数据点上的垂直偏移量
+.attr("y", -108) // 图像在数据点上的垂直偏移量
 .attr("width", 12) // 图像的宽度
 .attr("height", 12)
 .on("mouseover", function() { // 鼠标悬停时显示文本
