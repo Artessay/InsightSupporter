@@ -1,0 +1,15 @@
+.custom-calendar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 40px; /* adjust this value to position the calendar */
+    margin-right: 0px; /* adjust this value to position the calendar */
+  }
+
+.react-datepicker-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 40px; /* adjust this value to position the calendar */
+    margin-right: 0px; /* adjust this value to position the calendar */
+  }

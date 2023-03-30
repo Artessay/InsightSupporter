@@ -1,6 +1,7 @@
 import React  from "react";
 // import Drop from "./Drop";
 import './Head.css'
+import DatePickerButton from "./DatePickerButton.js";
 // import { Menu } from 'antd';
 
 export default class Head extends React.Component {
@@ -21,7 +22,8 @@ export default class Head extends React.Component {
                     {this.state.date}
                 </div>
 
-                <div className="DataSelect"></div>
+                {/* <div className="DataSelect"></div> */}
+                <DatePickerButton className='DataSelect'></DatePickerButton>
             </div>
         )
     }
