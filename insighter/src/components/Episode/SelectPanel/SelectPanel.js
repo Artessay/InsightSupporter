@@ -14,8 +14,8 @@ const measureOptions = [
 ];
 
 const breakdownOptions = [
-    "Athlete","Team","Isscore","Isshot",
-    "Quarter","ShotType","ShotRange","ActionType"
+    "Athlete","Team","Isscore","Isshot","Quarter",
+    "ShotType","ShotRange","ActionType", ""
 ];
 
 function GetDatas( {sentenceList} ) {
@@ -87,12 +87,6 @@ const SelectPanel = (props) => {
                             onChange={handleTypeChange}
                         />
                         <br></br>
-                        {/* <CustomSelect
-                            label="subspace"
-                            options={subspaceList}
-                            defaultValue="+"
-                            onChange={handleTypeChange}
-                        /> */}
                         <Subspace
                             label="subspace"
                             options={subspaceList}

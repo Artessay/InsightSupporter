@@ -4,6 +4,11 @@ import './CustomSelect.css'
 
 const { Option } = Select;
 
+const subspaceOptions = [
+    "Athlete = ?","Team = ?","Isscore = ?","Isshot = ?","Quarter = ?",
+    "ShotType = ?","ShotRange = ?","ActionType = ?", ""
+];
+
 const Subspace = ({ label, options, defaultValue, onChange }) => {
   const handleSelectChange = (value, option) => {
     onChange && onChange(value, option);
@@ -56,7 +61,7 @@ const Subspace = ({ label, options, defaultValue, onChange }) => {
                 }}
                 onChange={handleSelectChange}
             >
-                {options.map((option) => (
+                {subspaceOptions.map((option) => (
                 <Option key={option} value={option}>
                     {option}
                 </Option>

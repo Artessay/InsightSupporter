@@ -207,7 +207,7 @@ const Episode = props => {
                     </div>
                     
                     <div className='selectDrop'>
-                        <SelectPanel sentenceList = {listData[CE-1].E_Sentences}
+                        <SelectPanel key={CE-1} sentenceList = {listData[CE-1].E_Sentences}
                             index = {figureNumber}></SelectPanel>
                     </div>
 
