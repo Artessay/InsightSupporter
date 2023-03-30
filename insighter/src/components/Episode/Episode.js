@@ -93,9 +93,9 @@ const Episode = props => {
             return (
                 <div className="selectSection">
                     <span className="selectNumber">
-                        {sentenceList.length + 1}
+                    <span className="selectNumberNum">{sentenceList.length + 1}</span>
                     </span>
-                    <span className="selectDelete">
+                    <span className="selectInsert">
                         <Button
                             // disabled={true}
                             onClick={(e) => handleInsert()}
@@ -152,7 +152,7 @@ const Episode = props => {
         return(
             <div className="Episode">
                 <div className='episodeHeader'>
-                    <b>Episode {CE}</b>: 
+                    <b > Episode {CE}:</b>
                     <div className="input-wrapper">
                         <textarea rows="1" cols="26" key={CE-1}>
                             {props.DataSL.Contents.Episode[CE-1].E_Title}
@@ -166,11 +166,11 @@ const Episode = props => {
                         {
                             sentences.map((item, index) => (
                                 <div className="selectSection" key={index}>
-                                    <span className="selectNumber">
-                                        {index+1}
+                                    <span className="selectNumber" >
+                                        <span className="selectNumberNum">{index+1}</span>
                                     </span>
                                     <span className={item.S_Ischart === "Yes" ? "selectTaskEdit" : "selectTask"}>
-                                        {item.S_Task}
+                                    <span className="selectTaskNum">{item.S_Task}</span>
                                     </span>
                                     <span className="selectDelete">
                                         <Button
@@ -214,13 +214,14 @@ const Episode = props => {
                                         size="large"
                                         style={{
                                             backgroundColor: bgColor,
-                                            marginBottom: 10
+                                            marginBottom: 10,
+                                            
                                         }}
                                         value={number}
                                         onClick={(e) => {handleFigureNumber(number)}}
                                     >
                                         <div className="chartButtonText">
-                                            {number+1}
+                                            <span>{number+1}</span>
                                         </div>
                                     </Button>
                                 );

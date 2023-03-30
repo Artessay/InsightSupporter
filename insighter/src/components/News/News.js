@@ -54,15 +54,15 @@ export default class News extends React.Component {
                     </div>
                     
                     <div className='buttons'>
-                        <Button shape='circle' onClick={(e) => this.handleClick(e)} value="0"
-                        style={{backgroundColor: 'rgba(117, 117, 117, 0.3)'}}>0</Button>
+                        <Button shape='rect' onClick={(e) => this.handleClick(e)} value="0"
+                        style={{backgroundColor: 'rgba(117, 117, 117, 0.3)'}}><b style={{color:"white"}}>0</b></Button>
                         {
                             numbers.map((number) => (
                                 < >
                                     <div className='verticalLine'></div>
                                     <Button key={number} 
                                     style={{backgroundColor: taskColor[DataSL.Contents.Episode[number].E_Sentences[0].S_Task]}}
-                                    shape='circle' onClick={(e) => this.handleClick(e)} value={number+1}>{number+1}</Button>
+                                    shape='rect' onClick={(e) => this.handleClick(e)} value={number+1}><b style={{color:"white"}}>{number+1}</b></Button>
                                 </>
                             ))
                         }

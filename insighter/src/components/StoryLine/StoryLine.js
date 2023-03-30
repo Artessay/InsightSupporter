@@ -91,8 +91,8 @@ const StoryLine = props => {
                 overflow:"hidden",
                 
               }}>{item.E_Title}{} </Button>
-              {<img src={close} style={{
-                dalignSelf: "flex-start", position: "relative", top: "3px",right: "-10px"
+              {<img src={close} width="16"height="16" style={{
+                dalignSelf: "flex-start", position: "relative", top: "3px",right: "-10px",
               }} onClick={() => handleRemove(index)}></img>}
               </div>
             } 

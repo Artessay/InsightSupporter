@@ -6,7 +6,7 @@
 }
 
 .episodeHeader {
-    height: 50px;
+    height: 40px;
     background: rgba(117, 117, 117, 0.3);
 
     font-size: 26px;
@@ -17,11 +17,14 @@
     position: absolute;
     top: 15%;
     left: 120px;
+    display: inline-block;
 }
 
 .input-wrapper textArea {
-    width: 800px;
 
+    width: 800px;
+    display: inline-block;
+    vertical-align: middle;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -53,6 +56,23 @@
 }
 
 .chartButtonText {
+    margin-top: -8px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 28px;
+    line-height: 150%;
+    /* or 42px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.022em;
+
+    color: #000000;
+}
+.chartButtonTextNum {
     margin-top: -5px;
 
     font-family: 'Inter';
@@ -98,7 +118,7 @@
 .episodeFooter {
     height: 105px;
     margin: 5px;
-    background: rgba(117, 117, 117, 0.3);
+    background: #f5f5f5;
 
     font-family: 'Inter';
     font-style: normal;
@@ -148,6 +168,15 @@
     width: 30px;
     height: 30px;
     text-align: center;
+
+}
+
+.selectNumberNum {
+    display: inline-block;
+    width: 15px;
+    height:15px;
+    vertical-align: middle;
+    font-weight: bold;
 }
 
 .selectTaskEdit {
@@ -170,13 +199,25 @@
     margin-left: 10px;
     font-size: auto;
 }
+.selectTaskNum {
 
+
+    display: inline-block;
+    width: 100px;
+    height: 15px;
+    vertical-align: middle;
+    font-size: auto;
+
+}
 .selectText {
     margin-left: 10px;
 }
 
 .selectText textarea {
     font-family: 'Inter';
+
+    display: inline-block;
+    vertical-align: middle;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -190,8 +231,17 @@
 
     color: #1E1E1E;
 }
+.selectInsert {
 
+
+    display: inline-block;
+    margin-left: 10px;
+
+    transform: translate(0, 5px);
+}
 .selectDelete {
+    display: inline-block;
+   
     margin-left: 10px;
     transform: translate(0, 5px);
 }
@@ -215,7 +265,7 @@
     
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 1000;
     font-size: 10px;
     line-height: 150%;
     /* or 15px */
