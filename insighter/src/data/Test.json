@@ -124,7 +124,7 @@
             "E_Sentences":[
                 {
                     "S_Insight":"Provide the total number of shots Joel Embiid attempted in the game",
-                    "S_Task":"Value",
+                    "S_Task":"Proportion",
                     "S_Ischart":"No"
                     
                 },
@@ -195,7 +195,7 @@
             "E_Sentences":[
                 {
                     "S_Insight":"Categorize Joel Embiid's shots by type (midrange, three-point, layup, etc.)",
-                    "S_Task":"Categorization",
+                    "S_Task":"Distribution",
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
@@ -252,7 +252,7 @@
             "E_Sentences":[
                 {
                     "S_Insight":"Focus on Joel Embiid's midrange shots",
-                    "S_Task":"Value",
+                    "S_Task":"Difference",
                     "S_Ischart":"Yes",
                     "S_Chartneed":[
                         {
