@@ -65,13 +65,13 @@
     font-style: normal;
     font-weight: 1000;
     font-size: 28px;
-    line-height: 150%;
     /* or 42px */
 
     display: flex;
     align-items: center;
     text-align: center;
-    letter-spacing: -0.022em;
+
+    height: 30px;
 
     color: #000000;
 }
@@ -169,7 +169,7 @@
     background: rgba(117, 117, 117, 0.3);
     display: inline-block;
     width: 30px;
-    height: 30px;
+    line-height: 30px;
     text-align: center;
     vertical-align: middle;
 }
@@ -211,6 +211,7 @@
     font-size: auto;
 
 }
+
 .selectText {
     margin-left: 4px;
     display: inline-block;
@@ -243,7 +244,7 @@
 }
 .selectDelete {
     display: inline-block;
-    /* line-height: 30px; */
+    line-height: 30px;
     vertical-align: middle;
     margin-left: 10px;
     /* transform: translate(0, 5px); */

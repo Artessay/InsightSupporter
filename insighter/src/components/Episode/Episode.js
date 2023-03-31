@@ -236,7 +236,9 @@ const Episode = props => {
                                         onClick={(e) => {handleFigureNumber(number)}}
                                     >
                                         <div className="chartButtonText">
-                                            <span>{number+1}</span>
+                                            <span
+                          
+                                            >{number+1}</span>
                                         </div>
                                     </Button>
                                 );
