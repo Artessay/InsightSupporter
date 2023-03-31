@@ -39,9 +39,9 @@
 
     font-family: 'Inter';
     font-style: normal;
+    line-height: 150%;
     font-weight: 700;
     font-size: 32px;
-    line-height: 150%;
     /* or 48px */
 
     display: flex;

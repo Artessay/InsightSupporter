@@ -24,6 +24,9 @@
     text-align: center;
     border: 2px solid #0f0f0f;
     margin: 3px;
+
+    font-family: 'Inter';
+    font-style: normal;
 }
   
 /* .item-1 {
@@ -72,4 +75,8 @@ textarea {
     border-style: none;
     text-indent: 30px;
     color: black;
+
+    font-family: 'Inter';
+    font-style: normal;
+    line-height: 150%;
 }

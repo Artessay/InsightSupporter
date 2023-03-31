@@ -10,9 +10,13 @@
     top: 0px;
 
     width: 90px;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     letter-spacing: -0.022em;
+
+    font-family: 'Inter';
+    font-style: normal;
+    line-height: 150%;
     
     /* vertical center */
     display: flex;
@@ -30,10 +34,13 @@
     /* left: 0px; */
     /* top: 80px; */
     /* font-size: 15px; */
+    font-family: 'Inter';
+    font-style: normal;
+    line-height: 150%;
 
     width: 90px;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     letter-spacing: -0.022em;
     
     /* vertical center */
