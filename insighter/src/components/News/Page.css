@@ -52,10 +52,14 @@
 
 .subtitle {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .pageChart {
     position: relative;
     text-align: center;
+}
+
+.subparagraph {
+    font-size: 24px;
 }
