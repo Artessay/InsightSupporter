@@ -1,5 +1,5 @@
 label {
-    font-family: 'Inter';
+    font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
@@ -20,7 +20,7 @@ label {
 }
 
 .dropdownText {
-  font-family: 'Inter';
+  font-family: 'Arial';
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
