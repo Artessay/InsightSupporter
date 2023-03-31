@@ -55,7 +55,7 @@ function VideoCarousel() {
         <source src={videoPaths[currentVideoIndex]} type="video/mp4" />
       </video> */}
       <video 
-        src={require('../../video/35250.0.mp4')} 
+        src={require('../../video/video.mp4')} 
         controls // 控制panel current
         width='80%'
         

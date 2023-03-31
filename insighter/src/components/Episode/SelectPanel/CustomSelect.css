@@ -8,5 +8,7 @@
 
 .subspace label {
     align-self: flex-start;
-    margin-top: 5px;
+    margin-top: 4px;
+    height: 28px;
+    vertical-align: middle;
 }

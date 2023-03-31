@@ -14,8 +14,10 @@ const CustomSelect = ({ label, options, defaultValue, onChange }) => {
       <label 
         style={{ 
           minWidth: 100, 
-          marginRight: "10px", 
+          marginRight: "3px", 
           justifyContent: 'center',
+          height: '28px',
+          verticalAlign: 'middle',
           // backgroundColor: '#383f5e',
           // color: '#fff'
           backgroundColor: 'black',
