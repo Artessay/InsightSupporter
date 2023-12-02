@@ -1,0 +1,11 @@
+website,visualization,chart type,interaction type,visualization usage,interaction usage
+Hupu,FALSE,N/A,N/A,N/A,N/A
+Tencent,FALSE,N/A,N/A,N/A,N/A
+NBA.com/stats,TRUE,"lineup bubble, shot chart, game trend, leading players rose chart, stats bar chart","hover to show text, dropdown/radio button filtering",medium,low
+FiveThirtyEight,TRUE,"RAPTOR Beeswarm, RAPTOR scatterplot","hover to show more details, dropdown/radio button filtering",high,medium
+Basketball Reference,TRUE,"shot chart, lineup plus/minus",howver to show text,low,low
+ESPN,TRUE,"game flow, stats bar chart, shot chart ","hover to show text, dropdown/radio button filtering",medium,low
+CBS,FALSE,N/A,N/A,N/A,N/A
+NBA Stuffer,TRUE,scatter plot,N/A,low,N/A
+The Athletic,TRUE,stats bar chart,hover to highlight,low,low
+NBC,FALSE,N/A,N/A,N/A,N/A
